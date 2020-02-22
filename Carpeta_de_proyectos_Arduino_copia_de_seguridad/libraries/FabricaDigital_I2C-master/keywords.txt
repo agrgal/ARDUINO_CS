@@ -1,0 +1,3 @@
+FabricaDigital_I2C	KEYWORD1
+obtenerNumeroDeDispositivos	KEYWORD2
+obtenerDireccionDispositivo	KEYWORD2
