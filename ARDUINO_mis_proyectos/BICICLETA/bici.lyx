@@ -1,0 +1,6013 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[font={footnotesize,sc},textfont={footnotesize,sc,bf}]{caption}  
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usepackage[siunitx]{circuitikz}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{xcolor}
+\end_preamble
+\use_default_options true
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans berasans
+\font_typewriter courier
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref page
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 1cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\bullet 0 3 25 -1
+\bullet 1 5 13 -1
+\bullet 2 3 10 -1
+\bullet 3 5 1 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\author 1274912970 "Aurelio Gallardo Rodríguez" infbacseritium@gmail.com
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Notas del preámbulo:
+\end_layout
+
+\begin_layout Plain Layout
+1.- 
+\backslash
+usepackage[font={footnotesize,sc},textfont={footnotesize,sc,bf}]{caption}
+ para poner el texto de 
+\begin_inset Quotes eld
+\end_inset
+
+figuras...
+\begin_inset Quotes erd
+\end_inset
+
+ muy pequeños y en versalita (sc), y en negrita (bf).
+\end_layout
+
+\begin_layout Plain Layout
+2.- wrapfig, para que se puedan poner las imágenes flotantes envueltas (creo)
+\end_layout
+
+\begin_layout Plain Layout
+3.- tikz, circuitikz -> para poder dibujar circuitos con LATEX (ver CTRL+L)
+\end_layout
+
+\begin_layout Plain Layout
+4.- 
+\backslash
+usepackage{amsmath}: mirar bien, pero creo que es para poder usar matemáticas.
+\end_layout
+
+\begin_layout Plain Layout
+5.- 
+\backslash
+usepackage[T1]{fontenc} 
+\backslash
+usepackage{calligra} --> permite usar tipos de letras extra.
+ Mirar en esta web: http://bioinformatiquillo.wordpress.com/2009/03/28/usar-nuevas
+-y-varias-fuentes-latex-en-lyx/,
+\end_layout
+
+\begin_layout Plain Layout
+5a.- Si se utiliza en un párrafo nada más hay que separar unespacio del texto
+ de lo que es el código.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand {
+\backslash
+contentsname} {Índice General}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+
+\series bold
+\shape smallcaps
+\color black
+Señalización en Bicicletas
+\end_layout
+
+\begin_layout Date
+Mayo de 2014
+\end_layout
+
+\begin_layout Author
+por Aurelio Gallardo
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 5cm*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\shape smallcaps
+\size larger
+II Feria de la Ciencia en la Calle de Jerez de la Frontera
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 10cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename /home/aurelio/Desktop/commons.jpeg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+
+\size footnotesize
+Señalización en Bicicletas by Aurelio Gallardo Rodríguez, 31667329D is licensed
+ under a Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internaci
+onal License.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand {
+\backslash
+partname} {Apartado}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+thispagestyle{empty} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape smallcaps
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+thispagestyle{empty} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+renewcommand{
+\backslash
+thepage}{
+\backslash
+roman{page}} para numeración en números romanos de las páginas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+thepage}{
+\backslash
+arabic{page}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Left Header
+
+\series bold
+\size small
+Señalización en Bicicletas
+\end_layout
+
+\begin_layout Right Header
+
+\size small
+por Aurelio Gallardo Rodríguez 
+\end_layout
+
+\begin_layout Center Header
+\begin_inset Graphics
+	filename eco_green_cycle_icon.png
+	lyxscale 10
+	scale 2
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Center Footer
+- 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+ -
+\end_layout
+
+\begin_layout Section
+Introducción
+\end_layout
+
+\begin_layout Standard
+Es un hecho evidente que en los últimos tiempos cada vez más personas usan
+ la bicicleta como medio de transporte o como deporte.
+ Muchas son las causas y muchas las ventajas de su uso.
+ Entre las causas de su auge cabe destacar la mayor concienciación de un
+ sector de la población por temas ambientales o de salud, la preocupación
+ del gasto en transporte o el aumento de los tiempos de tránsito en los
+ desplazamientos urbanos habituales.
+ Y es que de hecho, las bicicletas en las ciudades modernas, permiten desplazami
+entos más rápidos en distancias a escala urbana, al ser un medio de transporte
+ que puede sortear con éxito las congestiones del tráfico automovilístico;
+ además, más allá de este beneficio inmediato y tangible, encontramos otros
+ no menos importantes: hacemos ejercicio físico, no contaminamos y ahorramos
+ en otros tipos de transporte.
+\end_layout
+
+\begin_layout Standard
+Como viene recogido en el Plan Andaluz de la Bicicleta 2014-2020 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.juntadeandalucia.es/fomentoyvivienda/portal-web/web/areas/transportes/plan_bici/texto/83770544-954a-11e2-8f48-a9c3a8bb53aa"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ , se considera importante el fomento de este medio de transporte en los
+ próximos años, como forma de trasladarse a los centros de trabajo o estudios,
+ y dando importancia también a las prácticas deportivas, de ocio y su potencial
+ turístico.
+ En dicho plan se tiene previsto la construcción de carriles urbanos e interurba
+nos que interconecten no sólo las distintas zonas urbanas de las principales
+ ciudades andaluzas, sino también numerosas poblaciones de nuestra tierra
+ entre sí.
+\change_inserted 1274912970 1397648788
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename eje andaluz.jpg
+	lyxscale 10
+	scale 20
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename zona jerez.jpg
+	lyxscale 10
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\series bold
+\shape smallcaps
+\size small
+Mapas de carriles bicis interurbanos y urbanos en Jerez
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Queda pues claro que la bicicleta, como medio de transporte, está adquiriendo
+ un mayor peso específico en nuestra vida diaria y, además, cuenta con el
+ apoyo de nuestras instituciones a nivel autonómico.
+ Por otra parte, se reconoce de forma implícita la necesidad de mejorar
+ o adecuar las vías de circulación; en efecto, el usuario o usuaria de la
+ bicicleta en las ciudades y carreteras actuales es un conductor frágil
+ y vulnerable, expuesto a frecuentes situaciones de peligro y teniendo que
+ sortear obstáculos que otros usuarios de las vías no tienen, sobre todo
+ cuando no se cuenta con vías específicas para uso de bicicletas.
+\end_layout
+
+\begin_layout Standard
+El o la ciclista preocupado por su seguridad, se encuentra ante una disyuntiva
+ difícil: o bien opta por usar las vías destinadas al tráfico rodado, tal
+ como exigen las normas de circulación, arriesgándose a que los usuarios
+ de los vehículos motorizados que circulan por la vía no cometan equivocaciones
+ y respeten a su vez las reglas, o bien opta por incumplir la normativa
+ y utiliza las zonas peatonales, más seguras para el ciclista.
+ 
+\end_layout
+
+\begin_layout Standard
+En este último caso, no es menos cierto que el ciclista actualmente y bajo
+ nuestra legislación pierde la razón legal, y es responsable de su conducción
+ y de los inconvenientes que pudiesen surgir con ella.
+ De hecho, no podemos obviar que muchos viandantes se quejan de que en las
+ zonas peatonales hay ciclistas que molestan al paso y, a su vez, pueden
+ provocar accidentes a los que caminan por ellas.
+ Siendo cierto que el o la ciclista suele ser una persona respetuosa, no
+ todo el mundo usa las vías con cuidado y atención, lo cual puede causar
+ molestias, sobre todo si no tiene derecho a circular por ellas.
+ 
+\end_layout
+
+\begin_layout Standard
+Por todo lo expuesto anteriormente, podemos concluir que la utilización
+ de la bicicleta, sobre todo en las ciudades, necesita de nuestro respaldo
+ y apoyo además de el de las instituciones.
+ En este trabajo, detectamos una necesidad específica relacionada con el
+ mundo del ciclismo y hemos intentado satisfacerla con el objeto de estudio
+ de nuestra asignatura de Proyecto Integrado 
+\begin_inset Quotes eld
+\end_inset
+
+Programación y Electrónica Digital
+\begin_inset Quotes erd
+\end_inset
+
+: la plataforma de electrónica abierta ARDUINO.
+\end_layout
+
+\begin_layout Section
+Descripción de la Necesidad
+\end_layout
+
+\begin_layout Standard
+En nuestra normativa de tráfico 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Reglamento general de tráfico:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.taxiasturias.com/html/3868_FEDERACION_ASTURIANA_SINDICAL_DEL_TAXI/files/5872_reglamento%20general%20de%20trafico.pdf"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, hay todo un capítulo, el décimo, dedicado a la señalización de vehículos.
+ Respecto a las bicicletas sólo se obliga, según el artículo 98.3, a llevar
+ elementos reflectantes en las mismas y en prendas que pueda llevar el ciclista.
+ El resto de vehículos tienen elementos visuales de seguridad activa tanto
+ para ver como para ser vistos, en circunstancias de luz diurna, o en conducción
+ nocturna o de baja visibilidad, y la obligación/posibilidad de señalizar
+ determinadas maniobras como frenar, girar, dar marcha atrás o parar de
+ emergencia.
+ 
+\end_layout
+
+\begin_layout Standard
+Así que...
+ ¿por qué no dotar a una bicicleta de algunos de estos elementos de seguridad
+ activa de señalización?
+\end_layout
+
+\begin_layout Standard
+¿Acaso no es deseable que un ciclista pueda mejorar su visibilidad en conducción
+ nocturna? ¿No sería útil que pudiese indicar de alguna forma a los otros
+ usuarios de la vía su presencia? ¿No sería conveniente que pudiese señalizar
+ algunas de sus maniobras como girar o frenar? O si se me detengo de emergencia
+ en un arcén o similar...
+ ¿no sería bueno indicar esa circunstancia con un juego de luces que parpadeen?
+\end_layout
+
+\begin_layout Section
+Objetivos
+\end_layout
+
+\begin_layout Standard
+Los objetivos de nuestro trabajo, por tanto, serán los siguientes:
+\end_layout
+
+\begin_layout Enumerate
+Dotar a nuestra bicicleta de medios de señalización e indicación luminosa:
+ intermitentes izquierdos y derechos (delanteros y traseros), luz de freno
+ y luces de emergencia.
+\end_layout
+
+\begin_layout Enumerate
+Dotar a nuestra bicicleta de medios de iluminación: luces cortas y largas.
+\end_layout
+
+\begin_layout Enumerate
+Realizar el control automático (SOFTWARE) de dicho sistema mediante ARDUINO.
+\end_layout
+
+\begin_layout Enumerate
+Que los elementos de HARDWARE cumplan las siguientes condiciones: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+No molesten los movimientos de la bicicleta.
+\end_layout
+
+\begin_layout Enumerate
+Estén bien sujetos y no sean voluminosos.
+ Que no impidan el uso de otros complementos o elementos de la bicicleta
+ (botella de agua, pitón ,transportín)...
+\end_layout
+
+\begin_layout Enumerate
+Los cables estén recogidos.
+\end_layout
+
+\begin_layout Enumerate
+Los pulsadores o elementos de activación sean accesibles para el ciclista
+ sin molestar la conducción.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Que los elementos de SOFTWARE cumplan las siguientes condiciones:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Respondan a las funcionalidades exigidas.
+\end_layout
+
+\begin_layout Enumerate
+la activación de un elemento del sistema interfiera lo menos posible en
+ el estado de funcionamiento de otro elemento cualquiera.
+\end_layout
+
+\begin_layout Enumerate
+El control del sistema se realice con el menor gasto de energía posible
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Un objetivo secundario que se ha planteado al finalizar este trabajo es
+ controlar, de alguna forma, el gasto o consumo del dispositivo cuando se
+ usen pilas.
+ Sin embargo, el uso de las pilas puede ser sustituido por baterías recargables
+ no demasiado caras.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Elementos de hardware
+\end_layout
+
+\begin_layout Standard
+Antes de explicar la composición de los distintos elementos de iluminación
+ y control que conforman el sistema hay que puntualizar que este trabajo
+ no ha formado parte del Proyecto Integrado en el que ha sido desarrollado.
+ El diseño e implementación del Hardware no entra dentro del curriculum
+ de la asignatura, sino tan sólo la parte de Programación en el entrono
+ ARDUINO.
+ Agradezco a los alumnos Luis y Juanma, de 2º de Bac.
+ , y Christian de 2º ESO, su ayuda y colaboración en estas tareas, incluso
+ sacando tiempo de los recreos o ratos libres que hayamos tenido.
+\end_layout
+
+\begin_layout Standard
+Cabe también destacar que la construcción del prototipo ha tropezado con
+ ciertas dificultades; algunas de diseño, otras de materiales y componentes.
+ El prototipo es susceptible de numerosas mejoras, que se indicarán en cada
+ apartado.
+\end_layout
+
+\begin_layout Standard
+Entre los elementos hardware del sistema cabe destacar los siguientes:
+\end_layout
+
+\begin_layout Itemize
+Bloque delantero de luces largas y cortas.
+\end_layout
+
+\begin_layout Itemize
+Bloque trasero de luces de freno e intermitentes.
+\end_layout
+
+\begin_layout Itemize
+Intermitentes delanteros: LEDs.
+\end_layout
+
+\begin_layout Itemize
+Pulsadores que activan los intermitentes.
+\end_layout
+
+\begin_layout Itemize
+Final de carrera del freno.
+\end_layout
+
+\begin_layout Itemize
+Caja con la placa principal y conexionado de control.
+\end_layout
+
+\begin_layout Itemize
+Unidad de alimentación.
+\end_layout
+
+\begin_layout Subsection
+Bloque delantero de luces largas y cortas
+\end_layout
+
+\begin_layout Standard
+Uno de los más difíciles de implementar, es un elemento que se posiciona
+ en el manillar y contiene el juego de luces cortas (cuatro leds blancos
+ de alta luminosidad), el juego de luces largas (otros cuatro leds), el
+ pulsador que activa estas luces y todo el conexionado previo del sistema
+ de señalización delantero más el conexionado de los actuadores (pulsadores,
+ fin de carrera...).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/fotos_bici/DSC_0080.jpg
+	lyxscale 10
+	scale 10
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\series bold
+\shape smallcaps
+\size small
+Módulo delantero del sistema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se construye con un tubo de PVC Ø20, usado para la canalización de cables
+ de red, pintado de negro con pintura de spray.
+ Las sujeciones se consiguen con abrazaderas atornilladas con dos tornillos
+ M6.
+ A él acceden, por la izquierda, seis cables correspondientes a los intermitente
+s delanteros izquierdo y derecho, y al pulsador del intermitente izquierdo,
+ y por la derecha, cuatro cables, correspondientes al pulsador del intermitente
+ derecho y al fin de carrera que detecta que se ha activado el freno trasero
+ de la bicicleta.
+ Por su parte inferior central sale un conjunto de diez cables con ocho
+ señales de control y activación, más la señal de alimentación y GND, que
+ se conectan a un antiguo cable de comunicación en serie (9 PIN D-SUB
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "http://todohard.awardspace.com/docs/ConectorCom9/"
+target "http://todohard.awardspace.com/docs/ConectorCom9/"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+).
+ Las conexiones y soldaduras en este cable están protegidos con funda pintada
+ de negro y el cable se enfunda con cañitas de color negro.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 0
+placement R
+overhang 0in
+width "30col%"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pulsador_esquema.png
+	lyxscale 10
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\series bold
+\shape smallcaps
+\size scriptsize
+Conexionado típico de un led y de un actuador (pulsador) usando ARDUINO
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Detallando la construcción del módulo
+\end_layout
+
+\begin_layout Standard
+Tras un mecanizado básico en que se corta el tubo, se practican los orificios
+ de los leds, el orificio para alojar el pulsador que activa las luces,
+ el del cableado de salida y los necesarios para atornillar el módulo a
+ las abrazaderas, se sueldan los dos grupos de 4 LEDs en paralelo usando
+ una plantilla con los orificios a la misma distancia que los practicados
+ en el tubo.
+ Se pone especial cuidado en que la soldadura y el cableado ocupe el mínimo
+ espacio pues después tienen que caber en el reducido lugar donde se alojarán.
+ Se suelda, además, una resistencia de 
+\begin_inset Formula $100\Omega$
+\end_inset
+
+ al negativo de los LEDs y se pega un palito de madera (pinchitos) al conjunto
+ con silicona.
+ Usando el palito, se colocan los LEDs en su lugar dentro del tubo y, cuando
+ estén colocados, se rompe el palito de madera por dentro cuidando que no
+ sobresalga por la apertura.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Esta operación resultó ser más dificultosa de lo que supuse.
+ El primer conjunto de LEDs estorbó bastante la colocación del segundo con
+ lo que sería mejor que ambas filas hubiesen estado más separadas.
+ Por otra parte, tuve que meter un redondo para poder presionar los LEDs
+ ya colocados de forma que sobresaliesen del tubo lo máximo posible, no
+ consiguiéndolo del todo con los LEDs del segundo grupo.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los comunes de los grupos de LEDs se unen entre sí y a un cable que posteriormen
+te se soldará al GND
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+GND: ground, tierra
+\end_layout
+
+\end_inset
+
+del conjunto.
+ Los cables de los positivos son de señal, y se hacen pasar por el orifico
+ de salida, para conectarlos a los pines correspondientes de ARDUINO.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 10
+placement L
+overhang 0in
+width "20text%"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pulsadores-de-panel-de-21x10mm-nc.jpg
+	lyxscale 10
+	scale 8
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename dsub9_male.jpg
+	lyxscale 15
+	scale 15
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Pulsador.
+ Imagen de 
+\begin_inset CommandInset href
+LatexCommand href
+name "shoptronica.com"
+target "http://www.shoptronica.com/interruptores-pulsadores-de-boton/817-pulsadores-de-panel-de-21x10mm-nc.html"
+
+\end_inset
+
+ y DSUB9-Macho
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Se instala un pulsador NA, en el orificio practicado previamente, soldándole
+ dos cables a cada terminal.
+ Los cables usados son del tipo plano-paralelo de las conexiones IDE de
+ los ordenadores: flexibles, y fáciles de pelar y de soldar, ocupando poco
+ espacio.
+ A continuación se colocan los tornillos y la parte superior de las abrazaderas,
+ en previsión que el número de elementos dentro del tubo aumente y no sea
+ fácil colocar los tornillos.
+ 
+\end_layout
+
+\begin_layout Standard
+En el tapón que se usará para tapar la parte derecha del tubo, se practica
+ un orificio, se le hace pasar una cañita protectora y se pega con silicona.
+ Por dicha cañita, se hacen pasar cuatro cables, soldándole en los extremos
+ exteriores del tubo conexiones hembras tipo PCB
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Sería deseable usar otro tipo de conexiones más recogidas, pero aproveché
+ lo que ya tenía.En este trabajo he usado mucho material reciclado o de uso
+ común en el taller
+\end_layout
+
+\end_inset
+
+.
+ En la parte interior se sueldan las conexiones a los cables que acabamos
+ de instalar en el tapón, que corresponden al intermitente derecho, al final
+ de carrera del freno y al pulsador de luces largas/cortas, con sus correspondie
+ntes resistencias de 
+\begin_inset Formula $10K\Omega$
+\end_inset
+
+ a tierra, pasando tres cables de señal por el orificio de salida.
+\end_layout
+
+\begin_layout Standard
+En el lado izquierdo se opera de forma idéntica, esta vez para las señales
+ de intermitentes delanteros izquierdo/derecho y para el pulsador del intermiten
+te izquierdo (resistencia 
+\begin_inset Formula $10K\Omega$
+\end_inset
+
+).
+ Se hacen pasar los tres cables de señal a través del orificio de salida.
+ 
+\end_layout
+
+\begin_layout Standard
+Se añaden los dos cables de GND y Vcc (5V) al orificio de salida, se comprueba
+ el funcionamiento y se cierra el conjunto, cerrando los tapones.
+ Se enfundan cañitas protectoras a los cables de salida, y se sueldan los
+ cables a un cable reciclado DSUB-9 macho, capaz de albergar 9 señales más
+ GND, en total las diez que necesitamos.
+ Se comprueba el conjunto, se enfunda un tubo de goma (previamente pintado
+ de negro) alrededor de las conexiones y se asegura la estanqueidad con
+ cinta aislante y presillas 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig: figura5"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+A mejorar:
+\end_layout
+
+\begin_layout Itemize
+Emplear abrazaderas y tornillos que separen más la pieza del manillar permitiría
+ poder posicionar mejor las luces de lo que ahora están.
+\end_layout
+
+\begin_layout Itemize
+Tapar con tapones de goma los orificios practicados al tubo para poder introduci
+r el pulsador y los tornillos de las abrazaderas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\shape smallcaps
+\size footnotesize
+(Izq) Soldando lado izquierdo.
+ (Centro) Conexiones al cable DSUB9.
+ (Dcha) Comprobando cables.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig: figura5"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/fotos_bici/DSC_0081.jpg
+	lyxscale 15
+	scale 5
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/fotos_bici/DSC_0082.jpg
+	lyxscale 15
+	scale 5
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/fotos_bici/DSC_0083.jpg
+	lyxscale 15
+	scale 5
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\SpecialChar \textcompwordmark{}
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Bloque trasero Luces de Freno e Intermitentes
+\end_layout
+
+\begin_layout Standard
+\noindent
+El bloque trasero contiene las luces de freno y los intermitentes de la
+ parte de atrás.
+ Se construye con varias capas de madera contrachapada 4mm, dejando hueco
+ entre ellas para incorporar los distintos elementos: un LED de alta luminosidad
+ 5mm para cada intermitente y cinco que conforman la luz del freno.
+\end_layout
+
+\begin_layout Standard
+Interiormente, y aunque la luminosidad en el rango usado de tensiones es
+ bastante aceptable, he optado por activar los LEDs del freno mediante un
+ transistor NPN 2N2222, lo que permite alimentarlos directamente desde la
+ pila.
+ El conexionado se termina con un RJ45 hembra del que sobresalen 5 señales:
+ GND, Vin, Señal luz de freno, y señal de cada intermitente.
+ Cada intermitente está conectado en paralelo con su par delantero.
+\end_layout
+
+\begin_layout Subsubsection
+Detallando la construcción del módulo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 7
+placement R
+overhang 0in
+width "20col%"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\shape smallcaps
+\size footnotesize
+RJ45 Hembra 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:RJ45-Hembra"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename conectores-rj45-hembra-pcb.jpg
+	lyxscale 15
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ En primer lugar se recortan las distintas capas usando plantillas 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig:capas_módulo_trasero"
+
+\end_inset
+
+ ; éstas irán superpuestas (y atravesadas y unidas mediante dos tornillos
+ Ø4 pasantes y cogidos con tuercas al transportín, al que previamente le
+ he desmontado el catadióptrico trasero) desde en la que va alojado el papel
+ de celofán rojo hasta la tapa final.
+ En total, siete capas.
+ Cada capa va lijada, pintada con imprimación para madera y posteriormente
+ de negro en la zona visible.
+ 
+\end_layout
+
+\begin_layout Standard
+En la segunda capa se colocan los LEDs del freno en sus orificios y se sueldan
+ los positivos entre sí, así como los negativos, de forma que el cableado
+ adopta la forma de la configuración definitiva de los LEDs.
+ Se colocan y sueldan los cables a los LEDs de los intermitentes, y resistencias
+ de 
+\begin_inset Formula $100\Omega$
+\end_inset
+
+ en sus negativos.
+ Se van añadiendo capas, y en el hueco que presentan, se coloca una plaquita
+ previamente soldada con el transistor y el conexionado a los LEDs del freno.
+ Para terminar, y colocadas todas las capas excepto la tapa, se coloca un
+ RJ45 hembra 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig:RJ45-Hembra"
+
+\end_inset
+
+ y se conectan a ella las 5 señales 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig:Fases módulo trasero"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\shape smallcaps
+\size footnotesize
+Distintas fases del montaje del módulo trasero 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Fases módulo trasero"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/fotos_bici/DSC_0064.jpg
+	lyxscale 15
+	scale 5
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/fotos_bici/DSC_0071.jpg
+	lyxscale 15
+	scale 5
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/fotos_bici/DSC_0073.jpg
+	lyxscale 15
+	scale 5
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/fotos_bici/DSC_0072.jpg
+	lyxscale 15
+	scale 5
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una vez comprobado el funcionamiento, se encolan entre sí las distintas
+ capas, se cierran y aprietan ayudándonos de los tornillos y de algunos
+ gatos, se encola las ranuras entre las distintas capas retirando el sobrante
+ y se repasa la pintura negra.
+ La unión es de tal forma que los tornillos pasantes pueden desmontarse
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig:capas_módulo_trasero"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Al final, se introduce papel de celofán rojo en los huecos de las luces
+ y se pega una capa protectora de vinilo transparente, del usado en los
+ dossieres de fotocopiadoras.
+\end_layout
+
+\begin_layout Subsubsection*
+A mejorar
+\end_layout
+
+\begin_layout Itemize
+El uso de papel celofán rojo o naranja no es buena opción de catadióptrico.
+ Hay que buscar otra solución.
+\end_layout
+
+\begin_layout Itemize
+Un error de precipitación fue pegar el vinilo a la primera capa con pegamento
+ loctite.
+ La unión quedó fija, pero el aspecto no fue el esperado.
+ Sin embargo no hubo ningún problema de funcionalidad.
+\end_layout
+
+\begin_layout Itemize
+Los RJ45 hembras 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig:RJ45-Hembra"
+
+\end_inset
+
+ están diseñados para soldar a una placa, no elementos 
+\begin_inset Quotes eld
+\end_inset
+
+al aire
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Es un trabajo delicado soldar cables directamente a sus conexiones, ya
+ que un exceso de calor puede provocar que sus contactos metálicos fundan
+ el plástico al que van cogidos.
+ Posteriormente, me di cuenta que es mejor soldar a los cables a tiras de
+ zócalos hembras y éstos, al tener medidas estándar en placa, conectarlos
+ por presión a los contactos del RJ45.
+ Por cierto, y aunque no son caros, hay que mandarlos a pedir en tiendas
+ online.
+ No los pude conseguir en ninguna tienda de la zona.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\shape smallcaps
+\size footnotesize
+Figuras base para las distintas capas 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:capas_módulo_trasero"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/parte_atras/documents-export-2014-04-14/cotas_2.pdf
+	lyxscale 75
+	scale 50
+	BoundingBox 120bp 260bp 495bp 500bp
+	clip
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/parte_atras/documents-export-2014-04-14/cotas_1.pdf
+	lyxscale 75
+	scale 50
+	BoundingBox 120bp 260bp 495bp 500bp
+	clip
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Intermitentes Delanteros
+\end_layout
+
+\begin_layout Standard
+Los intermitentes delanteros se implementan con dos LEDs de alta luminosidad
+ rojos, conectados sus negativos a resistencias de 
+\begin_inset Formula $100\Omega$
+\end_inset
+
+.
+ Como el manillar es un tubo de 
+\begin_inset Formula $\textrm{Ø20}$
+\end_inset
+
+, simplemente con dos tapones parecidos a los ya usados en el tubo de luces
+ principales se practica en cada uno un orificio para el LED, al que se
+ fija con silicona.
+ Los cables, largos, se hacen pasar por el interior y se sacan por un pequeño
+ orificio practicado en el manillar.
+ Se fijan los tapones una vez comprobado el funcionamiento, y se sueldan
+ conectores macho tipo PCB.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/fotos_bici/DSC_0075.jpg
+	lyxscale 15
+	scale 5
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/fotos_bici/DSC_0076.jpg
+	lyxscale 15
+	scale 5
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/fotos_bici/DSC_0077.jpg
+	lyxscale 15
+	scale 5
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\shape smallcaps
+\size footnotesize
+LEDs intermitentes delanteros 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:LEDs-intermitentes-delanteros"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Pulsadores que activan los intermitentes
+\end_layout
+
+\begin_layout Standard
+Los pulsadores 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig:Pulsadores-Delanteros"
+
+\end_inset
+
+ fueron objeto de varias elucubraciones y, al final, decidí poner algunos
+ normales que se ajustasen al hueco entre los cambios y el manillar.
+ Una funda de goma hace que entren en el hueco a presión y su movimiento
+ sea mínimo.
+ Sin embargo, es posible que este aspecto quede más estético si se pudiesen
+ implementar de otra forma.
+ Simplemente llevan dos cables soldados y éstos a una conexión PCB macho,
+ tanto en el lado izquierdo como en el derecho.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/fotos_bici/800x600-DSC_0007.JPG
+	lyxscale 15
+	scale 75
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\shape smallcaps
+\size footnotesize
+Pulsadores Delanteros 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Pulsadores-Delanteros"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Final de carrera del freno
+\end_layout
+
+\begin_layout Standard
+Otro quebradero de cabeza fue la implementación del dispositivo que detectara
+ cuando el freno (derecho) se activaba 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig: Final de carrera"
+
+\end_inset
+
+.
+ Le dimos vueltas a la posibilidad de colocar algo en la palanca del freno
+ que se encuentra en el cambio, o bien en algún lado del tensor o en la
+ propia horquilla del freno (la que presiona las pastillas).
+ Tres posibilidades parecieron ciertas: usar un sensor de efecto Hall 
+\begin_inset Wrap figure
+lines 7
+placement l
+overhang 0in
+width "20text%"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename efecto_hall.jpg
+	lyxscale 15
+	scale 8
+
+\end_inset
+
+
+\size footnotesize
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\shape smallcaps
+\size footnotesize
+Sensor efecto hall 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sensor-efecto-hall"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ , un interruptor magnético reed (ambas acercando/alejando un imán a ambos
+ dispositivos) o un final de carrera.
+ Pronto nos dimos cuenta que lo mejor, tanto por su posición dentro de la
+ bicicleta, como por sencillez, era usar el movimiento lineal del tensor,
+ y en él, fijar uno de estos tres elementos.
+\end_layout
+
+\begin_layout Standard
+El sensor de efecto Hall 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig:Sensor-efecto-hall"
+
+\end_inset
+
+ no lo llegué a encargar simplemente porque tenía interruptores reed y finales
+ de carrera, y quería aprovecharlos.
+ Se puede comprar en tiendas como 
+\begin_inset CommandInset href
+LatexCommand href
+name "shoptronica.com"
+target "http://www.shoptronica.com/search.php?orderby=position&orderway=desc&search_query=efecto+hall"
+
+\end_inset
+
+ o en 
+\begin_inset CommandInset href
+LatexCommand href
+name "cooking-hacks.com"
+target "http://www.cooking-hacks.com/hall-effect-sensor"
+
+\end_inset
+
+ por alrededor de un euro.
+ Existe una amplia documentación en la red de cómo usar y activar un sensor
+ de este tipo con ARDUINO
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "http://minibots.wordpress.com/2013/11/05/utilizacion-de-un-sensor-de-efecto-hall/"
+target "http://minibots.wordpress.com/2013/11/05/utilizacion-de-un-sensor-de-efecto-hall/"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Wrap figure
+lines 7
+placement r
+overhang 0in
+width "20text%"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename interruptor-magnetico-reed-switch.jpg
+	lyxscale 15
+	scale 8
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\shape smallcaps
+\size footnotesize
+Interruptor REED 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Interruptor-REED"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Me decidí en un principio por el interruptor reed 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig:Interruptor-REED"
+
+\end_inset
+
+ (
+\begin_inset CommandInset href
+LatexCommand href
+name "shoptronica.com reed"
+target "http://www.shoptronica.com/interruptor-magnetico-reed-switch/596-interruptor-magnetico-reed-switch.html"
+
+\end_inset
+
+).
+ Lo uní fijamente al tensor con presillas de manera que se moviese con él
+ y, al presionar el freno, se acercara a un imán.
+ Efectivamente, tras un ajuste de las distancias, el interruptor reed se
+ activaba, pero presentaba histéresis, es decir, permanecía imantado al
+ liberar el freno y alejarse del imán.
+ Para que se desactivase, había que alejarlo más del imán que el recorrido
+ que permitía el tensor.
+ Desde luego, era un gran inconveniente
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Parece ser que el interruptor reed funciona mejor cuando el acercamiento
+ al imán se realiza transversalmente a su eje, y no longitudinalmente, como
+ lo usaba con el tensor.
+ Pero cruzar perpendicularmente el interruptor respecto del tensor no era
+ una opción.
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Así que la siguiente opción fue usar un final de carrera.
+ Tras varias pruebas, resultó muy satisfactorio el funcionamiento cuando
+ lo fijé (se le pega por detrás un imán de neodimio y queda muy fijo al
+ tubo de acero del cuadro) al principio del tensor.
+ Sólo se necesita hacer solidario al interruptor algún elemento que hiciese
+ de vástago que pudiese empujar la palanca del mismo.
+ Tras darle algunas vueltas, y evitando dañar o modificar en demasía el
+ movimiento del tensor, una pieza de cobre de las fichas de empalme resulta
+ perfecta.
+ Una vez liberada de su carcasa de plástico, se le practica una ranura longitudi
+nal para poder introducir el tensor dentro, y se atornilla firmemente a
+ la distancia adecuada.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/fotos_bici/800x600-DSC_0009.JPG
+	lyxscale 15
+	scale 75
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\shape smallcaps
+\size footnotesize
+Fin de carrera del freno 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig: Final de carrera"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Caja con la placa principal y conexionado de control
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 7
+placement o
+overhang 0in
+width "20text%"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\shape smallcaps
+\size footnotesize
+Tiras de postes o zócalos hembra
+\shape default
+\size default
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Tiras-de-postes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename tira-de-postes-pines-hembra-torneado-254mm-recto.jpg
+	lyxscale 5
+	scale 8
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Tanto el bloque delantero, de donde vienen el grueso de las conexiones,
+ como el bloque trasero, tienen que comunicarse con ARDUINO.
+ Un conector DSUB9 hembra que encontré de reciclaje en el taller me vino
+ de perlas, pues tenía ya las conexiones soldadas a cables paralelos.
+ Le hice un hueco en la caja de plástico que venden para alojar a ARDUINO
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.cooking-hacks.com/shop/arduino/enclosures/plastic-case-for-small-project-88-65-36cm"
+target "http://www.cooking-hacks.com/shop/arduino/enclosures/plastic-case-for-small-project-88-65-36cm"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, lo fijé al mismo con pegamento de dos componentes, y los cables los soldé
+ a pines de tiras de zócalos hembra
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig:Tiras-de-postes"
+
+\end_inset
+
+.
+ Tan sólo añadir que la señal GND hubo que extraerla de la protección metálica
+ del conector, desarmándolo y soldándole un cable aparte.
+ 
+\end_layout
+
+\begin_layout Standard
+El siguiente paso sería alojar otro RJ45 hembra 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig:RJ45-Hembra"
+
+\end_inset
+
+ , para poder tender el cable de red que conecte el bloque trasero con ARDUINO.
+ Asimismo, y a esta conexión, se le añaden cables terminados en pines.
+\end_layout
+
+\begin_layout Standard
+Se interconectan entre sí los zócalos de los intermitentes izquierdos y
+ los derechos, y se conecta cada cable al pin correspondiente de ARDUINO
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "sub: pines de conexión"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 7
+placement l
+overhang 0in
+width "20text%"
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\shape smallcaps
+\size footnotesize
+Barrel Jack
+\shape default
+\size default
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig: Barrel Jack"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename barrel_jack.jpg
+	lyxscale 5
+	scale 8
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ También se le practica a la caja un orificio para poder alimentar la placa
+ a través de una fuente externa, permitiendo el paso de un 
+\begin_inset Quotes eld
+\end_inset
+
+barrel jack
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig: Barrel Jack"
+
+\end_inset
+
+.
+ La alimentación externa en este modelo de ARDUINO UNO requiere la actualización
+ del bootloader o la interconexión del pin 1 (RX) a tierra a través de una
+ resistencia de 
+\begin_inset Formula $10K\Omega$
+\end_inset
+
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "http://arduino.cc/es/Guide/Troubleshooting#toc5"
+target "http://arduino.cc/es/Guide/Troubleshooting#toc5"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se fija la placa ARDUINO a la caja en su parte inferior, con sendos tornillos
+ y tuercas 
+\begin_inset Formula $\textrm{Ø3}$
+\end_inset
+
+.
+ A esta parte inferior se le pega un trozo de madera al que se le han fijado
+ tiras del velcro, de forma que sea fácil poder colocar la caja en el cuadro
+ de la bici.
+\end_layout
+
+\begin_layout Standard
+Y ya solo queda cerrar la caja, comprobar el funcionamiento y colocarla
+ en su posición definitiva al cuadro de la bicicleta, conectando todos los
+ elementos.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Control central con ARDUINO 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Control-central-con"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/fotos_bici/DSC_0085.jpg
+	lyxscale 15
+	scale 5
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Unidad de alimentación
+\end_layout
+
+\begin_layout Standard
+ARDUINO 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig:Unidad de alimentación"
+
+\end_inset
+
+ puede alimentarse o bien a través de un cable USB, que a su vez sirve para
+ programarlo, o bien a través de una fuente externa.
+ En la configuración actual se ha optado por una pila de 9V, y se ha construido
+ un módulo con interruptor que permite el apagado o encendido de la unidad,
+ y que se aloja en una de las bolsas de transporte que tiene la bicicleta,
+ conectándose a ARDUINO a través de un cable con un barrel jack 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig: Barrel Jack"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Unidad de Alimentación y conectado 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Unidad de alimentación"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/fotos_bici/DSC_0084.jpg
+	lyxscale 15
+	scale 5
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /media/Datos/Institutos/IES_Seritium/anno_2013_2014/Proyecto_integrado/fotos_bici/DSC_0086.jpg
+	lyxscale 15
+	scale 5
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Cálculos de consumo
+\end_layout
+
+\begin_layout Standard
+Es recomendable hacer algunas estimaciones de consumo de la unidad, sobre
+ todo antes de lanzarse a la aventura de coger la bicicleta de noche.
+ Para estos cálculos se ha tenido en cuenta lo siguiente
+\end_layout
+
+\begin_layout Itemize
+El consumo principal sería el mantenimiento de las luces cortas y largas
+ permanentemente encendidas.
+ Se estudiarán los casos en el que la alimentación de los LEDs es constante
+ y el caso en el que la activación se hace a través de una señal cuadrada
+ con una frecuencia alta, lo que le disminuye algo el brillo pero permite
+ la reducción del consumo (sin notar el parpadeo de los LEDs).
+\end_layout
+
+\begin_layout Itemize
+La capacidad de una pila de 9V depende mucho de su tipología y marca, pero
+ supondré que en principio entrega unos 600mAh 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.afinidadelectrica.com.ar/articulo.php?IdArticulo=205"
+target "http://www.afinidadelectrica.com.ar/articulo.php?IdArticulo=205"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, si es alcalina.
+ También podrían usarse pilas de 9V recargables u otras pilas o baterías
+ que no excedan de los 20V (recomendable que no excedan de 12V y que sean
+ mayor de 6-7V) 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "http://es.wikipedia.org/wiki/Arduino"
+target "http://es.wikipedia.org/wiki/Arduino"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+El consumo de la placa ARDUINO no se ha medido, pero se supondrá de 100mAh
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "http://forum.arduino.cc/index.php/topic,31252.0.html"
+target "http://forum.arduino.cc/index.php/topic,31252.0.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ El ajuste fino del consumo de la placa necesita de un estudio más amplio
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.geekfactory.mx/arduino/mitos-de-arduino-las-baterias-duran-poco-para-alimentar-un-arduino/"
+target "http://www.geekfactory.mx/arduino/mitos-de-arduino-las-baterias-duran-poco-para-alimentar-un-arduino/"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Estimaciones experimentales, para las luces cortas (4 LEDs alta luminosidad
+ blancos en paralelo)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Relleno horizontal, para evitar que el título forme parte de una columna
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{2}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Alimentación continua 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig: circuito medida experimental"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Consumo total: 
+\begin_inset Formula $I_{T}=22,9mA$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Consumo por LED: 
+\begin_inset Formula $I_{LED}=4,33mA$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Resistencia de carga: 
+\begin_inset Formula $R_{LED}=99,2\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Vo pin ARDUINO: 
+\begin_inset Formula $V_{o}=5,7V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{LED}=3,51V$
+\end_inset
+
+ y 
+\begin_inset Formula $V_{R}=2,18V$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Añadir espacio horizontal para ajustar las dos columnas.
+ ¿No hay salto de columnas? NO, usa COLUMNBREAK
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Alimentación con pulsos
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Cadencia 2ms
+\end_layout
+
+\begin_layout Itemize
+Período 
+\begin_inset Formula $T=4ms$
+\end_inset
+
+ y frecuencia 
+\begin_inset Formula $f=\cfrac{1}{T}=250Hz$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Consumo total: 
+\begin_inset Formula $I_{T}=10,5mA$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Consumo por LED: 
+\begin_inset Formula $I_{LED}=2,1mA$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Vo pin ARDUINO: 
+\begin_inset Formula $V_{o}=2,9V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{LED}=1,8V$
+\end_inset
+
+ y 
+\begin_inset Formula $V_{R}=1,11V$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Medidas experimentales, señal continua 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig: circuito medida experimental"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+Utiliza 
+\backslash
+mathrm{=} para usar el símbolo matemático = o la ,
+\end_layout
+
+\begin_layout Itemize
+http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{circuitikz}[american voltages]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw 
+\end_layout
+
+\begin_layout Plain Layout
+
+	(0,0) to[open,v^>=$V_{pin}
+\backslash
+mathrm{=}5
+\backslash
+mathrm{,}7V$] (0,4)
+\end_layout
+
+\begin_layout Plain Layout
+
+    (0,4) to[short,*-,i^>=$I_{T}
+\backslash
+mathrm{=}22
+\backslash
+mathrm{,}9mA$] (1,4)
+\end_layout
+
+\begin_layout Plain Layout
+
+    (1,4) to[short] (8,4)
+\end_layout
+
+\begin_layout Plain Layout
+
+	(2,4) to[empty led,i>^=$
+\backslash
+;4
+\backslash
+mathrm{,}33mA$] (2,2)  
+\end_layout
+
+\begin_layout Plain Layout
+
+	(4,4) to[empty led] (4,2)
+\end_layout
+
+\begin_layout Plain Layout
+
+	(6,4) to[empty led] (6,2)
+\end_layout
+
+\begin_layout Plain Layout
+
+    % 
+\backslash
+quad, 
+\backslash
+; --> aumenta espacio de la etiqueta
+\end_layout
+
+\begin_layout Plain Layout
+
+	(8,4) to[empty led,v^<=$
+\backslash
+;3
+\backslash
+mathrm{,}51V$] (8,2)
+\end_layout
+
+\begin_layout Plain Layout
+
+	%(5,2) to[R=100{<
+\backslash
+ohm>}] (5,0) ¡¡NO FUNCIONA!!
+\end_layout
+
+\begin_layout Plain Layout
+
+    % Necesito incluir la etiqueta entre $$.
+ Notación matemática
+\end_layout
+
+\begin_layout Plain Layout
+
+    (5,2) to[R,l=$100{
+\backslash
+Omega}$] (5,0)
+\end_layout
+
+\begin_layout Plain Layout
+
+    % Diferentes alineaciones de R
+\end_layout
+
+\begin_layout Plain Layout
+
+    %(5,2) to[R,l=$100{
+\backslash
+Omega}$,label/align=straight] (5,0)
+\end_layout
+
+\begin_layout Plain Layout
+
+    %(5,0) to[R,l=$100{
+\backslash
+Omega}$,label/align=rotate] (5,2)
+\end_layout
+
+\begin_layout Plain Layout
+
+	(4.5,2) to[open,v_<=$2
+\backslash
+mathrm{,}18V$] (4.5,0)
+\end_layout
+
+\begin_layout Plain Layout
+
+    (2,2) -- (8,2) 
+\end_layout
+
+\begin_layout Plain Layout
+
+	(5,0) to[short,-*] (0,0)    
+\end_layout
+
+\begin_layout Plain Layout
+
+;
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end {circuitikz}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Conclusión a los cálculos de consumo
+\end_layout
+
+\begin_layout Itemize
+Para un consumo de señal continua, dos grupos de luces más el consumo de
+ la placa ARDUINO dan un total de 
+\begin_inset Formula $Q\approx146mAh$
+\end_inset
+
+.
+ Para una pila de 600mAh de carga, se puede estimar un tiempo de funcionamiento
+ de aproximadamente 4,1 horas.
+\end_layout
+
+\begin_layout Itemize
+Con una señal a pulsos, en las mismas condiciones, 
+\begin_inset Formula $Q\approx121mAh$
+\end_inset
+
+, lo que corresponde a un tiempo de funcionamiento de 4,96 horas.
+\end_layout
+
+\begin_layout Itemize
+Es evidente que necesito o bien reducir el consumo de ARDUINO o bien usar
+ elementos de mayor capacidad de carga.
+ En este caso la solución de pilas recargables puede ser una opción.
+ Otra opción, al tener ARDUINO la facilidad de alimentarse a través de una
+ conexión USB, sería el uso de una batería externa.
+ Con una de 2200mAh, por ejemplo, tendríamos una autonomía de entre 15 y
+ 18,2 horas aproximadamente, números más que aceptables.
+\end_layout
+
+\begin_layout Section
+Electrónica
+\end_layout
+
+\begin_layout Standard
+La electrónica de los circuitos es simple.
+ A continuación se detallan los circuitos usados:
+\end_layout
+
+\begin_layout Subsection
+Circuito con transistor para activar los LEDs traseros
+\end_layout
+
+\begin_layout Standard
+Mediante un transistor en saturación o corte, se activan o desactivan los
+ LEDs del freno.
+ Aunque no es necesario (experimentalmente una activación directa a ARDUINO
+ resulta satisfactoria), es una forma de asegurarse el máximo brillo en
+ los LEDs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Circuito activador con transistor NPN 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig: circuito activador npn"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{circuitikz}[american voltages]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw 
+\end_layout
+
+\begin_layout Plain Layout
+
+%definicion nodo del transistor
+\end_layout
+
+\begin_layout Plain Layout
+
+	(6,1) node[npn] (npn) {} 
+\end_layout
+
+\begin_layout Plain Layout
+
+        (npn) node[scale=1,right=-1mm] {2N2222} %para poner la etiqueta
+\end_layout
+
+\begin_layout Plain Layout
+
+           % Jugar con xscale y yscale modifica el tamaño, o con scale.
+ right/left a izquierda y derecha
+\end_layout
+
+\begin_layout Plain Layout
+
+           % below para poner debajo, o jugar con anchor = north, south,
+ east , west...
+\end_layout
+
+\begin_layout Plain Layout
+
+           % scale=-1 o xscale=-1 o yscale=-1 refleja las cosas.
+\end_layout
+
+\begin_layout Plain Layout
+
+		(npn.base) node[anchor=south] {B} 
+\end_layout
+
+\begin_layout Plain Layout
+
+		(npn.collector) node[anchor=east] {C} 
+\end_layout
+
+\begin_layout Plain Layout
+
+		(npn.emitter) node[anchor=east] {E}  
+\end_layout
+
+\begin_layout Plain Layout
+
+% construyo el circuito: del emisor
+\end_layout
+
+\begin_layout Plain Layout
+
+    (6,-1) node[ground] {}
+\end_layout
+
+\begin_layout Plain Layout
+
+   	 to[R=$100{
+\backslash
+Omega}$] (npn.emitter) %hasta el emisor
+\end_layout
+
+\begin_layout Plain Layout
+
+% construyo el circuito: de la base
+\end_layout
+
+\begin_layout Plain Layout
+
+    (0,1) node[left] {$V_{pin}$}
+\end_layout
+
+\begin_layout Plain Layout
+
+   	 to[R=$1K{
+\backslash
+Omega}$,o-] (npn.base) %hasta la base
+\end_layout
+
+\begin_layout Plain Layout
+
+% construyo el circuito: del colector
+\end_layout
+
+\begin_layout Plain Layout
+
+    (0,4) node[left] {$V_{CC}=9V$}
+\end_layout
+
+\begin_layout Plain Layout
+
+   	 (0,4) to[short,o-] (10,4)
+\end_layout
+
+\begin_layout Plain Layout
+
+	    (2,4) to[empty led] (2,2)  
+\end_layout
+
+\begin_layout Plain Layout
+
+	    (4,4) to[empty led] (4,2)
+\end_layout
+
+\begin_layout Plain Layout
+
+	    (6,4) to[empty led] (6,2)
+\end_layout
+
+\begin_layout Plain Layout
+
+    	(8,4) to[empty led] (8,2)
+\end_layout
+
+\begin_layout Plain Layout
+
+        (10,4) to[empty led] (10,2)
+\end_layout
+
+\begin_layout Plain Layout
+
+        (2,2) to[short] (10,2) % interconexión de los leds en sus negativos
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+        (6,2) to[short,*-] (npn.collector)      		
+\end_layout
+
+\begin_layout Plain Layout
+
+;
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end {circuitikz}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Prueba 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig: prueba"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{circuitikz}[american voltages]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw 
+\end_layout
+
+\begin_layout Plain Layout
+
+     (0,0) node[pnp] (pnp2) {2}	
+\end_layout
+
+\begin_layout Plain Layout
+
+     (pnp2.B) node[pnp, xscale=-1, anchor=B] (pnp1) {}	
+\end_layout
+
+\begin_layout Plain Layout
+
+	  (pnp1) node {1}  %no se pone el 1 en la parte de arriba porque también
+ lo refleja con xscale=-1
+\end_layout
+
+\begin_layout Plain Layout
+
+     (pnp1.C) node[npn, anchor=C] (npn1) {}
+\end_layout
+
+\begin_layout Plain Layout
+
+     (pnp2.C) node[npn, xscale=-1, anchor=C] (npn2) {}
+\end_layout
+
+\begin_layout Plain Layout
+
+     (pnp1.E) -- (pnp2.E) (npn1.E) -- (npn2.E)
+\end_layout
+
+\begin_layout Plain Layout
+
+	 % (pnp1.B) node[circ] {} -- (pnp2.C) node[circ] {}
+\end_layout
+
+\begin_layout Plain Layout
+
+     (pnp1.B) |- (pnp2.C)
+\end_layout
+
+\begin_layout Plain Layout
+
+;
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end {circuitikz}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Circuito pulsador o fin de carrera: INPUT DIGITAL de ARDUINO
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pulsador en ARDUINO 
+\begin_inset CommandInset label
+LatexCommand label
+name "Pulsador ARDUINO"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{circuitikz}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw 
+\end_layout
+
+\begin_layout Plain Layout
+
+  (-1,2) node[left] {$V_{PIN}$} to[short,o-] (0,2) %de -1,2 un nodo a través
+ de una linea a 0,2
+\end_layout
+
+\begin_layout Plain Layout
+
+  to[R=$10K{
+\backslash
+Omega}$] (0,0) node[ground] {} %y de ahí a R al ground
+\end_layout
+
+\begin_layout Plain Layout
+
+  %(0,2) to[ospst,-o] (0,4) node[left=1mm] {$5V$} % y del 0,2 al 0,4 se
+ dibuja el pulsador		
+\end_layout
+
+\begin_layout Plain Layout
+
+  %(0,2) to[pushbutton,-o] (0,4) node[left=1mm] {$5V$} % y del 0,2 al 0,4
+ se dibuja el pulsador
+\end_layout
+
+\begin_layout Plain Layout
+
+    %pulsador
+\end_layout
+
+\begin_layout Plain Layout
+
+    (0,2) to[short,-*] (0,2.7)
+\end_layout
+
+\begin_layout Plain Layout
+
+    (0,3.3) to[short,*-o] (0,4) node[left=1mm] {$5V$} % y del 0,2 al 0,4
+ se dibuja el pulsador		
+\end_layout
+
+\begin_layout Plain Layout
+
+    % (0,2.7) to[open] (0,3.3) 
+\end_layout
+
+\begin_layout Plain Layout
+
+    (-0.2,2.7) -- (-0.2,3.3)	
+\end_layout
+
+\begin_layout Plain Layout
+
+    (-0.2,3) -- (-0.4,3)
+\end_layout
+
+\begin_layout Plain Layout
+
+    %Fin del pulsador
+\end_layout
+
+\begin_layout Plain Layout
+
+;
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end {circuitikz}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Activación simple de un LED: OUTPUT DIGITAL de ARDUINO
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{circuitikz}[american voltages]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw 
+\end_layout
+
+\begin_layout Plain Layout
+
+  (-2,2) node[left] {$V_{PIN}$}
+\end_layout
+
+\begin_layout Plain Layout
+
+  to[empty led,o-] (0,2)
+\end_layout
+
+\begin_layout Plain Layout
+
+  to[R=$100{
+\backslash
+Omega}$] (0,0) node[ground] {}  	
+\end_layout
+
+\begin_layout Plain Layout
+
+;
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end {circuitikz}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Caption
+
+\begin_layout Plain Layout
+LED en ARDUINO 
+\begin_inset CommandInset label
+LatexCommand label
+name "LED en ARDUINO"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Programación y funcionamiento
+\end_layout
+
+\begin_layout Standard
+La otra parte importante del proyecto consiste en su SOFTWARE, que describiremos
+ a continuación.
+ Las bases del mismo ha constituido el núcleo central de la asignatura del
+ 
+\series bold
+Proyecto Integrado de 2º BAC 
+\begin_inset Quotes eld
+\end_inset
+
+Electrónica Digital y Programación
+\begin_inset Quotes erd
+\end_inset
+
+
+\series default
+, impartida en el 
+\series bold
+IES Seritium de Jerez de la Fra
+\series default
+.
+ durante el curso 2013-2014.
+ La funcionalidad básica fue desarrollada por los alumnos de esta asignatura,
+ con mejoras en el código posteriormente realizadas por su profesor.
+\end_layout
+
+\begin_layout Subsection
+Definición de variables: pines de conexión 
+\begin_inset CommandInset label
+LatexCommand label
+name "sub: pines de conexión"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,comment={[l]{//}},commentstyle={\color{purple}\ttfamily},keywordstyle={\color{blue}},language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// declaracion de variables 
+\end_layout
+
+\begin_layout Plain Layout
+
+// Freno 
+\end_layout
+
+\begin_layout Plain Layout
+
+const int luzFreno = 3; 
+\end_layout
+
+\begin_layout Plain Layout
+
+const int pulsadorFreno = 10; 
+\end_layout
+
+\begin_layout Plain Layout
+
+// Intermitentes
+\end_layout
+
+\begin_layout Plain Layout
+
+const int intermitenteIzquierdo= 5; 
+\end_layout
+
+\begin_layout Plain Layout
+
+const int intermitenteDerecho= 4; 
+\end_layout
+
+\begin_layout Plain Layout
+
+const int pulsadorIzquierdo= 12; 
+\end_layout
+
+\begin_layout Plain Layout
+
+const int pulsadorDerecho= 11; 
+\end_layout
+
+\begin_layout Plain Layout
+
+// Luces cortas y largas 
+\end_layout
+
+\begin_layout Plain Layout
+
+const int Largas = 6; 
+\end_layout
+
+\begin_layout Plain Layout
+
+const int Cortas = 7; 
+\end_layout
+
+\begin_layout Plain Layout
+
+const int pulsadorLuces = 13;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No hay mucho que explicar de este código.
+ Simplemente se definen los pines que sirven para detectar (empiezan por
+ 
+\begin_inset Quotes eld
+\end_inset
+
+pulsador
+\begin_inset Quotes erd
+\end_inset
+
+) o activar las distintas señales.
+ Se sigue, en general, la nomenclatura llamada 
+\shape italic
+jorobaDeCamello
+\shape default
+.
+\end_layout
+
+\begin_layout Subsection
+Definición de variables: estados
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "comment={[l]{//}},commentstyle={\color{purple}\ttfamily},keywordstyle={\color{blue}},language=Java"
+inline false
+status collapsed
+
+\begin_layout Plain Layout
+
+// variables de estado
+\end_layout
+
+\begin_layout Plain Layout
+
+int estadoFreno = LOW;
+\end_layout
+
+\begin_layout Plain Layout
+
+int estadoLuces = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int estadoIIz = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int estadoIDr = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int estadoAlarma = 0; // controla si la bici est en posicin o no de emergencia.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+int estadoEmergencia = 0; // controla el parpadeo de emergencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Indican los distintos estados por los que pasará el programa.
+ En cada estado, y según como se encuentre, funcionará de una u otra manera.
+\end_layout
+
+\begin_layout Subsection
+Definición de variables: temporales
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,comment={[l]{//}},commentstyle={\color{purple}\ttfamily},keywordstyle={\color{blue}},language=Java"
+inline false
+status collapsed
+
+\begin_layout Plain Layout
+
+// variables temporales 
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long t = 0; 
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long retardo = 10; 
+\end_layout
+
+\begin_layout Plain Layout
+
+// segundos que dura el parpadeo de los intermitentes 
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long cadencia =200; 
+\end_layout
+
+\begin_layout Plain Layout
+
+// cadencia o frecuencia de parpadeo 
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long cadenciaEmergencia = 500; 
+\end_layout
+
+\begin_layout Plain Layout
+
+// frecuencia de parpadeo en el estado de emergencia 
+\end_layout
+
+\begin_layout Plain Layout
+
+// tiempo intermitente izquierdo 
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long tIIz = 0; 
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long difIIz = 0; 
+\end_layout
+
+\begin_layout Plain Layout
+
+// tiempo intermitente derecho 
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long tIDr = 0; 
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long difIDr = 0; 
+\end_layout
+
+\begin_layout Plain Layout
+
+// parpadeo luces largas cortas 
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long cadenciaPotencia = 2;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las variables temporales controlan los 
+\begin_inset Quotes eld
+\end_inset
+
+tiempos
+\begin_inset Quotes erd
+\end_inset
+
+ del programa.
+ En detalle:
+\end_layout
+
+\begin_layout Itemize
+La variable 
+\emph on
+t 
+\emph default
+sirve para contar los milisegundos transcurridos desde que se encendió la
+ placa.
+\end_layout
+
+\begin_layout Itemize
+La variable 
+\emph on
+retardo
+\emph default
+ define la duración del parpadeo de los intermitentes.
+\end_layout
+
+\begin_layout Itemize
+La variable 
+\emph on
+cadencia
+\emph default
+ controla la frecuencia de parpadeo de los intermitentes.
+\end_layout
+
+\begin_layout Itemize
+La variable 
+\emph on
+cadenciaEmergencia
+\emph default
+ controla la frecuencia de parpadeo de las luces en estado de Emergencia.
+ Podrá cambiarse posteriormente.
+\end_layout
+
+\begin_layout Itemize
+La variable 
+\emph on
+tIIz
+\emph default
+ indica el tiempo, posterior a 
+\emph on
+t
+\emph default
+ en el momento de activación, en el que acabará la secuencia de activación
+ del intermitente izquierdo (
+\emph on
+tIDr
+\emph default
+ análogo en el derecho).
+\end_layout
+
+\begin_layout Itemize
+La variable 
+\emph on
+difIIz
+\emph default
+ controla la diferencia que existe entre 
+\emph on
+tIIz
+\emph default
+ y el tiempo transcurrido.
+ Mientras 
+\emph on
+difIIz
+\emph default
+ sea mayor que cero, el intermitente izquierdo se activará (
+\emph on
+difIDr
+\emph default
+ análogo en el derecho).
+\end_layout
+
+\begin_layout Itemize
+La variable 
+\emph on
+cadenaPotencia
+\emph default
+ controla el parpadeo rápido de las luces cortas y largas para disminuir
+ el consumo de las mismas.
+\end_layout
+
+\begin_layout Subsection
+Setup
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,comment={[l]{//}},commentstyle={\color{purple}\ttfamily},keywordstyle={\color{blue}},language=Java"
+inline false
+status collapsed
+
+\begin_layout Plain Layout
+
+void setup () {   
+\end_layout
+
+\begin_layout Plain Layout
+
+// salidas   
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(luzFreno,OUTPUT);   
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(intermitenteIzquierdo,OUTPUT);   
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(intermitenteDerecho,OUTPUT);   
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(Largas,OUTPUT);   
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(Cortas,OUTPUT);   
+\end_layout
+
+\begin_layout Plain Layout
+
+// pulsadores   
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(pulsadorFreno,INPUT);   
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(pulsadorIzquierdo,INPUT);   
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(pulsadorDerecho,INPUT);   
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(pulsadorLuces,INPUT); 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Simplemente activa los pines de salida y entrada.
+\end_layout
+
+\begin_layout Subsection
+Bucle principal LOOP
+\end_layout
+
+\begin_layout Subsubsection
+Contamos el tiempo
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,comment={[l]{//}},commentstyle={\color{purple}\ttfamily},keywordstyle={\color{blue}},language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+  // ******************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Conteo tiempo
+\end_layout
+
+\begin_layout Plain Layout
+
+  // ******************
+\end_layout
+
+\begin_layout Plain Layout
+
+  t = millis(); // microsegundos despus de encendido
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Bucle del freno
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,comment={[l]{//}},commentstyle={\color{purple}\ttfamily},keywordstyle={\color{blue}},language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// ******************
+\end_layout
+
+\begin_layout Plain Layout
+
+// Pulso luz de freno
+\end_layout
+
+\begin_layout Plain Layout
+
+// ******************
+\end_layout
+
+\begin_layout Plain Layout
+
+if (digitalRead(pulsadorFreno) == HIGH) { // 1ª condicional      
+\end_layout
+
+\begin_layout Plain Layout
+
+    delay(50);         
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (digitalRead(pulsadorFreno) == HIGH) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+	// 2ª condicional            
+\end_layout
+
+\begin_layout Plain Layout
+
+	estadoFreno=HIGH;         
+\end_layout
+
+\begin_layout Plain Layout
+
+	estadoAlarma = LOW; 
+\end_layout
+
+\begin_layout Plain Layout
+
+	// desconecta el estado de alarma         
+\end_layout
+
+\begin_layout Plain Layout
+
+	} // 2ª condicional FIN    
+\end_layout
+
+\begin_layout Plain Layout
+
+} else {         
+\end_layout
+
+\begin_layout Plain Layout
+
+    estadoFreno=LOW;   
+\end_layout
+
+\begin_layout Plain Layout
+
+}// 1ª condicional FIN      
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// Enciendo luz freno    
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(luzFreno,estadoFreno);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al pulsar el pulsador del freno (fin de carrera), hace un doble reconocimiento
+ para evitar activaciones espurias.
+ Desconecta el estado de alarma (sirve para eso si la alarma está encendida)
+ y activa el estado del freno.
+ Si no, el estado del freno lo deja en LOW (desconectado).
+\end_layout
+
+\begin_layout Standard
+Posteriormente en la salida escribe el estado del freno.
+\end_layout
+
+\begin_layout Subsubsection
+Bucle de las luces cortas y largas
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,comment={[l]{//}},commentstyle={\color{purple}\ttfamily},keywordstyle={\color{blue}},language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  // *************************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Pulso luz LARGAS / CORTAS
+\end_layout
+
+\begin_layout Plain Layout
+
+  // *************************
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (digitalRead(pulsadorLuces) == HIGH && estadoAlarma==LOW) { // 1ª condicion
+al
+\end_layout
+
+\begin_layout Plain Layout
+
+     delay(200);
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (digitalRead(pulsadorLuces) == HIGH && estadoAlarma==LOW) { //
+ 2ª condicional   
+\end_layout
+
+\begin_layout Plain Layout
+
+        estadoLuces = estadoLuces + 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+        // estadoAlarma = LOW; // desconecta el estado de alarma; mejor
+ se quita el estado de alarma pulsando el freno.
+\end_layout
+
+\begin_layout Plain Layout
+
+        } // 2ª condicional FIN 
+\end_layout
+
+\begin_layout Plain Layout
+
+  }// 1ª condicional FIN
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  // desbordamiento
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (estadoLuces>=3) { estadoLuces =0; } // condicional de desbordamiento
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (estadoLuces==1 && (t/cadenciaPotencia)%2==HIGH ) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite(Largas,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite(Cortas,HIGH);   
+\end_layout
+
+\begin_layout Plain Layout
+
+  } else if (estadoLuces==2 && (t/cadenciaPotencia)%2==HIGH)  {
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite(Largas,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite(Cortas,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+  } else {
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite(Largas,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite(Cortas,LOW); 
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Al encender las luces, pulsos de la luz de freno
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Reconocimiento de pulsos
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (estadoLuces>=1 && t%1500<=200) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    digitalWrite(luzFreno,HIGH); 
+\end_layout
+
+\begin_layout Plain Layout
+
+  } else {
+\end_layout
+
+\begin_layout Plain Layout
+
+    digitalWrite(luzFreno,estadoFreno); // como este el feeno 
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tiene tres partes diferenciadas:
+\end_layout
+
+\begin_layout Enumerate
+Lee el estado del pulsador, evitando activaciones espurias, y, cada vez
+ que detecta una detección, el estado de las luces lo aumenta en uno.
+\end_layout
+
+\begin_layout Enumerate
+Controla el desbordamiento de dicho estado.
+ Si es igual o mayor que tres lo vuelve a poner a cero.
+ Así la variable 
+\emph on
+estadoLuces
+\emph default
+ sólo valdrá entre cero y dos.
+ En cero, todas se apagan; en uno se encienden las cortas y en dos, las
+ cortas y largas.
+ La condición 
+\emph on
+(t/cadenciaPotencia)%2==HIGH
+\emph default
+ permite que sólo en el intervalo temporal definido por 
+\emph on
+cadenciaPotencia
+\emph default
+ se activen las luces, reduciendo el consumo.
+\end_layout
+
+\begin_layout Enumerate
+Durante un tiempo definido por la expresión 
+\emph on
+t%1500<=200 
+\emph default
+se permite el encendido de las luces de freno (parpadeo lento) siempre que
+ las luces cortas y/o largas estén encendidas, lo que permite la señalización
+ de la bicicleta de noche por la parte trasera.
+\end_layout
+
+\begin_layout Subsubsection
+Intermitentes izquierdo y derecho
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,comment={[l]{//}},commentstyle={\color{purple}\ttfamily},keywordstyle={\color{blue}},language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+  // *************************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Intermitentes IZQUIERDOS
+\end_layout
+
+\begin_layout Plain Layout
+
+  // *************************
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (digitalRead(pulsadorIzquierdo) == HIGH  && estadoAlarma==LOW ) { //
+ 1ª condicional
+\end_layout
+
+\begin_layout Plain Layout
+
+     delay(100);
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (digitalRead(pulsadorIzquierdo) == HIGH && estadoAlarma==LOW)
+ { // 2ª condicional   
+\end_layout
+
+\begin_layout Plain Layout
+
+        difIIz = retardo * 1000; // diferencia entre los milisegundos actuales
+ mas el retardo   
+\end_layout
+
+\begin_layout Plain Layout
+
+        tIIz = t + difIIz; // tiempo en el que acaba la secuencia 
+\end_layout
+
+\begin_layout Plain Layout
+
+        difIDr = 0; // anula el intermitente izquierdo   
+\end_layout
+
+\begin_layout Plain Layout
+
+        } // 2ª condicional FIN 
+\end_layout
+
+\begin_layout Plain Layout
+
+  } // 1ª condicional FIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  // } else {
+\end_layout
+
+\begin_layout Plain Layout
+
+  //       estadoIIz = LOW;
+\end_layout
+
+\begin_layout Plain Layout
+
+  // } // 1ª condicional FIN
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (difIIz>0) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      estadoIIz = (difIIz/cadencia)%2;
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite (intermitenteIzquierdo,estadoIIz);
+\end_layout
+
+\begin_layout Plain Layout
+
+      difIIz = tIIz - t; // voy calculando la diferencia
+\end_layout
+
+\begin_layout Plain Layout
+
+  }  else if (difIIz<=0) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      difIIz = 0; // fuerza a cero
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite (intermitenteIzquierdo,LOW); // apaga intermitente
+\end_layout
+
+\begin_layout Plain Layout
+
+  }   
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  // *************************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Intermitentes DERECHOS
+\end_layout
+
+\begin_layout Plain Layout
+
+  // *************************
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (digitalRead(pulsadorDerecho) == HIGH  && estadoAlarma==LOW) { // 1ª
+ condicional
+\end_layout
+
+\begin_layout Plain Layout
+
+     delay(100);
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (digitalRead(pulsadorDerecho) == HIGH && estadoAlarma==LOW) {
+ // 2ª condicional   
+\end_layout
+
+\begin_layout Plain Layout
+
+        difIDr = retardo * 1000; // diferencia entre los milisegundos actuales
+ mas el retardo   
+\end_layout
+
+\begin_layout Plain Layout
+
+        tIDr = t + difIDr; // tiempo en el que acaba la secuencia    
+\end_layout
+
+\begin_layout Plain Layout
+
+        difIIz = 0; // anula el intermitente izquierdo
+\end_layout
+
+\begin_layout Plain Layout
+
+        } // 2ª condicional FIN 
+\end_layout
+
+\begin_layout Plain Layout
+
+  } // 1ª condicional FIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  // } else {
+\end_layout
+
+\begin_layout Plain Layout
+
+  //       estadoIIz = LOW;
+\end_layout
+
+\begin_layout Plain Layout
+
+  // } // 1ª condicional FIN
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (difIDr>0) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      estadoIDr = (difIDr/cadencia)%2;
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite (intermitenteDerecho,estadoIDr);
+\end_layout
+
+\begin_layout Plain Layout
+
+      difIDr = tIDr - t; // voy calculando la diferencia
+\end_layout
+
+\begin_layout Plain Layout
+
+  }  else if (difIDr<=0) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      difIDr = 0; // fuerza a cero
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite (intermitenteDerecho,LOW); // apaga intermitente
+\end_layout
+
+\begin_layout Plain Layout
+
+  }   
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Paso a explicar sólo la parte de uno de los intermitentes (izquierdo).
+ La otra es simétrica.
+\end_layout
+
+\begin_layout Enumerate
+Reconoce si se ha pulsado el intermitente izquierdo, y si el estado no es
+ de alarma y la detección no es espuria, realiza tres operaciones
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calcula 
+\emph on
+difIIz
+\emph default
+, según el retardo previamente establecido.
+\end_layout
+
+\begin_layout Enumerate
+Calcula 
+\emph on
+tIIz
+\emph default
+, tiempo máximo en el que estará activo.
+\end_layout
+
+\begin_layout Enumerate
+Anula la 
+\emph on
+difIDr
+\emph default
+, para desactivar el derecho caso de que estuviese encendido.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Si 
+\emph on
+difIIz>0
+\emph default
+, calcula 
+\emph on
+estadoIIz
+\emph default
+ según la 
+\emph on
+cadencia
+\emph default
+ establecida.
+ Escribe el estado en la salida y resta 
+\emph on
+difIIz
+\emph default
+ del tiempo máximo entre el actual.
+ Esta diferencia irá disminuyendo, de forma que cuando se alcance 
+\emph on
+tIIz
+\emph default
+ será cero.
+ Cuando lo sea, apagará el intermitente.
+\end_layout
+
+\begin_layout Subsubsection
+Luces de emergencia
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,comment={[l]{//}},commentstyle={\color{purple}\ttfamily},keywordstyle={\color{blue}},language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+  // *******************************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Luces de Emergencia
+\end_layout
+
+\begin_layout Plain Layout
+
+  // *******************************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Se encienden todas las luces (parpadeando) al pulsar los dos intermitentes
+ a la vez
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (digitalRead(pulsadorIzquierdo) == HIGH && digitalRead(pulsadorDerecho)
+ == HIGH) { // 1ª condicional
+\end_layout
+
+\begin_layout Plain Layout
+
+     delay(300);
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (digitalRead(pulsadorIzquierdo) == HIGH && digitalRead(pulsadorDerech
+o) == HIGH) { // 2ª condicional
+\end_layout
+
+\begin_layout Plain Layout
+
+            estadoAlarma = HIGH;
+\end_layout
+
+\begin_layout Plain Layout
+
+            difIIz=0; // anula intermitente izquierdo
+\end_layout
+
+\begin_layout Plain Layout
+
+            difIDr=0; // anula intermitente derecho
+\end_layout
+
+\begin_layout Plain Layout
+
+            estadoLuces = LOW; // apaga las luces
+\end_layout
+
+\begin_layout Plain Layout
+
+            estadoFreno = LOW; // anula el freno
+\end_layout
+
+\begin_layout Plain Layout
+
+        } // Fin del 2º condicional
+\end_layout
+
+\begin_layout Plain Layout
+
+  } // Fin del 1º condicional
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (estadoAlarma) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    estadoEmergencia = (t/cadenciaEmergencia)%2;
+\end_layout
+
+\begin_layout Plain Layout
+
+    digitalWrite(Largas,estadoEmergencia^HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+    digitalWrite(Cortas,estadoEmergencia);
+\end_layout
+
+\begin_layout Plain Layout
+
+    digitalWrite(intermitenteDerecho,estadoEmergencia^HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+    digitalWrite(intermitenteIzquierdo,estadoEmergencia^HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+    digitalWrite(luzFreno,estadoEmergencia);
+\end_layout
+
+\begin_layout Plain Layout
+
+  }  // condiconal de Alarma
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si se pulsa durante un tiempo (300 ms) los dos pulsadores de los intermitentes
+ a la vez se entra en estado de alarma y...
+\end_layout
+
+\begin_layout Enumerate
+Se anula el resto de estados.
+ Sólo se activa el estado de alarma 
+\emph on
+estadoAlarma
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+En este estado, se calcula un 
+\emph on
+estadoEmergencia
+\emph default
+ con la frecuencia definida por 
+\emph on
+cadenciaEmergencia
+\emph default
+, y en él parpadean todas las luces, algunas sincronizadas y otras desincronizad
+as (mediante la función booleana XOR: 
+\emph on
+^HIGH
+\emph default
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Este estado es útil si de noche se desea indicar la presencia de la bicicleta
+ cuando esté en reposo.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Disminuyo/aumento la cadencia de las luces de emergencia
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "breaklines=true,comment={[l]{//}},commentstyle={\color{purple}\ttfamily},keywordstyle={\color{blue}},language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+  //****************************************************************************
+************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // En estado de Alarma, pulso Intermitente derecho para aumentar la cadencia
+ de emergencia
+\end_layout
+
+\begin_layout Plain Layout
+
+  //****************************************************************************
+************
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (digitalRead(pulsadorDerecho) == HIGH  && estadoAlarma==HIGH) { //
+ 1ª condicional
+\end_layout
+
+\begin_layout Plain Layout
+
+     delay(50);
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (digitalRead(pulsadorDerecho) == HIGH && estadoAlarma==HIGH)
+ { // 2ª condicional   
+\end_layout
+
+\begin_layout Plain Layout
+
+        cadenciaEmergencia = (cadenciaEmergencia+50)*(cadenciaEmergencia<=1000)+
+1000*(cadenciaEmergencia>1000);
+\end_layout
+
+\begin_layout Plain Layout
+
+        } // 2ª condicional FIN 
+\end_layout
+
+\begin_layout Plain Layout
+
+  } // 1ª condicional FIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  //****************************************************************************
+************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // En estado de Alarma, pulso Intermitente izquierdo para disminuir la
+ cadencia de emergencia
+\end_layout
+
+\begin_layout Plain Layout
+
+  //****************************************************************************
+************
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (digitalRead(pulsadorIzquierdo) == HIGH  && estadoAlarma==HIGH) { //
+ 1ª condicional
+\end_layout
+
+\begin_layout Plain Layout
+
+     delay(50);
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (digitalRead(pulsadorIzquierdo) == HIGH && estadoAlarma==HIGH)
+ { // 2ª condicional   
+\end_layout
+
+\begin_layout Plain Layout
+
+        cadenciaEmergencia = (cadenciaEmergencia-50)*(cadenciaEmergencia>50)+50*
+(cadenciaEmergencia<=50); // cadencia minima 50
+\end_layout
+
+\begin_layout Plain Layout
+
+        } // 2ª condicional FIN 
+\end_layout
+
+\begin_layout Plain Layout
+
+  } // 1ª condicional FIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+} // FIN DEL PROGRAMA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con este código se permite, siempre que estemos en estado de alarma, aumentar
+ o disminuir la variable 
+\emph on
+cadenciaEmergencia
+\emph default
+ de 50 en 50, entre los límites 50 y 1000, permitiendo controlar así la
+ rapidez del parpadeo.
+\end_layout
+
+\begin_layout Section
+Colaboradores
+\end_layout
+
+\begin_layout Paragraph
+Programadores
+\end_layout
+
+\begin_layout Enumerate
+Gonzalo Aguilera Salas 2 BAC C 
+\end_layout
+
+\begin_layout Enumerate
+Eduardo Barba Aguilar 2 BAC C 
+\end_layout
+
+\begin_layout Enumerate
+Alexandro Copero Román 2 BAC C 
+\end_layout
+
+\begin_layout Enumerate
+David Heredia Soto 2 BAC C 
+\end_layout
+
+\begin_layout Enumerate
+Fernando Letrán García 2 BAC D 
+\end_layout
+
+\begin_layout Enumerate
+Borja García Barea 2 BAC E 
+\end_layout
+
+\begin_layout Enumerate
+Arturo Paz Payá 2 BAC E
+\end_layout
+
+\begin_layout Paragraph
+Diseño, construcción y acabados
+\end_layout
+
+\begin_layout Enumerate
+Juan Manuel Fernandez Andrades 2 BAC A
+\end_layout
+
+\begin_layout Enumerate
+Luis Moreno Martin 2 BAC C 
+\end_layout
+
+\begin_layout Enumerate
+Christian Bermúdez 2 ESO E
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "prueba"
+options "bibtotoc,vancouver"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\start_of_appendix
+\noindent
+\align center
+
+\series bold
+\shape smallcaps
+\size giant
+Apéndices
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+appendixname}{Apéndice}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Listado completo del programa
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\small\rmfamily},breaklines=true,comment={[l]{//}},commentstyle={\color{purple}\ttfamily},keywordstyle={\color{blue}},language=Java"
+inline false
+status collapsed
+
+\begin_layout Plain Layout
+
+// declaracion de variables
+\end_layout
+
+\begin_layout Plain Layout
+
+// Freno
+\end_layout
+
+\begin_layout Plain Layout
+
+const int luzFreno = 3;
+\end_layout
+
+\begin_layout Plain Layout
+
+const int pulsadorFreno = 10;
+\end_layout
+
+\begin_layout Plain Layout
+
+// Intermitentes
+\end_layout
+
+\begin_layout Plain Layout
+
+const int intermitenteIzquierdo= 5;
+\end_layout
+
+\begin_layout Plain Layout
+
+const int intermitenteDerecho= 4;
+\end_layout
+
+\begin_layout Plain Layout
+
+const int pulsadorIzquierdo= 12;
+\end_layout
+
+\begin_layout Plain Layout
+
+const int pulsadorDerecho= 11;
+\end_layout
+
+\begin_layout Plain Layout
+
+// Luces cortas y largas
+\end_layout
+
+\begin_layout Plain Layout
+
+const int Largas = 6;
+\end_layout
+
+\begin_layout Plain Layout
+
+const int Cortas = 7;
+\end_layout
+
+\begin_layout Plain Layout
+
+const int pulsadorLuces = 13;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// variables de estado
+\end_layout
+
+\begin_layout Plain Layout
+
+int estadoFreno = LOW;
+\end_layout
+
+\begin_layout Plain Layout
+
+int estadoLuces = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int estadoIIz = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int estadoIDr = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int estadoAlarma = 0; // controla si la bici est en posicin o no de emergencia.
+\end_layout
+
+\begin_layout Plain Layout
+
+int estadoEmergencia = 0; // controla el parpadeo de emergencia
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// variables temporales
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long t = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long retardo = 10; // segundos que dura el parpadeo de los intermitente
+s
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long cadencia =200; // cadencia o frecuencia de parpadeo
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long cadenciaEmergencia = 500; // frecuencia de parpadeo en el
+ estado de emergencia
+\end_layout
+
+\begin_layout Plain Layout
+
+// tiempo intermitente izquierdo
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long tIIz = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long difIIz = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+// tiempo intermitente derecho
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long tIDr = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long difIDr = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+// parpadeo luces largas cortas
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long cadenciaPotencia = 2;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void setup () {
+\end_layout
+
+\begin_layout Plain Layout
+
+  // salidas
+\end_layout
+
+\begin_layout Plain Layout
+
+  pinMode(luzFreno,OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+  pinMode(intermitenteIzquierdo,OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+  pinMode(intermitenteDerecho,OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+  pinMode(Largas,OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+  pinMode(Cortas,OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+  // pulsadores
+\end_layout
+
+\begin_layout Plain Layout
+
+  pinMode(pulsadorFreno,INPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+  pinMode(pulsadorIzquierdo,INPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+  pinMode(pulsadorDerecho,INPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+  pinMode(pulsadorLuces,INPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void loop() {
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Prueba de encendido
+\end_layout
+
+\begin_layout Plain Layout
+
+  /* digitalWrite(luzFreno,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+  digitalWrite(intermitenteIzquierdo,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+  digitalWrite(intermitenteDerecho,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+  digitalWrite(Largas,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+  digitalWrite(Cortas,HIGH); */
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  // ******************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Conteo tiempo
+\end_layout
+
+\begin_layout Plain Layout
+
+  // ******************
+\end_layout
+
+\begin_layout Plain Layout
+
+  t = millis(); // microsegundos despus de encendido
+\end_layout
+
+\begin_layout Plain Layout
+
+  // if (((t/cantidadMicrosegundos)%2)==0) {estadoGeneral=LOW;} else {estadoGene
+ral=HIGH;}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  // ******************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Pulso luz de freno
+\end_layout
+
+\begin_layout Plain Layout
+
+  // ******************
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (digitalRead(pulsadorFreno) == HIGH) { // 1ª condicional
+\end_layout
+
+\begin_layout Plain Layout
+
+     delay(50);
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (digitalRead(pulsadorFreno) == HIGH) { // 2ª condicional   
+\end_layout
+
+\begin_layout Plain Layout
+
+        estadoFreno=HIGH;
+\end_layout
+
+\begin_layout Plain Layout
+
+        estadoAlarma = LOW; // desconecta el estado de alarma
+\end_layout
+
+\begin_layout Plain Layout
+
+        } // 2ª condicional FIN 
+\end_layout
+
+\begin_layout Plain Layout
+
+  } else {
+\end_layout
+
+\begin_layout Plain Layout
+
+        estadoFreno=LOW;
+\end_layout
+
+\begin_layout Plain Layout
+
+  }// 1ª condicional FIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Enciendo luz freno
+\end_layout
+
+\begin_layout Plain Layout
+
+   digitalWrite(luzFreno,estadoFreno);
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  // *************************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Pulso luz LARGAS / CORTAS
+\end_layout
+
+\begin_layout Plain Layout
+
+  // *************************
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (digitalRead(pulsadorLuces) == HIGH && estadoAlarma==LOW) { // 1ª condicion
+al
+\end_layout
+
+\begin_layout Plain Layout
+
+     delay(200);
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (digitalRead(pulsadorLuces) == HIGH && estadoAlarma==LOW) { //
+ 2ª condicional   
+\end_layout
+
+\begin_layout Plain Layout
+
+        estadoLuces = estadoLuces + 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+        // estadoAlarma = LOW; // desconecta el estado de alarma; mejor
+ se quita el estado de alarma pulsando el freno.
+\end_layout
+
+\begin_layout Plain Layout
+
+        } // 2ª condicional FIN 
+\end_layout
+
+\begin_layout Plain Layout
+
+  }// 1ª condicional FIN
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  // desbordamiento
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (estadoLuces>=3) { estadoLuces =0; } // condicional de desbordamiento
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (estadoLuces==1 && (t/cadenciaPotencia)%2==HIGH ) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite(Largas,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite(Cortas,HIGH);   
+\end_layout
+
+\begin_layout Plain Layout
+
+  } else if (estadoLuces==2 && (t/cadenciaPotencia)%2==HIGH)  {
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite(Largas,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite(Cortas,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+  } else {
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite(Largas,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite(Cortas,LOW); 
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Al encender las luces, pulsos de la luz de freno
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Reconocimiento de pulsos
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (estadoLuces>=1 && t%1500<=200) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    digitalWrite(luzFreno,HIGH); 
+\end_layout
+
+\begin_layout Plain Layout
+
+  } else {
+\end_layout
+
+\begin_layout Plain Layout
+
+    digitalWrite(luzFreno,estadoFreno); // como este el feeno 
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  // *************************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Intermitentes IZQUIERDOS
+\end_layout
+
+\begin_layout Plain Layout
+
+  // *************************
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (digitalRead(pulsadorIzquierdo) == HIGH  && estadoAlarma==LOW ) { //
+ 1ª condicional
+\end_layout
+
+\begin_layout Plain Layout
+
+     delay(100);
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (digitalRead(pulsadorIzquierdo) == HIGH && estadoAlarma==LOW)
+ { // 2ª condicional   
+\end_layout
+
+\begin_layout Plain Layout
+
+        difIIz = retardo * 1000; // diferencia entre los milisegundos actuales
+ mas el retardo   
+\end_layout
+
+\begin_layout Plain Layout
+
+        tIIz = t + difIIz; // tiempo en el que acaba la secuencia 
+\end_layout
+
+\begin_layout Plain Layout
+
+        difIDr = 0; // anula el intermitente izquierdo   
+\end_layout
+
+\begin_layout Plain Layout
+
+        } // 2ª condicional FIN 
+\end_layout
+
+\begin_layout Plain Layout
+
+  } // 1ª condicional FIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  // } else {
+\end_layout
+
+\begin_layout Plain Layout
+
+  //       estadoIIz = LOW;
+\end_layout
+
+\begin_layout Plain Layout
+
+  // } // 1ª condicional FIN
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (difIIz>0) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      estadoIIz = (difIIz/cadencia)%2;
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite (intermitenteIzquierdo,estadoIIz);
+\end_layout
+
+\begin_layout Plain Layout
+
+      difIIz = tIIz - t; // voy calculando la diferencia
+\end_layout
+
+\begin_layout Plain Layout
+
+  }  else if (difIIz<=0) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      difIIz = 0; // fuerza a cero
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite (intermitenteIzquierdo,LOW); // apaga intermitente
+\end_layout
+
+\begin_layout Plain Layout
+
+  }   
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  // *************************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Intermitentes DERECHOS
+\end_layout
+
+\begin_layout Plain Layout
+
+  // *************************
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (digitalRead(pulsadorDerecho) == HIGH  && estadoAlarma==LOW) { // 1ª
+ condicional
+\end_layout
+
+\begin_layout Plain Layout
+
+     delay(100);
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (digitalRead(pulsadorDerecho) == HIGH && estadoAlarma==LOW) {
+ // 2ª condicional   
+\end_layout
+
+\begin_layout Plain Layout
+
+        difIDr = retardo * 1000; // diferencia entre los milisegundos actuales
+ mas el retardo   
+\end_layout
+
+\begin_layout Plain Layout
+
+        tIDr = t + difIDr; // tiempo en el que acaba la secuencia    
+\end_layout
+
+\begin_layout Plain Layout
+
+        difIIz = 0; // anula el intermitente izquierdo
+\end_layout
+
+\begin_layout Plain Layout
+
+        } // 2ª condicional FIN 
+\end_layout
+
+\begin_layout Plain Layout
+
+  } // 1ª condicional FIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  // } else {
+\end_layout
+
+\begin_layout Plain Layout
+
+  //       estadoIIz = LOW;
+\end_layout
+
+\begin_layout Plain Layout
+
+  // } // 1ª condicional FIN
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (difIDr>0) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      estadoIDr = (difIDr/cadencia)%2;
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite (intermitenteDerecho,estadoIDr);
+\end_layout
+
+\begin_layout Plain Layout
+
+      difIDr = tIDr - t; // voy calculando la diferencia
+\end_layout
+
+\begin_layout Plain Layout
+
+  }  else if (difIDr<=0) {
+\end_layout
+
+\begin_layout Plain Layout
+
+      difIDr = 0; // fuerza a cero
+\end_layout
+
+\begin_layout Plain Layout
+
+      digitalWrite (intermitenteDerecho,LOW); // apaga intermitente
+\end_layout
+
+\begin_layout Plain Layout
+
+  } 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  // ************************** FIN PROGRAMA PRINCIPAL *************************
+*******************
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  // *******************************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Luces de Emergencia
+\end_layout
+
+\begin_layout Plain Layout
+
+  // *******************************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // Se encienden todas las luces (parpadeando) al pulsar los dos intermitentes
+ a la vez
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (digitalRead(pulsadorIzquierdo) == HIGH && digitalRead(pulsadorDerecho)
+ == HIGH) { // 1ª condicional
+\end_layout
+
+\begin_layout Plain Layout
+
+     delay(300);
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (digitalRead(pulsadorIzquierdo) == HIGH && digitalRead(pulsadorDerech
+o) == HIGH) { // 2ª condicional
+\end_layout
+
+\begin_layout Plain Layout
+
+            estadoAlarma = HIGH;
+\end_layout
+
+\begin_layout Plain Layout
+
+            difIIz=0; // anula intermitente izquierdo
+\end_layout
+
+\begin_layout Plain Layout
+
+            difIDr=0; // anula intermitente derecho
+\end_layout
+
+\begin_layout Plain Layout
+
+            estadoLuces = LOW; // apaga las luces
+\end_layout
+
+\begin_layout Plain Layout
+
+            estadoFreno = LOW; // anula el freno
+\end_layout
+
+\begin_layout Plain Layout
+
+        } // Fin del 2º condicional
+\end_layout
+
+\begin_layout Plain Layout
+
+  } // Fin del 1º condicional
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (estadoAlarma) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    estadoEmergencia = (t/cadenciaEmergencia)%2;
+\end_layout
+
+\begin_layout Plain Layout
+
+    digitalWrite(Largas,estadoEmergencia^HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+    digitalWrite(Cortas,estadoEmergencia);
+\end_layout
+
+\begin_layout Plain Layout
+
+    digitalWrite(intermitenteDerecho,estadoEmergencia^HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+    digitalWrite(intermitenteIzquierdo,estadoEmergencia^HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+    digitalWrite(luzFreno,estadoEmergencia);
+\end_layout
+
+\begin_layout Plain Layout
+
+  }  // condiconal de Alarma
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  //****************************************************************************
+************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // En estado de Alarma, pulso Intermitente derecho para aumentar la cadencia
+ de emergencia
+\end_layout
+
+\begin_layout Plain Layout
+
+  //****************************************************************************
+************
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (digitalRead(pulsadorDerecho) == HIGH  && estadoAlarma==HIGH) { //
+ 1ª condicional
+\end_layout
+
+\begin_layout Plain Layout
+
+     delay(50);
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (digitalRead(pulsadorDerecho) == HIGH && estadoAlarma==HIGH)
+ { // 2ª condicional   
+\end_layout
+
+\begin_layout Plain Layout
+
+        cadenciaEmergencia = (cadenciaEmergencia+50)*(cadenciaEmergencia<=1000)+
+1000*(cadenciaEmergencia>1000);
+\end_layout
+
+\begin_layout Plain Layout
+
+        } // 2ª condicional FIN 
+\end_layout
+
+\begin_layout Plain Layout
+
+  } // 1ª condicional FIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+  //****************************************************************************
+************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // En estado de Alarma, pulso Intermitente izquierdo para disminuir la
+ cadencia de emergencia
+\end_layout
+
+\begin_layout Plain Layout
+
+  //****************************************************************************
+************
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (digitalRead(pulsadorIzquierdo) == HIGH  && estadoAlarma==HIGH) { //
+ 1ª condicional
+\end_layout
+
+\begin_layout Plain Layout
+
+     delay(50);
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (digitalRead(pulsadorIzquierdo) == HIGH && estadoAlarma==HIGH)
+ { // 2ª condicional   
+\end_layout
+
+\begin_layout Plain Layout
+
+        cadenciaEmergencia = (cadenciaEmergencia-50)*(cadenciaEmergencia>50)+50*
+(cadenciaEmergencia<=50); // cadencia minima 50
+\end_layout
+
+\begin_layout Plain Layout
+
+        } // 2ª condicional FIN 
+\end_layout
+
+\begin_layout Plain Layout
+
+  } // 1ª condicional FIN
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+} // FIN DEL PROGRAMA
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

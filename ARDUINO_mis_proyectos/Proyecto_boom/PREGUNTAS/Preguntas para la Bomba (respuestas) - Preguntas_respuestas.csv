@@ -1,0 +1,44 @@
+1,¿Qué operador realiza la comparación lógica OR en ARDUINO?,P1D: ||
+2,¿Qué resistencia es más conveniente colocar en serie con un LED para que se encienda a 5V?,P2C: 220 Ohmios
+3,"¿Qué función de ARDUINO, siempre presente, repite sus órdenes constantemente?",P3C: void loop()
+4,¿Qué significa la abreviación 'OS' en el lenguaje informático?,P4C: Operative System
+5,¿Que tres extensiones son necesarias en una libreria de arduino?,P5A:  .h .cpp .txt 
+6,¿Qué estructura del lenguaje en ARDUINOes la condicional?,P6C: if...else
+7,La función pinMode admite tres modos de operación. ¿Cuál es el incorrecto?,P7C:  INPUT_PULLDOWN
+8,¿Qué función matemática realiza en ARDUINO una regla de tres?,P8B: map()
+9,¿Con qué relacionas el comando ramdom()?,P9C: pseudo-aleatoriedad
+10,Imprime el resultado en el Monitor Serie y salta a la siguiente línea,P10A: Serial.println()
+11,¿Cómo se denomina el problema que surge cuando la función millis() completa su cuenta y empieza desde cero?,P11A: rollover
+12,¿Qué cuenta la función millis() ?,P12A: milisegundos
+13,¿Qué máximo valor devuelve una función analogRead()?,P13A: 1023
+14,¿Cuál es el máximo valor que puedo escribir con un analogWrite()?,P14A: 255
+15,¿Qué técnica usa la función analogWrite() para poder escribir un valor analógico?,P15C: PWM
+16,¿Qué hace la función tone()?,P16B: Toca un tono
+17,¿Qué función trigonométrica es INCORRECTA en ARDUINO?,P17C: sen()
+18,¿Quién inventó el motor de corriente alterna?,P18C: Nikola Tesla
+19,¿Cuál es el motor gráfico que usa el videojuego: Duke Nukem Forever?,P19D: Unreal Engine 1
+20,"¿Cuál es el ""Konami Code""?",P20A: ↑↑↓↓←→←→ B A  START
+21,¿De qué no está compuesto un sistema de telecomunicaciones?,P21A: Código
+22,"Teniendo en cuenta los factores físicos como la velocidad de la luz y la temperatura constante en 500 K en la Tierra y la variación de energía interna igual a 0, ¿cuál es la masa del Sol?","P22A: 1,989 × 10^30 kg"
+23,"Si tengo 5 velas encendidas y apago 2, ¿cuántas velas me quedan en t=0s?",P23B: 5
+24,¿Cuál es el apellido de Mario y Luigi?,P24C: Mario
+25,"¿Cuál es el porcentaje aproximado de aprobados en la asignatura ""Física I""?","P25B: 0,15"
+26,Quién ha muerto más veces a lo largo de bola de dragón,P26B: Krillin
+27,¿Cuál de estos lenguajes de programación no existe?,P27A: Vulkan
+28,¿En qué año consiguió el hombre llegar a la Luna?,P28B: 1969
+29,¿Cuál de estos personajes NO es de Nintendo?,P29A: Spyro
+30,¿Cuál fue el primer videojuego creado en la histora?,P30B: OXO
+31,¿Cual fue el primer grupo de k-pop en ganar en los Billboards?,P31B: BTS
+32,¿Qué descarga eléctrica de la atmósfera puede alcanzar los 100 millones de voltios?,P32B: Rayo
+33,¿Cual es el coche mas rapido del mundo?,P33D: Hennessey Venom f5
+34,¿Cuántos mundos existen en el anime de Mirai Nikki?,P34A: 3
+35,¿Cual es la velocidad mas rapida alcanzada por un automovil?,P35A: 484 km/h
+36,¿En qué lenguaje funciona Arduino?,P36A: C++
+37,¿De cuántos colores puede ser Yoshi?,P37D: 10
+38,"A qué equivale el número ""e''...",P38C: 2'718
+39,¿Que hdad de jerez es servita?,P39B: Angustias
+40,¿Quién sobrevive en Vengadores: Infinity War?,P40C: Iron Man
+41,¿Cómo se llama el mayor enemigo de MegaMan?,P41C: Dr. Willy
+42,¿Cómo se llama el informante de Ikebukuro y antagonista en el anime Durarara?,P42D: Izaya Orihara
+43,¿Qué mide el tubo de Pitot?,P43C: La presion total.
+44,¿Quin es el piloto que mas grandes premios de motociclismo ha ganado?,P44D: Valentino Rossi

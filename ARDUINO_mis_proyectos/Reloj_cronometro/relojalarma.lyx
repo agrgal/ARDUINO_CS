@@ -1,0 +1,5295 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{multicol}
+\usepackage{xcolor}
+\renewcommand{\indexname}{Índice}
+\end_preamble
+\use_default_options true
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman bookman
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "Corriendo el tiempo en un display"
+\pdf_author "Aurelio Gallardo Rodríguez"
+\pdf_subject "Construcción de un reloj con ARDUINO"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 1.8cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\bullet 2 0 34 -1
+\bullet 3 0 26 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand {
+\backslash
+contentsname} {Índice General}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+
+\series bold
+\shape smallcaps
+\color black
+El paso del tiempo
+\end_layout
+
+\begin_layout Date
+29 de Enero de 2013
+\end_layout
+
+\begin_layout Author
+por Aurelio Gallardo
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 5cm*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\shape smallcaps
+Construyendo un reloj digital con ARDUINO...
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand {
+\backslash
+partname} {Apartado}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+thispagestyle{empty} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape smallcaps
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+thispagestyle{empty} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+thepage}{
+\backslash
+roman{page}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Left Header
+
+\series bold
+\size small
+Un reloj digital con Arduino
+\end_layout
+
+\begin_layout Right Header
+
+\size small
+por Aurelio Gallardo Rodríguez
+\end_layout
+
+\begin_layout Center Header
+\begin_inset Graphics
+	filename reloj_cuatro_displays/09767-05_display_serie.jpg
+	lyxscale 10
+	scale 4
+	BoundingBox 0bp 30bp 600bp 600bp
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Right Footer
+-
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+-
+\end_layout
+
+\begin_layout Center Footer
+
+\end_layout
+
+\begin_layout Part
+Introducción
+\end_layout
+
+\begin_layout Standard
+El tiempo es la variable física más escurridiza y enigmática de todas las
+ magnitudes que pueden medirse.
+ Paradójicamente, es una de las más controlables y reproducibles.
+ Es la menos tangible por los sentidos y, a la vez, de la que mantenemos
+ una mayor percepción.
+ 
+\end_layout
+
+\begin_layout Standard
+No puede, además, definirse.
+ Nadie sabe qué es el tiempo.
+ Tenemos que definirlo a través de sus características.
+ Por ejemplo, el tiempo es continuo creciente, ya que fijada una referencia,
+ toma todos los valores numéricos reales posibles, por lo tanto un escalar.
+\end_layout
+
+\begin_layout Standard
+El tiempo es irreversible, asimétrico.
+ Ningún suceso puede contradecir los principios de causa-efecto.
+ Esto quiere decir que una taza siempre que caiga se romperá y no sucede
+ que exista un devenir en el que los trozos de la taza se unan.
+ Así, aunque la existencia de un tiempo negativo no está prohibido 
+\shape italic
+de facto
+\shape default
+ por ninguna ley física, condiciona nuestra realidad.
+ Sabemos que el pasado es inmutable, que el futuro es una incógnita lleno
+ de probabilidades y que el presente es la frontera entre ambos: claramente
+ asimétrico.
+ Esta concepción parece estar relacionada con el aumento de entropía del
+ Universo.
+\end_layout
+
+\begin_layout Standard
+El tiempo es homogéneo.
+ No transcurre algunas veces más rápido y otras menos (para el mismo sistema
+ de referencia).
+ 
+\end_layout
+
+\begin_layout Standard
+El tiempo es isótropo.
+ En cualquier dirección que nos movamos, transcurre igual.
+\end_layout
+
+\begin_layout Standard
+En Mecánica Clásica, no relativista, el tiempo era absoluto, igual para
+ cualquier observador e independiente del movimiento de éstos.
+ Einstein, sin embargo, en su teoría relativista, baja la categoría de variable
+ independiente a variable dependiente.
+ El transcurso del tiempo para dos observadores que se muevan a velocidades
+ cercanas a la de la luz, uno respecto del otro, difiere.
+ Depende, pues, del sistema de referencia usado, del observador.
+\end_layout
+
+\begin_layout Part
+La medida del tiempo
+\end_layout
+
+\begin_layout Standard
+Probablemente el ser humano adquiere la conciencia del transcurso del tiempo
+ desde los albores de nuestra raza, ligando el transcurso del mismo a ciclos
+ naturales.
+ No es difícil imaginar a nuestro ancestro en una cueva, haciendo una muesca
+ en un palo cada noche, esperando ver aparecer la luna llena de nuevo; y
+ quizás, marcando en otro palo las apariciones de ésta, predijese cuál es
+ la siguiente época de lluvias, o la luna en la que apareció esa manada
+ de bisontes por el desfiladero.
+ 
+\end_layout
+
+\begin_layout Standard
+Me hubiese gustado estar presente la primera vez que clavó un palo vertical
+ en la tierra y observó la sombra del sol y su recorrido.
+ Por el ángulo podía saber el momento del día.
+ Por su longitud variable, la época del año.
+ 
+\end_layout
+
+\begin_layout Standard
+Los descubrimientos de otros fenómenos cíclicos, más o menos complicados,
+ dieron como resultado otros tipos de relojes.
+ Desde los relojes de arena a los relojes atómicos.
+ Todos se basan en algún acontecimiento repetitivo, en algún fenómeno oscilatori
+o: un péndulo, una lámina de cuarzo piezoeléctrico por el que pasa una corriente
+, la frecuencia de resonancia de los electrones del Cesio...
+ Y contar las veces que se repite.
+ 
+\end_layout
+
+\begin_layout Standard
+Contar el tiempo es, pues, una necesidad humana.
+ El conocimiento que permite llegar a diseñar un dispositivo preciso que
+ lo consiga, un reto.
+\end_layout
+
+\begin_layout Standard
+¿Podré construir un reloj con ARDUINO? 
+\end_layout
+
+\begin_layout Part
+Que tendrá ARDUINO para poder hacerme un reloj con él
+\end_layout
+
+\begin_layout Section*
+La cuenta del tiempo...
+\end_layout
+
+\begin_layout Standard
+ARDUINO es una placa controladora, con un microprocesador capaz de ejecutar
+ las órdenes que se almacenen en su memoria.
+ Posee una serie de entradas y salidas, digitales y analógicas, configurables
+ muchas de ellas mediante código.
+\end_layout
+
+\begin_layout Standard
+Una pieza esencial de su electrónica, común a todos los circuitos digitales
+ secuenciales, es el dispositivo que le permite obtener una señal cíclica,
+ repetitiva: la señal de reloj.
+ Su frecuencia 16MHz lo cual significa que puede realizar 16 millones de
+ operaciones básicas por segundo.
+ ¿Podrá contar el tiempo? ¡¡Por supuesto!!
+\end_layout
+
+\begin_layout Standard
+De hecho, en el lenguaje de programación que acompaña a ARDUINO encontramos
+ funciones específicas muy relacionadas con la cuenta del tiempo:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+millis()
+\series default
+.
+ Función que cuenta los milisegundos transcurridos desde que se enciende
+ la unidad.
+ Devuelve un número tipo long.
+ La cuenta se desborda y vuelve a cero aproximadamente a los 50 días.
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+si es un unsigned long, se desborda en el número 
+\begin_inset Formula $4,294,967,295=2^{32}-1$
+\end_inset
+
+.
+ Un simple cálculo nos indica que corresponde a 49,71 días.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://arduino.cc/en/Reference/UnsignedLong "
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+micros()
+\series default
+.
+ Análoga a la anterior, cuenta microsegundos.
+ Se desborda volviendo a cero a los 70 minutos.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+delay(n)
+\series default
+.
+ Pausa el programa durante 
+\series bold
+\shape italic
+n
+\series default
+\shape default
+ milisegundos.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+delayMicroseconds(m)
+\series default
+.
+ Pausa el programa durante 
+\series bold
+\shape italic
+m
+\series default
+\shape default
+ microsegundos.
+ Se recomienda 
+\begin_inset Formula $m>3\mu s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Y generar las señales para activar unos displays...
+\end_layout
+
+\begin_layout Standard
+Como sabemos Arduino UNO tiene una capacidad de 14 entradas o salidas digitales,
+ algunas de las cuales pueden ser moduladas analógicamente, más 6 entradas
+ analógicas.
+ 
+\begin_inset Wrap figure
+lines 0
+placement l
+overhang 0in
+width "20text%"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename imagenes_ilustraciones/diodo_led.jpg
+	lyxscale 15
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+LED.
+ Ánodo y Cátodo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Nuestros displays de 7 segmentos necesitan conectarse a 7 salidas digitales,
+ numeradas de la “a” a la “g”, que activen cada led del display más un cátodo
+ común que, conectado a través de una resistencia, lleve la intensidad a
+ tierra.
+ 
+\end_layout
+
+\begin_layout Standard
+Un reloj que muestre horas y minutos necesitaría cuatro displays de este
+ tipo, con lo cual hablamos de 28 conexiones, el doble de las que puede
+ ofrecer Arduino.
+ Además, conectaríamos a través de una resistencia pequeña (unos 
+\begin_inset Formula $100\Omega-500\Omega$
+\end_inset
+
+) cada cátodo a tierra.Sin embargo si los cátodos no son conectados a tierra,
+ sino a Vcc (tensión de alimentación), no circulará intensidad por el diodo
+ y no se iluminarán.
+ Este hecho puedo usarlo para reducir el conexionado de los displays a Arduino
+ 
+\series bold
+\shape italic
+activando los cuatro displays en secuencia
+\series default
+\shape default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Efectivamente,
+\series bold
+\shape italic
+ conectando siete salidas digitales de Arduino a los displays, en paralelo,
+ sólo se activará el display que en ese momento tenga el cátodo conectado
+ a tierra
+\series default
+\shape default
+.
+ Así que, además de esas siete salidas digitales, necesito conectar cuatro
+ salidas a cada cátodo de cada display y enviar en secuencia un cero lógico
+ a la salida que quiero activar (podríamos decir que esas cuatro salidas
+ son activas por lógica inversa).
+ 
+\shape italic
+Dando un barrido del primer al cuarto dígito, del primer al cuarto display,
+ si la velocidad de cambio es lo suficientemente lenta para activar los
+ leds del display y lo suficientemente rápida para que el ojo humano no
+ distinga el parpadeo podremos ofrecer los cuatros dígitos a la vez
+\shape default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Y habremos usado, en total, 11 salidas digitales de las 14 disponibles.
+ En el montaje que sigue, una de las tres sobrantes se usará como medida
+ de los segundos, activando el típico parpadeo de los dos puntos luminosos
+ que separan la hora de los minutos y otra como salida hacia un buzzer para
+ hacer sonar la alarma.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Display_fotos_Datasheet/display.png
+	lyxscale 25
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Esquemático de 4 displays 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:etiquetas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Y detectar ciertas señales analógicas...
+\end_layout
+
+\begin_layout Standard
+Para poder tener un reloj es necesario ponerlo en hora.
+ Cuanto menos, necesito dos pulsadores para ello: uno que haga de horaria
+ y pueda ajustarme la hora, y otro que haga de minutero y pueda ajustarme
+ los minutos.
+ Sin embargo, me hacen falta entradas digitales: de antes, sólo me sobraba
+ una.
+ Aunque sí que dispongo aún de seis entradas analógicas.
+ 
+\end_layout
+
+\begin_layout Standard
+La solución es utilizar tres entradas analógicas como entradas digitales.
+ No, ARDUINO no las lee como las digitales.
+ En las entradas analógicas lee niveles de tensión convertidas a un rango
+ numérico entre 0 y 1023.
+ Pero claramente un 0 lógico perfectamente está en el umbral inferior a
+ la mitad y un 1 lógico en el umbral superior.
+ Detectar esta señal 
+\begin_inset Quotes eld
+\end_inset
+
+digital
+\begin_inset Quotes erd
+\end_inset
+
+ es tan fácil como discernir si el rango de entrada es mayor o menor que
+ un valor intermedio (por ejemplo, 500).
+ 
+\end_layout
+
+\begin_layout Standard
+Me hará falta, si además quiero una alarma, una entrada suplementaria.
+ Combinada con las otras dos podré poner la hora y los minutos de la alarma,
+ y activarla o desactivarla.
+ 
+\end_layout
+
+\begin_layout Part
+Montaje del reloj digital
+\end_layout
+
+\begin_layout Section*
+Display comercial ATA3492BR-1 
+\end_layout
+
+\begin_layout Standard
+Entrando en la web comercial 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.cooking-hacks.com/"
+target "http://www.cooking-hacks.com/"
+
+\end_inset
+
+, se pueden encontrar varios tipos de displays de 7 segmentos (
+\begin_inset CommandInset href
+LatexCommand href
+name "enlace"
+target "http://www.cooking-hacks.com/index.php/catalogsearch/result/?q=7+segment+display"
+
+\end_inset
+
+).
+ De un precio más que asequible disponemos de un set de 4 displays formando
+ el display de un reloj digital, y, además en varios colores: rojo, verde,
+ azul, amarillo...
+ Las conexiones de la 
+\begin_inset Quotes eld
+\end_inset
+
+a
+\begin_inset Quotes erd
+\end_inset
+
+ a la 
+\begin_inset Quotes eld
+\end_inset
+
+g
+\begin_inset Quotes erd
+\end_inset
+
+ que activa cada segmento están ya en paralelo (con la salvedad que son
+ de ÁNODO COMÚN) y sólo necesito activar los cátodos correspondientes.
+ El resto de pines se usan para activar los dos puntos luminosos centrales
+ L1 y L2 (segundos), el punto decimal D1 y el punto superior L3.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename reloj_cuatro_displays/09482-01_2.jpg
+	lyxscale 25
+	scale 15
+	BoundingBox 0bp 10bp 600bp 500bp
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename imagenes_ilustraciones/patillaje_display.png
+	lyxscale 25
+	scale 60
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename imagenes_ilustraciones/esquema_display.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Set de displays 7-segmentos.
+ Esquema.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Set-de-displays"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las especificaciones técnicas de este dispositivo pueden encontrarse en
+ el siguiente datasheet: 
+\begin_inset CommandInset href
+LatexCommand href
+name "especificaciones técnicas display"
+target "http://www.sparkfun.com/datasheets/Components/LED/7-Segment/YSD-439AY2B-35.pdf"
+
+\end_inset
+
+.
+ Destacamos que posee 16 pines de conexión, y el conteo se realiza de la
+ patilla 1 (esquina inferior izquierda) dando la vuelta de izquierda a derecha,
+ y arriba de derecha a izquierda hasta el pin 16 (esquina superior izquierda).
+\end_layout
+
+\begin_layout Standard
+Usamos el siguiente conexionado 
+\begin_inset Wrap figure
+lines 0
+placement O
+overhang 0in
+width "45col%"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes_ilustraciones/conexionado_display.png
+	lyxscale 25
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Conexionado de la placa arduino 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:placa_conexionado"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ a la placa ARDUINO UNO.
+\end_layout
+
+\begin_layout Standard
+Podemos observar que los cuatro ánodos se unen cada uno a una patilla de
+ la placa ARDUINO.
+ En concreto los comunes COM1, COM2, COM3 y COM4 se activan con las patillas
+ 7, 8, 9 y 10.
+ El dígito visualizado es el que se activa cuando su ÁNODO está conectado
+ a 5 V, teniendo que estar el resto de los ÁNODOS conectados a 0 V (para
+ que no circule intensidad por los leds).
+ Podríamos decir entonces que cada dígito se activa por LÓGICA POSITIVA.
+\end_layout
+
+\begin_layout Standard
+Los comunes tienen una resistencia que limita la intensidad que circula
+ por los LEDS de 470 Ohmios.
+ Puede aumentarse la luminosidad con reducir el valor de resistencia hasta
+ un mínimo de unos 100 Ohmios .
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Cálculos más precisos necesitan estudiar los datos técnicos de cada LED,
+ su tensión umbral y la intensidad máxima soportada ( 
+\begin_inset CommandInset href
+LatexCommand href
+name "Página WEB"
+target "http://www.iearobotics.com/personal/ricardo/articulos/diodos_led/index.html"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El resto de las salidas digitales activan:
+\end_layout
+
+\begin_layout Itemize
+Los segmentos de los displays: [a,11] - [b,13] - [c,2] - [d,3] - [e,4] -
+ [f,5] -[g,6].
+ Por LÓGICA NEGATIVA, o sea, poniendo un 
+\begin_inset Quotes eld
+\end_inset
+
+0
+\begin_inset Quotes erd
+\end_inset
+
+ lógico a la salida de los pines que corresponden a los segmentos que quiero
+ visualizar, para que circule por ellos la corriente desde su ánodo.
+\end_layout
+
+\begin_layout Itemize
+Los LEDS centrales L1 y L2 del segundero.
+ La salida digital 12 es elegida para tal fin.
+\end_layout
+
+\begin_layout Itemize
+La salida 1 se elige para activar un buzzer de alarma.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename imagenes_ilustraciones/buzzer.png
+	lyxscale 25
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Buzzer de alarma 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Buzzer"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Pulsadores
+\end_layout
+
+\begin_layout Standard
+Usamos los pulsadores 
+\begin_inset Wrap figure
+lines 0
+placement L
+overhang 0in
+width "25col%"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename imagenes_ilustraciones/conexionado_botones.png
+	lyxscale 25
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pulsadores
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ para enviar señales de entrada hacia nuestro ARDUINO.
+ Como no podemos usar más entradas digitales, optamos por las entradas analógica
+s que ofrece el dispositivo.
+ 
+\end_layout
+
+\begin_layout Standard
+Los pulsadores, de izquierda a derecha, corresponden a las funciones de
+ cambio de hora, de cambio de los minutos, y de cambio de la hora-minutos
+ de la alarma, o su desactivación-activación.
+\end_layout
+
+\begin_layout Standard
+Cada pulsador, en estado OFF, o abierto, conecta a tierra la señal analógica
+ correspondiente a través de una resistencia de 
+\begin_inset Formula $10K\Omega$
+\end_inset
+
+.
+ Con ello, evitamos cualquier lectura espuria en la entrada y aseguramos
+ que cualquier pequeña carga acumulada en el pin en cuestión tenga un camino
+ a tierra.
+ Mantenemos un 
+\begin_inset Quotes eld
+\end_inset
+
+0
+\begin_inset Quotes erd
+\end_inset
+
+ lógico en la entrada analógica.
+\end_layout
+
+\begin_layout Standard
+Al pulsar, estado ON, o cerrado, conectamos la entrada analógica a 5V.
+ Ponemos un 
+\begin_inset Quotes eld
+\end_inset
+
+1
+\begin_inset Quotes erd
+\end_inset
+
+ lógico en dicha entrada.
+\end_layout
+
+\begin_layout Standard
+¿Qué ocurre realmente, si no son entradas digitales, sino analógicas? El
+ conversor analógico-digital de ARDUINO convierte los valores de tensión
+ ofrecidos en estas entradas a un rango numérico de 1024 valores.
+ Teóricamente, 0 Voltios (tierra) de tensión los traduce al valor numérico
+ 0; 5 Voltios (Vcc) al valor 1023.
+ Un valor intermedio, por ejemplo, 1.9 Voltios lo traduce a:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $1,9\, V\cdot\dfrac{1023}{5\, V}\simeq389$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Resumiendo: interpretar a la entrada de las señales analógicas un 0 o un
+ 1 lógico es tan sencillo como discernir si estamos por debajo o por encima
+ de un valor intermedio.
+ Elegí el número 500 por ser un número redondo próximo a la mitad exacta
+ (512 -> 2.5 Voltios) y, como veremos, detectaré un 
+\begin_inset Quotes eld
+\end_inset
+
+0
+\begin_inset Quotes erd
+\end_inset
+
+ lógico si el valor de la entrada analógica está por debajo de 500 y un
+ 
+\begin_inset Quotes eld
+\end_inset
+
+1
+\begin_inset Quotes erd
+\end_inset
+
+ lógico si por encima.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Montaje Final
+\end_layout
+
+\begin_layout Standard
+\noindent
+Este es el esquema del montaje final (Fritzing).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename imagenes_ilustraciones/reloj4displays_montaje.png
+	lyxscale 25
+	scale 80
+	rotateAngle 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Montaje Final (Fritzing) 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Montaje"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+¿A que no es complicado? No, si lo bueno viene ahora que tenemos que programar...
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+¿Cómo programo mi reloj? Ideas fracasadas e ideas correctas
+\end_layout
+
+\begin_layout Standard
+No es de extrañar que una primera idea resulte incorrecta, por muy atractiva
+ que pueda parecernos a priori.
+ Es lo que me ha pasado a mí estudiando este proyecto.
+ Mi primera idea de diseño del programa consistía en:
+\end_layout
+
+\begin_layout Enumerate
+El bucle principal del programa 
+\series bold
+void loop() { }
+\series default
+ lo basaría en:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Un contador recursivo y un retraso de 1s
+\series bold
+\shape italic
+ 
+\series default
+\shape slanted
+- o delay(1000)
+\shape default
+ -.
+\end_layout
+
+\begin_layout Enumerate
+Órdenes y llamadas a funciones que calculan:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+La hora (unidad y decenas) y los minutos (unidad y decenas), en base a ese
+ contador recursivo.
+\end_layout
+
+\begin_layout Enumerate
+las diferentes salidas digitales que permiten visualizar los diversos números
+ en el display.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+El convencimiento de que el tiempo de ejecución de un ciclo de la rutina
+ 
+\series bold
+\shape italic
+loop
+\series default
+\shape default
+ podía ajustarlo a 1 segundo con la suficiente precisión como para usarlo
+ de base de cuenta de tiempo del programa...
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ya que suponía que el retraso provocado por el delay era muy preciso, de
+ exactamente 1 segundo: 
+\begin_inset Formula $T=1\, s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Y que el resto de las funciones de visualización o cálculo eran muy rápidas
+ en su ejecución y no provocarían un retardo mucho mayor.
+ Si suponía que el retardo provocado por estas funciones era 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+, pensaba que 
+\begin_inset Formula $t_{0}\ll T$
+\end_inset
+
+.
+ Los errores arrastrados en la ejecución de estas órdenes no retrasarían
+ mucho el reloj.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Sin embargo, y como pude comprobar experimentalmente, el tiempo que tardan
+ las órdenes en ejecutarse sí que son relevantes.
+ Incluso retrasos menores como incluso de 1 ms 
+\shape slanted
+- delay(1) -
+\shape default
+, no permitían evitar que los errores se acumulasen al poco de funcionar
+ el reloj
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Evidentemente, el contador ya no contaba segundos, sino milisegundos.
+\end_layout
+
+\end_inset
+
+.
+ La otra orden que podía usar, 
+\series bold
+delayMicroseconds()
+\series default
+, quizás me sirviese y reduje con ella aún más el tiempo de espera; pero
+ seguían acumulándose retrasos.
+ Por lo que deduje que las órdenes de cálculo y visualización cumplían que
+ 
+\begin_inset Formula $t_{0}\sim1\, s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+No me servía esta idea para construir un reloj.
+\end_layout
+
+\begin_layout Standard
+Sin embargo, aún me quedaba la orden 
+\series bold
+millis()
+\series default
+, que cuenta los milisegundos transcurridos desde que se enciende la unidad.
+ La variable long asignada a millis() abarca un período de 50 días aproximadamen
+te.
+ ¿Serviría para llevar la cuenta del tiempo? Debían cumplirse dos condiciones
+ básicas:
+\end_layout
+
+\begin_layout Enumerate
+La cuenta de este tiempo es 
+\series bold
+\shape italic
+independiente
+\series default
+\shape default
+ de las órdenes que se ejecuten.
+ Éstas no deben añadirle retrasos.
+\end_layout
+
+\begin_layout Enumerate
+El programa debe ser capaz de convertir una variable que crece continua
+ y linealmente en cuentas cíclicas.
+ 
+\end_layout
+
+\begin_layout Standard
+Evidentemente, ésta ha sido la solución.
+ 
+\end_layout
+
+\begin_layout Part
+Programación
+\end_layout
+
+\begin_layout Section*
+Variables
+\end_layout
+
+\begin_layout Subsection*
+Variables de salida digital
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+int outa = 11; 
+\end_layout
+
+\begin_layout Standard
+int outb = 13;
+\end_layout
+
+\begin_layout Standard
+int outc = 2;
+\end_layout
+
+\begin_layout Standard
+int outd = 3;
+\end_layout
+
+\begin_layout Standard
+int oute = 4;
+\end_layout
+
+\begin_layout Standard
+int outf = 5;
+\end_layout
+
+\begin_layout Standard
+int outg = 6;
+\end_layout
+
+\begin_layout Standard
+int outsegundero = 12;
+\end_layout
+
+\begin_layout Standard
+int outalarma=1; 
+\end_layout
+
+\begin_layout Standard
+int anodo[4]={7,8,9,10};
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cada variable define el pin que activa cada tramo de los displays, los leds
+ de los segundos y la salida que controla el buzzer de alarma.
+ También inicializo un array en el que asocio cada ánodo a un pin de activación.
+\end_layout
+
+\begin_layout Subsection*
+Variables de entrada analógica
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+int inhoraria = 0;
+\end_layout
+
+\begin_layout Standard
+int inminutero = 1; 
+\end_layout
+
+\begin_layout Standard
+int inalarma = 2; 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Define los pines de entrada analógica.
+ El pin 0 para la horaria, el 1 para el minutero y el 2 para las funciones
+ de alarma.
+\end_layout
+
+\begin_layout Subsection*
+Variables cálculos temporales
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{2}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+unsigned long hora = 0; // de 0 a 23.
+\end_layout
+
+\begin_layout Standard
+unsigned long minuto = 0; // de 0 a 59
+\end_layout
+
+\begin_layout Standard
+unsigned long hora0 = 10; // de 0 a 23.
+\end_layout
+
+\begin_layout Standard
+unsigned long minuto0 = 10; // de 0 a 59 
+\end_layout
+
+\begin_layout Standard
+unsigned long segundo0 = 0; // de 0 a 59
+\end_layout
+
+\begin_layout Standard
+unsigned long segundo = 0; // de 0 a 59
+\end_layout
+
+\begin_layout Standard
+unsigned long segundostranscurridos = 0;
+\end_layout
+
+\begin_layout Standard
+unsigned long mediosegundo = 0; 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Las variables hora, minuto y segundo almacenan los valores correspondientes
+ al momento temporal visualizado en el display.
+\end_layout
+
+\begin_layout Enumerate
+Las variables hora0, minuto0 y segundo0 almacenan la hora de desfase.
+ Añadiendo un desfase a las variables hora-minuto-segundo podré poner en
+ hora al reloj.
+ El reloj inicialmente está ajustado a las 10 y 10 (como los relojes de
+ manecillas).
+\end_layout
+
+\begin_layout Enumerate
+La variable 
+\series bold
+\color green
+segundostranscurridos
+\series default
+\color inherit
+ toma valores cíclicos entre 0 y 86399 segundos, según los valores de la
+ variable 
+\series bold
+\color blue
+tiempo1
+\series default
+\color inherit
+ (definida posteriormente) que cuenta los milisegundos transcurridos desde
+ que se enciende la unidad.
+ A la variable 
+\series bold
+\color green
+segundostranscurridos 
+\series default
+\color black
+se le añade los segundos de desfase.
+\end_layout
+
+\begin_layout Enumerate
+La variable mediosegundo toma valores 0 ó 1 cada medio segundo, lo cual
+ permite activar-desactivar los leds centrales parpadeantes, y es aprovechada
+ para generar un tono variable en la alarma.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Variables de alarma
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{2}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+unsigned long horaalarma=10;
+\end_layout
+
+\begin_layout Standard
+unsigned long minutoalarma=5;
+\end_layout
+
+\begin_layout Standard
+int alarma=0; 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+\color red
+horaalarma
+\series default
+\color inherit
+ y 
+\series bold
+\color red
+minutoalarma
+\series default
+\color inherit
+ (de inicio a las 10:05) permiten almacenar la hora en la que se activará
+ la alarma si...
+\end_layout
+
+\begin_layout Enumerate
+...la activamos con la variable alarma (0-> desactivada y 1-> activada).
+\end_layout
+
+\begin_layout Subsection*
+Variables de los displays, de tiempo y contador
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+unsigned long displays[4]; 
+\end_layout
+
+\begin_layout Standard
+int cualactivo = 0 ;
+\end_layout
+
+\begin_layout Standard
+unsigned long tiempo1=0; 
+\end_layout
+
+\begin_layout Standard
+int retrasoboton = 100; 
+\end_layout
+
+\begin_layout Standard
+int i=0;
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+El array 
+\series bold
+\color magenta
+displays
+\series default
+\color inherit
+ almacena el dígito que tiene que mostrar cada display individual del set
+ de 4.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+displays[0] corresponde al valor más a la izquierda, la decena de las horas;
+ displays[1] a las unidades de las horas.
+\end_layout
+
+\begin_layout Enumerate
+displays[2] y displays[3] lo mismo pero con los minutos.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+La variable 
+\series bold
+\color red
+cualactivo
+\series default
+\color inherit
+ recorre cíclicamente los valores de 0 a 3, en cada ciclo de loop(), y activa
+ el display correspondiente al valor que toma.
+ El ciclo es tan rápido que el ojo humano no puede distinguir cuál está
+ encendido y el efecto es el de mostrar los 4 dígitos a la vez, sin parpadeos.
+\end_layout
+
+\begin_layout Enumerate
+La variable 
+\series bold
+\color blue
+tiempo1
+\series default
+\color inherit
+ almacena el valor de la función 
+\shape italic
+millis()
+\shape default
+.
+\end_layout
+
+\begin_layout Enumerate
+Los botones de entrada pueden detectar más de una señal encendido-apagado
+ al ser pulsados.
+ Para poder asegurar que han sido pulsados de forma correcta se comprueba
+ el estado del botón en un período de tiempo que puede ajustarse mediante
+ la variable retrasoboton (en milisegundos).
+\end_layout
+
+\begin_layout Enumerate
+La variable i es un contador de propósito general.
+\end_layout
+
+\begin_layout Section*
+Funciones y subrutinas
+\end_layout
+
+\begin_layout Subsection*
+Mostrar un valor en uno de los cuatro displays
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void mandasenal(int numdisplay, int valor) {
+\end_layout
+
+\begin_layout Plain Layout
+
+// ********************************************
+\end_layout
+
+\begin_layout Plain Layout
+
+// a) activa cada tramo del display segun valor
+\end_layout
+
+\begin_layout Plain Layout
+
+// ********************************************
+\end_layout
+
+\begin_layout Plain Layout
+
+// recibe el numero de display y el valor que tiene que entregar
+\end_layout
+
+\begin_layout Plain Layout
+
+switch (valor) {
+\end_layout
+
+\begin_layout Plain Layout
+
+case 0:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+case 10:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+// **********************************
+\end_layout
+
+\begin_layout Plain Layout
+
+// b) activo un solo display cada vez
+\end_layout
+
+\begin_layout Plain Layout
+
+// **********************************
+\end_layout
+
+\begin_layout Plain Layout
+
+for (int i=0;i<=3;i++) { // recorrido de 0 hasta 3
+\end_layout
+
+\begin_layout Plain Layout
+
+if (i==numdisplay) {
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(anodo[i],HIGH); // activo 
+\end_layout
+
+\begin_layout Plain Layout
+
+} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(anodo[i],LOW); // desactivo 
+\end_layout
+
+\begin_layout Plain Layout
+
+} // fin del if
+\end_layout
+
+\begin_layout Plain Layout
+
+} // fin del for
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta función tiene dos partes bien diferenciadas:
+\end_layout
+
+\begin_layout Enumerate
+En la primera, y según lo que valga la variable 
+\shape italic
+valor
+\shape default
+, se activan (a nivel bajo, por LÓGICA NEGATIVA), los segmentos de los displays:
+ los números del 0 al 9, y si 
+\begin_inset Formula $valor=10$
+\end_inset
+
+, un guión.
+\end_layout
+
+\begin_layout Enumerate
+En la segunda parte, y según lo que valga la variable numdisplay, activo
+ el ánodo que le corresponde, de manera que el valor del dígito se aplica
+ sólo a él.
+\end_layout
+
+\begin_layout Subsection*
+La rutina 
+\begin_inset Quotes eld
+\end_inset
+
+valordisplay
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void valordisplay(unsigned long h,unsigned long m,int rayah, int rayam)
+ {
+\end_layout
+
+\begin_layout Plain Layout
+
+if (rayah==LOW) {
+\end_layout
+
+\begin_layout Plain Layout
+
+displays[0]= h/10;
+\end_layout
+
+\begin_layout Plain Layout
+
+displays[1]= h % 10; // resto de la division entre 10
+\end_layout
+
+\begin_layout Plain Layout
+
+} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+displays[0]= 10;
+\end_layout
+
+\begin_layout Plain Layout
+
+displays[1]= 10; // guion
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+if (rayam==LOW) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+displays[2]= m / 10;
+\end_layout
+
+\begin_layout Plain Layout
+
+displays[3]= m % 10; // resto de la division entre 10
+\end_layout
+
+\begin_layout Plain Layout
+
+} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+displays[2]= 10;
+\end_layout
+
+\begin_layout Plain Layout
+
+displays[3]= 10; // guion
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La rutina 
+\shape italic
+valordisplay
+\shape default
+ convierte el valor que toma la variable hora (
+\shape italic
+h
+\shape default
+) y la variable minuto (
+\shape italic
+m
+\shape default
+) en los cuatro números que hay que aplicar a cada display.
+ Se aprovecha para aplicar un guión (valor de display 
+\begin_inset Quotes eld
+\end_inset
+
+10
+\begin_inset Quotes erd
+\end_inset
+
+) si se activan a nivel alto las variables 
+\shape italic
+rayah
+\shape default
+ o 
+\shape italic
+rayam
+\shape default
+.
+ Se usará en el cambio de hora o en el cambio de minuto para, de alguna
+ manera, mostrar sólo lo que se está cambiando.
+\end_layout
+
+\begin_layout Subsection*
+La rutina que calcula el tiempo
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void calculamuestratiempo() {
+\end_layout
+
+\begin_layout Plain Layout
+
+// 1) calculos para el reloj
+\end_layout
+
+\begin_layout Plain Layout
+
+segundostranscurridos = hora0*3600+minuto0*60+segundo0+((tiempo1/1000) %
+ 86400);
+\end_layout
+
+\begin_layout Plain Layout
+
+segundo= segundostranscurridos % 60;
+\end_layout
+
+\begin_layout Plain Layout
+
+minuto = segundostranscurridos/60;
+\end_layout
+
+\begin_layout Plain Layout
+
+hora = minuto/60;
+\end_layout
+
+\begin_layout Plain Layout
+
+hora = hora % 24;
+\end_layout
+
+\begin_layout Plain Layout
+
+minuto = minuto % 60;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Constituye uno de los núcleos centrales de la programación:
+\end_layout
+
+\begin_layout Enumerate
+La variable 
+\series bold
+\color green
+segundostranscurridos
+\series default
+\color inherit
+ convierte el valor de 
+\series bold
+\color blue
+tiempo1
+\series default
+\color inherit
+ en el segundo del día en el que me encuentro.
+ Cuando acaba su cuenta vuelve a cero.
+ Poner el reloj en hora es añadir un desfase a esta variable, a través de
+ las variables hora0, minuto0 y segundo0.
+\end_layout
+
+\begin_layout Enumerate
+Los segundos cuentan de 60 en 60.
+ Si la variable 
+\series bold
+\color green
+segundostranscurridos
+\series default
+\color inherit
+ supera los 60 segundos, ya se ha superado un minuto.
+ Los minutos transcurridos se obtienen dividiendo la variable entre 60.
+ Los segundos que pasan de esos minutos calculando su resto (operación %).
+\end_layout
+
+\begin_layout Enumerate
+De igual forma, las horas transcurridas se obtienen dividiendo entre 60
+ los minutos, y los minutos que pasan de esas horas calculando su resto
+ al dividir entre 60.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Para las horas, cuando se desborda la cuenta al llegar a 24, hay que obtener
+ el resto de la división por ese número.
+\end_layout
+
+\begin_layout Section*
+Bucle setup
+\end_layout
+
+\begin_layout Standard
+Simplemente activa los pines digitales como salidas, según las variables
+ que elegí al principio.
+\end_layout
+
+\begin_layout Section*
+Bucle loop
+\end_layout
+
+\begin_layout Standard
+La primera instrucción es 
+\series bold
+\color blue
+tiempo1
+\color black
+=millis();
+\series default
+\color inherit
+ asigno a la variable 
+\series bold
+\color blue
+tiempo1
+\series default
+\color inherit
+ el conteo de milisegundos transcurridos desde que se encendió la unidad.
+\end_layout
+
+\begin_layout Subsection*
+Compruebo el botón horaria
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if (analogRead(inhoraria)>500 && analogRead(inalarma)<500) { //compara
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(retrasoboton); 
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inhoraria)>500) {
+\end_layout
+
+\begin_layout Plain Layout
+
+hora0=(hora0+1)*(hora0<23);
+\end_layout
+
+\begin_layout Plain Layout
+
+calculamuestratiempo();
+\end_layout
+
+\begin_layout Plain Layout
+
+valordisplay(hora,0,LOW,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+for(i=0;i<=300;i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+mandasenal(i%4,displays[i%4]); 
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(1);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+El primer condicional comprueba si la lectura analógica del botón de horaria
+ está en estado 
+\begin_inset Quotes eld
+\end_inset
+
+1
+\begin_inset Quotes erd
+\end_inset
+
+ (recordemos: valor analógico mayor que el umbral), espera un poco, y vuelve
+ a comprobarlo.
+ Si sigue pulsado, se activan el resto de órdenes.
+ Así, una pulsación leve o una falsa lectura no activa el cambio de hora.
+ En el primer condicional, se comprueba además que no se haya pulsado el
+ botón de alarma, porque si se hace, lo que cambia no es la hora sino la
+ hora de la alarma.
+\end_layout
+
+\begin_layout Enumerate
+La pulsación añade un hora más al desfase (con desbordamiento).
+ Si hora0>=23 al pulsar vuelve a cero.
+\end_layout
+
+\begin_layout Enumerate
+Se calcula el tiempo, y por tanto la variable hora llamando a calculamuestratiem
+po.
+\end_layout
+
+\begin_layout Enumerate
+En los displays se visualiza la hora y un guión en los minutos (último parámetro
+ de valordisplay a HIGH).
+\end_layout
+
+\begin_layout Enumerate
+Durante aproximadamente unos 300 ms se muestra lo que hay en el array displays.
+ Así la nueva hora y un guión aparecen brevemente en el reloj.
+\end_layout
+
+\begin_layout Subsection*
+Compruebo el botón minutero
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if (analogRead(inminutero)>500 && analogRead(inalarma)<500) { //compara
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(retrasoboton); 
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inminutero)>500) {
+\end_layout
+
+\begin_layout Plain Layout
+
+minuto0=(minuto0+1)*(minuto0<59);
+\end_layout
+
+\begin_layout Plain Layout
+
+calculamuestratiempo();
+\end_layout
+
+\begin_layout Plain Layout
+
+valordisplay(0,minuto,HIGH,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+for(i=0;i<=300;i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+mandasenal(i%4,displays[i%4]); 
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(1);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Idéntico al bloque anterior, se opera ahora con la variable minutos.
+ Es la única diferencia.
+\end_layout
+
+\begin_layout Subsection*
+Compruebo el botón alarma
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+visualizo:
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inalarma)>500) { //compara
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(retrasoboton); 
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inalarma)>500 && analogRead(inhoraria)<500 && analogRead(inminute
+ro)<500) {
+\end_layout
+
+\begin_layout Plain Layout
+
+alarma=!alarma;
+\end_layout
+
+\begin_layout Plain Layout
+
+valordisplay(horaalarma,minutoalarma,LOW,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outsegundero,!alarma);
+\end_layout
+
+\begin_layout Plain Layout
+
+for(i=0;i<=2000;i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+mandasenal(i%4,displays[i%4]); 
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(1);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+} else if(analogRead(inalarma)>500 && analogRead(inhoraria)>500 && analogRead(in
+minutero)<500) { // caso que pulse las dos a la vez
+\end_layout
+
+\begin_layout Plain Layout
+
+horaalarma=(horaalarma+1)*(horaalarma<23);
+\end_layout
+
+\begin_layout Plain Layout
+
+valordisplay(horaalarma,minutoalarma,LOW,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+for(i=0;i<=500;i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+mandasenal(i%4,displays[i%4]); 
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(1);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+goto visualizo;
+\end_layout
+
+\begin_layout Plain Layout
+
+} else if(analogRead(inalarma)>500 && analogRead(inhoraria)<500 && analogRead(in
+minutero)>500) {
+\end_layout
+
+\begin_layout Plain Layout
+
+minutoalarma=(minutoalarma+1)*(minutoalarma<59);
+\end_layout
+
+\begin_layout Plain Layout
+
+valordisplay(horaalarma,minutoalarma,LOW,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+for(i=0;i<=500;i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+mandasenal(i%4,displays[i%4]); 
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(1);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+goto visualizo;
+\end_layout
+
+\begin_layout Plain Layout
+
+} // fin del if secundario
+\end_layout
+
+\begin_layout Plain Layout
+
+} // fin del if principal
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+El primer 
+\series bold
+\shape italic
+if
+\series default
+\shape default
+ comprueba si se ha pulsado el botón de alarma, y sólo ese, no en combinación
+ con los otros.
+ Modifica la variable alarma (o 0 ó 1, desactivada o activada), apaga o
+ enciende los leds centrales del parpadeo cada segundo y muestra la hora
+ de alarma durante unos dos segundos.
+ Si los leds centrales aparecen apagados, la alarma está desconectada.
+ Si aparecen encendidos, conectada.
+ 
+\end_layout
+
+\begin_layout Enumerate
+El segundo condicional 
+\series bold
+\shape italic
+if
+\series default
+\shape default
+ comprueba si se han pulsado los botones de alarma y hora a la vez.
+ En este caso, se cambia y se muestra la hora de la alarma.
+\end_layout
+
+\begin_layout Enumerate
+Lo mismo para el tercer condicional 
+\series bold
+\shape italic
+if
+\series default
+\shape default
+, pero en este caso para los minutos de la hora de alarma.
+\end_layout
+
+\begin_layout Subsection*
+Desbordamiento de la variable tiempo1
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+if (tiempo1<=10 && segundostranscurridos>=1) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+hora0=hora;
+\end_layout
+
+\begin_layout Plain Layout
+
+minuto0=minuto; 
+\end_layout
+
+\begin_layout Plain Layout
+
+segundo0=segundo;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+¿Qué ocurre cuando la variable 
+\series bold
+\color blue
+tiempo1
+\series default
+\color inherit
+ se desborde, al cabo de los 50 días? Si fuese múltiplo de 86400 no pasaría
+ nada, porque la cuenta cíclica de los segundos y de la variable 
+\series bold
+\color blue
+tiempo1
+\series default
+\color inherit
+ estarían sincronizadas...
+ Pero no es así.
+ En este caso puede producirse un desfase que desajustaría la hora del reloj.
+\end_layout
+
+\begin_layout Standard
+Para evitarlo, este condicional 
+\series bold
+\shape italic
+\color black
+if
+\series default
+\shape default
+\color inherit
+.
+ No está probado, pues no he tenido paciencia de esperar a ver qué pasa
+ a los cincuenta días.
+ He razonado lo siguiente:
+\end_layout
+
+\begin_layout Enumerate
+Cuando la variable 
+\series bold
+\color blue
+tiempo1
+\series default
+\color inherit
+ es muy pequeña y 
+\series bold
+\color green
+segundostranscurridos
+\series default
+\color inherit
+ es mayor que 1 (mayor de 1000 ms), evidentemente o hemos puesto ya el reloj
+ en hora e introducido un desfase, o se ha alcanzado el desbordamiento de
+ 
+\series bold
+\color blue
+tiempo1
+\series default
+\color inherit
+, o ambas cosas.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Como todavía no se ha vuelto a calcular la hora de visualización en el bucle
+ (la orden 
+\shape italic
+\color black
+calculamuestratiempo
+\shape default
+\color inherit
+ es posterior), si fuerzo a que el desfase sea la hora actual, al ser 
+\series bold
+\color blue
+tiempo1
+\series default
+\color inherit
+ muy pequeño, la variable 
+\series bold
+\color green
+segundostranscurridos
+\series default
+\color inherit
+ se ajustaría bien ya que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+segundostranscurridos = hora0*3600+minuto0*60+segundo0+((tiempo1/1000) %
+ 86400);
+\end_layout
+
+\begin_layout Enumerate
+((tiempo1/1000) % 86400)=0, si tiempo1<=10
+\end_layout
+
+\begin_layout Enumerate
+y 
+\series bold
+\color green
+segundostranscurridos
+\series default
+\color inherit
+ correspondería a los segundos transcurridos simplemente por el desfase.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+También se ha supuesto que la variable 
+\series bold
+\color blue
+tiempo1
+\series default
+\color inherit
+ se refresca con una cadencia inferior a 10ms.
+ Si el código no funcionase, se podría intentar variar la condición para
+ 
+\series bold
+\color blue
+tiempo1
+\series default
+\color inherit
+; si 
+\series bold
+\color blue
+tiempo1
+\series default
+\color inherit
+<=n, siendo n<1000.
+ Por ejemplo, con n=100, n=500, n=900...
+\end_layout
+
+\begin_layout Subsection*
+Cálculo y muestra del segundero
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+//a) segundero
+\end_layout
+
+\begin_layout Plain Layout
+
+mediosegundo = ((tiempo1/500) % 2);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outsegundero,mediosegundo);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Calculo un 0 o un 1 para la variable mediosegundo, y pongo ese valor en
+ los leds centrales.
+ Poco más que explicar.
+\end_layout
+
+\begin_layout Subsection*
+Mostrando la hora
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// b) calculo el tiempo
+\end_layout
+
+\begin_layout Plain Layout
+
+calculamuestratiempo(); 
+\end_layout
+
+\begin_layout Plain Layout
+
+valordisplay(hora,minuto,LOW,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+//c) visualizo
+\end_layout
+
+\begin_layout Plain Layout
+
+cualactivo=(cualactivo+1)*(cualactivo<3);
+\end_layout
+
+\begin_layout Plain Layout
+
+mandasenal(cualactivo,displays[cualactivo]);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Vuelve a calcular el tiempo con la función calculamuestratiempo.
+\end_layout
+
+\begin_layout Enumerate
+Refresca los valores del array 
+\series bold
+\color magenta
+displays
+\series default
+\color inherit
+ con la llamada a la rutina valordisplay.
+\end_layout
+
+\begin_layout Enumerate
+La variable 
+\series bold
+\color red
+cualactivo
+\series default
+\color inherit
+, en cada ejecución del loop, va tomando valores entre 0 y 3.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Con la función mandasenal, activo uno de los cuatro displays (el que indique
+ 
+\series bold
+\color red
+cualactivo
+\series default
+\color inherit
+) y le paso el valor del número que tiene que mostrar.
+ 
+\end_layout
+
+\begin_layout Standard
+Evidentemente, es otro de los núcleos centrales del programa.
+ Las llamadas a las funciones permiten que en un ciclo de loop se elija
+ uno de los cuatro displays y se visualice el valor que le corresponda,
+ pero antes necesito que se refresquen las variables que cuentan el tiempo
+ y éstas a su vez refresquen los valores del array 
+\series bold
+\color magenta
+displays
+\series default
+\color inherit
+.
+ Es instructivo que, una vez que tengamos el reloj funcionando, hagamos
+ algunas modificaciones que nos permitan comprobar su forma de operar.
+ Por ejemplo:
+\end_layout
+
+\begin_layout Itemize
+Cambiar cualactivo=(cualactivo+1)*(cualactivo<
+\series bold
+\shape italic
+\color black
+3
+\series default
+\shape default
+\color inherit
+) por cualactivo=(cualactivo+1)*(cualactivo<
+\series bold
+\shape italic
+\color black
+2
+\series default
+\shape default
+\color inherit
+).
+ Así nunca veremos el último dígito.
+\end_layout
+
+\begin_layout Itemize
+Añadir la orden 
+\series bold
+\shape italic
+\color black
+delay(500);
+\series default
+\shape default
+\color inherit
+ al final de este bloque de órdenes.
+ Veremos como se suceden las activaciones de los 4 displays lentamente.
+ Reducir ese valor poco a poco, y se irán activando cada vez más rápido
+ hasta que no pueda distinguirse el cambio.
+\end_layout
+
+\begin_layout Subsection*
+Activando la alarma
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language=Java"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// d) activo alarma
+\end_layout
+
+\begin_layout Plain Layout
+
+if (horaalarma==hora && minutoalarma==minuto && alarma==1) { // control
+ de la alarma.
+ En la hora, en el minuto y si alarma esta activado
+\end_layout
+
+\begin_layout Plain Layout
+
+tone(outalarma,100*mediosegundo*2,100); 
+\end_layout
+
+\begin_layout Plain Layout
+
+} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+noTone(outalarma);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+// Fin del programa
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El condicional 
+\series bold
+\shape italic
+\color black
+if
+\series default
+\shape default
+\color inherit
+ comprueba, simplemente, si la hora actual coincide con los de la variable
+ alarma y, si esta está activada, toca un tono que, dependiendo si mediosegundo
+ es 0 ó 1 lo conmuta entre los 100 y 300 Hz.
+ Si no estamos en hora de alarma, desactiva el tono.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Fotografías
+\end_layout
+
+\begin_layout Standard
+Video en youtube: 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://youtu.be/vMsYxfWGz1k"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename videos_fotos/01_estado_inicial.jpg
+	lyxscale 25
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+estado inicial del reloj 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Figura-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename videos_fotos/02_cambiando_la_hora.jpg
+	lyxscale 25
+	width 25text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename videos_fotos/03_cambiando_los_minutos.jpg
+	lyxscale 25
+	width 25text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename videos_fotos/04_hora_colocada.jpg
+	lyxscale 25
+	width 25text%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+cambiando los dígitos de la hora y de los minutos; reloj en hora 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Figura-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename videos_fotos/05_cambiando_la_hora_alarma.jpg
+	lyxscale 25
+	width 25text%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+cambiando la hora de la alarma 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Figura-5"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename videos_fotos/06_desactiva_alarma.jpg
+	lyxscale 25
+	width 25text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename videos_fotos/07_activa_alarma.jpg
+	lyxscale 25
+	width 25text%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Desactivando y activando la alarma 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Figura-6"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Posibles mejoras
+\end_layout
+
+\begin_layout Subsection*
+Segundero
+\end_layout
+
+\begin_layout Standard
+Aún quedan tres entradas analógicas por usar.
+ Sería posible, por ejemplo, programar otro botón para que mostrara los
+ segundos que están transcurriendo.
+\end_layout
+
+\begin_layout Subsection*
+Display con entrada serie
+\end_layout
+
+\begin_layout Standard
+En la página de cooking-hacks encontramos un set de 4 displays de 7 segmentos
+ (
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.cooking-hacks.com/index.php/7-segment-serial-display-kelly-green.html"
+
+\end_inset
+
+) con activación serie, de forma que los 13 posibles pines de los que hemos
+ hablado con anterioridad se transforman en tres.
+ La ventaja es evidente: la visualización de la hora deja ahora libre muchos
+ pines digitales para poder usar como salidas o entradas.
+ El handicap radicaría en modificar el programa para usar este dispositivo.
+ Su desventaja: el precio, mucho más caro que el display anterior.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename reloj_cuatro_displays/09767-05_display_serie.jpg
+	lyxscale 25
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Set de 4 displays de7-segmentos entrada serie.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Set-de-4"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Calendario
+\end_layout
+
+\begin_layout Standard
+¿Podría ir más allá y configurar un calendario? Creo que sí.
+ Ahora tendría que tener una variable 
+\series bold
+\color magenta
+días
+\series default
+\color inherit
+, que contase los días transcurridos desde que encendiese el reloj más un
+ desfase.
+ Necesitaría un botón o dos, para que al pulsar se viese el mes y el día,
+ y en otro el año.
+ Otros botones más para incluir el desfase del día y ajustar la fecha.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename imagenes_ilustraciones/ez-expander-assembled.jpg
+	lyxscale 25
+	scale 15
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename imagenes_ilustraciones/breakout_board_for_pcf8575_i2c_expander.jpg
+	lyxscale 25
+	scale 15
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+EZ EXPANDER
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Además, necesito funciones que transformasen la cuenta de los días al formato
+ día-mes-año.
+ Quizás la función inversa.
+ Otras funciones que pudiesen servir de calendario perpetuo y, al pulsar
+ otro botón, me mostrasen el día de la semana.
+ Hay muchas posibilidades.
+ Evidentemente, si aumentan tanto las posibles entradas de datos, el set
+ de displays en serie es una buena opción para la visualización.
+ Otra posibilidad es estudiar el shield de ARDUINO 
+\begin_inset Quotes eld
+\end_inset
+
+EZ-EXPANDER
+\begin_inset Quotes erd
+\end_inset
+
+ (placa de expansión 
+\begin_inset CommandInset href
+LatexCommand href
+name "EZ-EXPANDER"
+target "http://www.cooking-hacks.com/index.php/shop/arduino/ez-expander-kit.html"
+
+\end_inset
+
+), que convierte mediante registros de desplazamiento tres salidas digitales
+ en dieciséis.
+ También en cooking-hacks encontramos la placa 
+\begin_inset Quotes eld
+\end_inset
+
+Breakout Board for PCF8575 I2C Expander
+\begin_inset Quotes erd
+\end_inset
+
+ (
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.cooking-hacks.com/index.php/breakout-board-for-pcf8575-i2c-expander.html"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsection*
+Melodía
+\end_layout
+
+\begin_layout Standard
+Parece lógico mejorar este aspecto del reloj.
+ La salida de alarma queda algo monótona e incluso molesta...
+ ¿No podría ser que sonase una melodía? Hay un par de programas disponibles
+ en la página de ARDUINO que hablan de este tema: 
+\end_layout
+
+\begin_layout Enumerate
+Melody: 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.arduino.cc/en/Tutorial/Melody"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+PlayMelody: 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.arduino.cc/en/Tutorial/PlayMelody"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sin embargo, aunque llegué a incorporar dichos programas a la programación
+ del reloj, el resultado no fue satisfactorio.
+ En ambos, se usan rutinas 
+\series bold
+\shape italic
+\color black
+delay()
+\series default
+\shape default
+\color inherit
+ de forma habitual y eso provoca que el display de la hora tenga retardos
+ y la visualización no sea correcta.
+ No queda bien que cuando suene la alarma los dígitos aparezcan de uno en
+ uno.
+ 
+\end_layout
+
+\begin_layout Standard
+Posibles soluciones que incorporen el código de estos dos programas musicales
+ podrían ser la visualización en el display de algún símbolo que recordase
+ que se está tocando una melodía o el uso del display en serie que quizás
+ minimice el efecto del retardo.
+ O estudiar a fondo la cuestión y ver si pueden generarse notas musicales
+ de otras formas, incluso con circuitos externos o complementarios a ARDUINO.
+\end_layout
+
+\begin_layout Subsection*
+Cronómetro
+\end_layout
+
+\begin_layout Standard
+Sería interesante la modificación del código para conseguir, no un reloj,
+ sino un cronómetro.
+ Quizás con exactamente el mismo hardware.
+ Un proyecto para estudiar.
+\end_layout
+
+\begin_layout Part
+Idea de negocio: LilyPad y relojes montados en tela.
+\end_layout
+
+\begin_layout Standard
+Las posibilidades de hardware relacionados con ARDUINO es muy amplia.
+ Sólo hay que echar un vistazo a la página de cooking-hacks.
+ Una de las versiones de ARDUINO está implementada en una placa pequeña,
+ plana, especialmente diseñada para ser cosida a la tela.
+ Una serie de componentes (pulsadores, sensores, leds...) están especialmente
+ diseñados para usarse en combinación con LilyPad.
+ 
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename imagenes_ilustraciones/lilypad.jpg
+	lyxscale 25
+	scale 15
+	BoundingBox 20bp 20bp 550bp 500bp
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+LilyPad 328 Main Board
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teóricamente, puede trasladarse el mismo programa reloj, de ARDUINO UNO
+ a LilyPad.
+ Es posible montar un dispositivo de este tipo en cualquier prenda.
+\end_layout
+
+\begin_layout Standard
+Montar un reloj con un set de 4 displays como los que hemos presentado puede
+ ser algo problemático por el grosor de los mismos y por ser componentes
+ relativamente grandes y poco flexibles.
+ El resto de componentes necesarios (resistencias, pulsadores y cableado)
+ son más fáciles de esconder entre los forros y la tela.
+ No obstante, puede hacerse, y no cabe duda que es un valor añadido a una
+ prenda.
+ 
+\end_layout
+
+\begin_layout Standard
+Una versión del reloj podría ser el que indique horas y minutos formando
+ una esfera, mediante simples LEDs.
+ Necesitaría 12 de un color, para las horas, y 60 de otro color para los
+ minutos (o algún otro diseño original).
+ El bloque básico de programación del reloj puede conservarse; cambiaría
+ la parte de visualización.
+ Es casi seguro que necesitaría una ampliación de las salidas digitales
+ (seguramente tendría que usar uno o varios 
+\begin_inset Quotes eld
+\end_inset
+
+EZ-EXPANDER
+\begin_inset Quotes erd
+\end_inset
+
+).
+ Si unimos la idea de implementar un reloj en una prenda y este tipo de
+ reloj, podrían diseñarse relojes-cojines, por ejemplo.
+ Los cojines son elementos altamente decorativos de un hogar, y ahora, podrían
+ también dar la hora.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename imagenes_ilustraciones/cushion.jpg
+	lyxscale 15
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Cojines dando la hora
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Anexo: programa completo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language={C++}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// siete salidas digitales a cada tramo del display
+\end_layout
+
+\begin_layout Plain Layout
+
+int outa = 11;
+\end_layout
+
+\begin_layout Plain Layout
+
+int outb = 13;
+\end_layout
+
+\begin_layout Plain Layout
+
+int outc = 2;
+\end_layout
+
+\begin_layout Plain Layout
+
+int outd = 3;
+\end_layout
+
+\begin_layout Plain Layout
+
+int oute = 4;
+\end_layout
+
+\begin_layout Plain Layout
+
+int outf = 5;
+\end_layout
+
+\begin_layout Plain Layout
+
+int outg = 6;
+\end_layout
+
+\begin_layout Plain Layout
+
+int outsegundero = 12;
+\end_layout
+
+\begin_layout Plain Layout
+
+int outalarma=1;
+\end_layout
+
+\begin_layout Plain Layout
+
+// a los anodos de los displays.
+ Actuan por logica inversa
+\end_layout
+
+\begin_layout Plain Layout
+
+int anodo[4]={7,8,9,10};
+\end_layout
+
+\begin_layout Plain Layout
+
+// entradas para modificar la hora y minuto
+\end_layout
+
+\begin_layout Plain Layout
+
+int inhoraria = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int inminutero = 1; //entrada 1
+\end_layout
+
+\begin_layout Plain Layout
+
+int inalarma = 2; //entrada 2
+\end_layout
+
+\begin_layout Plain Layout
+
+// cuenta el tiempo
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long hora = 0; // de 0 a 23.
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long minuto = 0; // de 0 a 59
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long hora0 = 10; // de 0 a 23.
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long minuto0 = 10; // de 0 a 59 // :-) Como los relojes de esfera,
+ a las 10 y 10.
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long segundo0 = 0; // de 0 a 59
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long segundo = 0; // de 0 a 59
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long segundostranscurridos = 0; // de 0 a 59.
+ segundostranscurridos transcurridos
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long mediosegundo = 0; // de 0 a 59
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long muestraminuto = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long muestrahora = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+// alarma //Inicializo a las 10:05
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long horaalarma=10;
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long minutoalarma=5;
+\end_layout
+
+\begin_layout Plain Layout
+
+int alarma=0; // desactivada 0 y activada 1
+\end_layout
+
+\begin_layout Plain Layout
+
+// variables de los displays
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long displays[4]; // variable para cada display
+\end_layout
+
+\begin_layout Plain Layout
+
+int cualactivo = 0 ; //variable para guardar cual se activa
+\end_layout
+
+\begin_layout Plain Layout
+
+//contador general de tiempo
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long tiempo1=0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int retrasoboton = 100; //retraso del botn al pulsar
+\end_layout
+
+\begin_layout Plain Layout
+
+// contador de proposito general
+\end_layout
+
+\begin_layout Plain Layout
+
+int i=0;
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ====================== */
+\end_layout
+
+\begin_layout Plain Layout
+
+/* Funciones y subrutinas */
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ====================== */
+\end_layout
+
+\begin_layout Plain Layout
+
+// *************************************************
+\end_layout
+
+\begin_layout Plain Layout
+
+// Funcion que pone un valor en un display a la vez
+\end_layout
+
+\begin_layout Plain Layout
+
+// *************************************************
+\end_layout
+
+\begin_layout Plain Layout
+
+void mandasenal(int numdisplay, int valor) {
+\end_layout
+
+\begin_layout Plain Layout
+
+// ********************************************
+\end_layout
+
+\begin_layout Plain Layout
+
+// a) activa cada tramo del display segun valor
+\end_layout
+
+\begin_layout Plain Layout
+
+// ********************************************
+\end_layout
+
+\begin_layout Plain Layout
+
+// recibe el numero de display y el valor que tiene que entregar
+\end_layout
+
+\begin_layout Plain Layout
+
+switch (valor) {
+\end_layout
+
+\begin_layout Plain Layout
+
+case 0:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 1:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 2:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 3:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 4:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 5:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 6:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 7:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 8:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 9:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 10:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+// **********************************
+\end_layout
+
+\begin_layout Plain Layout
+
+// b) activo un solo display cada vez
+\end_layout
+
+\begin_layout Plain Layout
+
+// **********************************
+\end_layout
+
+\begin_layout Plain Layout
+
+for (int i=0;i<=3;i++) { // recorrido de 0 hasta 3
+\end_layout
+
+\begin_layout Plain Layout
+
+if (i==numdisplay) {
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(anodo[i],HIGH); // activo por 
+\end_layout
+
+\begin_layout Plain Layout
+
+} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(anodo[i],LOW); // desactivo por 
+\end_layout
+
+\begin_layout Plain Layout
+
+} // fin del if
+\end_layout
+
+\begin_layout Plain Layout
+
+} // fin del for
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+// **********************************
+\end_layout
+
+\begin_layout Plain Layout
+
+// displays
+\end_layout
+
+\begin_layout Plain Layout
+
+// **********************************
+\end_layout
+
+\begin_layout Plain Layout
+
+void valordisplay(unsigned long h,unsigned long m,int rayah, int rayam)
+ {
+\end_layout
+
+\begin_layout Plain Layout
+
+if (rayah==LOW) {
+\end_layout
+
+\begin_layout Plain Layout
+
+displays[0]= h/10;
+\end_layout
+
+\begin_layout Plain Layout
+
+displays[1]= h % 10; // resto de la division entre 10
+\end_layout
+
+\begin_layout Plain Layout
+
+} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+displays[0]= 10;
+\end_layout
+
+\begin_layout Plain Layout
+
+displays[1]= 10; // guion
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+if (rayam==LOW) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+displays[2]= m / 10;
+\end_layout
+
+\begin_layout Plain Layout
+
+displays[3]= m % 10; // resto de la division entre 10
+\end_layout
+
+\begin_layout Plain Layout
+
+} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+displays[2]= 10;
+\end_layout
+
+\begin_layout Plain Layout
+
+displays[3]= 10; // guion
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+// **********************************
+\end_layout
+
+\begin_layout Plain Layout
+
+// calcula el tiempo
+\end_layout
+
+\begin_layout Plain Layout
+
+// **********************************
+\end_layout
+
+\begin_layout Plain Layout
+
+void calculamuestratiempo() {
+\end_layout
+
+\begin_layout Plain Layout
+
+// 1) calculos para el reloj
+\end_layout
+
+\begin_layout Plain Layout
+
+segundostranscurridos = hora0*3600+minuto0*60+segundo0+((tiempo1/1000) %
+ 86400);
+\end_layout
+
+\begin_layout Plain Layout
+
+segundo= segundostranscurridos % 60;
+\end_layout
+
+\begin_layout Plain Layout
+
+minuto = segundostranscurridos/60;
+\end_layout
+
+\begin_layout Plain Layout
+
+hora = minuto/60;
+\end_layout
+
+\begin_layout Plain Layout
+
+hora = hora % 24;
+\end_layout
+
+\begin_layout Plain Layout
+
+minuto = minuto % 60;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ===================================== */
+\end_layout
+
+\begin_layout Plain Layout
+
+/* Bucles principales del programa: setup */
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ====================================== */
+\end_layout
+
+\begin_layout Plain Layout
+
+void setup () { // inicializo
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(outa, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(outb, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(outc, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(outd, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(oute, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(outf, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(outg, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(outsegundero, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(anodo[0], OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(anodo[1], OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(anodo[2], OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(anodo[3], OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(outalarma, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+// Serial.begin(115200);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ====================================== */
+\end_layout
+
+\begin_layout Plain Layout
+
+/* Bucles principales del programa: loop */
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ====================================== */
+\end_layout
+
+\begin_layout Plain Layout
+
+void loop () { // bucle
+\end_layout
+
+\begin_layout Plain Layout
+
+tiempo1=millis(); // milisegundostranscurridos al empezar el bucle
+\end_layout
+
+\begin_layout Plain Layout
+
+// 1) comprueba horaria
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inhoraria)>500 && analogRead(inalarma)<500) { //compara
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(retrasoboton); // tiempo de espera 50 milisegundostranscurridos de
+ pulsacion de boton.
+ El boton debe mantenerse pulsado 50 milisegundostranscurridos
+\end_layout
+
+\begin_layout Plain Layout
+
+// hacerlo de esta manera evita que una pulsacion fisica sea reconocida
+ como muchas pulsaciones
+\end_layout
+
+\begin_layout Plain Layout
+
+// ajustar el retraso por cada boton.
+ Se ha puesto un valor de 50 pero podria tener que ser mas
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inhoraria)>500) {
+\end_layout
+
+\begin_layout Plain Layout
+
+hora0=(hora0+1)*(hora0<23);
+\end_layout
+
+\begin_layout Plain Layout
+
+calculamuestratiempo();
+\end_layout
+
+\begin_layout Plain Layout
+
+valordisplay(hora,0,LOW,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+for(i=0;i<=300;i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+mandasenal(i%4,displays[i%4]); 
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(1);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+// 2) comprueba minutero
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inminutero)>500 && analogRead(inalarma)<500) { //compara
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(retrasoboton); // tiempo de espera 50 milisegundostranscurridos de
+ pulsacion de boton.
+ El boton debe mantenerse pulsado 50 milisegundostranscurridos
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inminutero)>500) {
+\end_layout
+
+\begin_layout Plain Layout
+
+minuto0=(minuto0+1)*(minuto0<59);
+\end_layout
+
+\begin_layout Plain Layout
+
+calculamuestratiempo();
+\end_layout
+
+\begin_layout Plain Layout
+
+valordisplay(0,minuto,HIGH,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+for(i=0;i<=300;i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+mandasenal(i%4,displays[i%4]); 
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(1);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+// 3) comprueba segundero.
+ Solo verlo
+\end_layout
+
+\begin_layout Plain Layout
+
+visualizo:
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inalarma)>500) { //compara
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(retrasoboton); // tiempo de espera 50 milisegundostranscurridos de
+ pulsacion de boton.
+ El boton debe mantenerse pulsado 50 milisegundostranscurridos
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inalarma)>500 && analogRead(inhoraria)<500 && analogRead(inminute
+ro)<500) {
+\end_layout
+
+\begin_layout Plain Layout
+
+alarma=!alarma;
+\end_layout
+
+\begin_layout Plain Layout
+
+valordisplay(horaalarma,minutoalarma,LOW,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outsegundero,!alarma);
+\end_layout
+
+\begin_layout Plain Layout
+
+for(i=0;i<=2000;i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+mandasenal(i%4,displays[i%4]); 
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(1);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+} else if(analogRead(inalarma)>500 && analogRead(inhoraria)>500 && analogRead(in
+minutero)<500) { // caso que pulse las dos a la vez
+\end_layout
+
+\begin_layout Plain Layout
+
+horaalarma=(horaalarma+1)*(horaalarma<23);
+\end_layout
+
+\begin_layout Plain Layout
+
+valordisplay(horaalarma,minutoalarma,LOW,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+for(i=0;i<=500;i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+mandasenal(i%4,displays[i%4]); 
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(1);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+goto visualizo;
+\end_layout
+
+\begin_layout Plain Layout
+
+} else if(analogRead(inalarma)>500 && analogRead(inhoraria)<500 && analogRead(in
+minutero)>500) {
+\end_layout
+
+\begin_layout Plain Layout
+
+minutoalarma=(minutoalarma+1)*(minutoalarma<59);
+\end_layout
+
+\begin_layout Plain Layout
+
+valordisplay(horaalarma,minutoalarma,LOW,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+for(i=0;i<=500;i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+mandasenal(i%4,displays[i%4]); 
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(1);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+goto visualizo;
+\end_layout
+
+\begin_layout Plain Layout
+
+} // fin del if secundario
+\end_layout
+
+\begin_layout Plain Layout
+
+} // fin del if principal
+\end_layout
+
+\begin_layout Plain Layout
+
+// *******************************************
+\end_layout
+
+\begin_layout Plain Layout
+
+// previo: si llega a la cuenta de los 50 dias
+\end_layout
+
+\begin_layout Plain Layout
+
+// *******************************************
+\end_layout
+
+\begin_layout Plain Layout
+
+if (tiempo1<=10 && segundostranscurridos>=1) { // esta situacin no se puede
+ dar de inicio
+\end_layout
+
+\begin_layout Plain Layout
+
+// si segundostranscurridos>=1 entonces como tiempo1>=1000
+\end_layout
+
+\begin_layout Plain Layout
+
+// Esta situacion puede darse si se alcanzan los 50 dias (limite maximo
+ del conteo de milisegundos) y se reinicie la cuenta de tiempo1
+\end_layout
+
+\begin_layout Plain Layout
+
+// En ese caso fuerzo a que la hora inicial sea la hora actual
+\end_layout
+
+\begin_layout Plain Layout
+
+hora0=hora;
+\end_layout
+
+\begin_layout Plain Layout
+
+minuto0=minuto; // pongo la hora y los minutos de inicio como las actuales
+\end_layout
+
+\begin_layout Plain Layout
+
+segundo0=segundo;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+//a) segundero
+\end_layout
+
+\begin_layout Plain Layout
+
+mediosegundo = ((tiempo1/500) % 2);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outsegundero,mediosegundo);
+\end_layout
+
+\begin_layout Plain Layout
+
+// b) calculo el tiempo
+\end_layout
+
+\begin_layout Plain Layout
+
+calculamuestratiempo(); // llama a la funcin que calcula las variables temporale
+s
+\end_layout
+
+\begin_layout Plain Layout
+
+valordisplay(hora,minuto,LOW,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+//c) visualizo
+\end_layout
+
+\begin_layout Plain Layout
+
+cualactivo=(cualactivo+1)*(cualactivo<3);
+\end_layout
+
+\begin_layout Plain Layout
+
+mandasenal(cualactivo,displays[cualactivo]); // activa los pines del display
+ elegido
+\end_layout
+
+\begin_layout Plain Layout
+
+// d) activo alarma
+\end_layout
+
+\begin_layout Plain Layout
+
+if (horaalarma==hora && minutoalarma==minuto && alarma==1) { // control
+ de la alarma.
+ En la hora, en el minuto y si alarma esta activado
+\end_layout
+
+\begin_layout Plain Layout
+
+tone(outalarma,100*mediosegundo*2,100); 
+\end_layout
+
+\begin_layout Plain Layout
+
+} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+noTone(outalarma);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+// Fin del programa
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

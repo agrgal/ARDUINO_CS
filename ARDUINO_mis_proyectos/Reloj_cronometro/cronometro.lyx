@@ -1,0 +1,3444 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{multicol}
+\usepackage{xcolor}
+\renewcommand{\indexname}{Índice}
+\end_preamble
+\use_default_options true
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman bookman
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "Corriendo el tiempo en un display"
+\pdf_author "Aurelio Gallardo Rodríguez"
+\pdf_subject "Construcción de un reloj con ARDUINO"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 1.8cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\bullet 2 0 34 -1
+\bullet 3 0 26 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand {
+\backslash
+contentsname} {Índice General}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+
+\series bold
+\shape smallcaps
+\color black
+El paso del tiempo (II)
+\end_layout
+
+\begin_layout Date
+8 de Febrero de 2013
+\end_layout
+
+\begin_layout Author
+por Aurelio Gallardo
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 5cm*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\shape smallcaps
+Construyendo un cronómetro con ARDUINO...
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand {
+\backslash
+partname} {Apartado}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+thispagestyle{empty} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape smallcaps
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+thispagestyle{empty} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+thepage}{
+\backslash
+roman{page}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Left Header
+
+\series bold
+\size small
+Un cronómetro con Arduino
+\end_layout
+
+\begin_layout Right Header
+
+\size small
+por Aurelio Gallardo Rodríguez
+\end_layout
+
+\begin_layout Center Header
+\begin_inset Graphics
+	filename reloj_cuatro_displays/09767-05_display_serie.jpg
+	lyxscale 10
+	scale 4
+	BoundingBox 0bp 30bp 600bp 600bp
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Right Footer
+-
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+-
+\end_layout
+
+\begin_layout Center Footer
+
+\end_layout
+
+\begin_layout Part
+Introducción
+\end_layout
+
+\begin_layout Standard
+Como comentamos en la primera parte, dedicada al diseño y construcción de
+ un reloj digital, con pocas modificaciones de hardware, podemos construir
+ un cronómetro a partir del montaje del mismo.
+ Se conserva el set de 4 displays de 7 segmentos, y los tres botones, y
+ se modifica el programa casi al completo.
+ 
+\end_layout
+
+\begin_layout Standard
+Ambos dispositivos, reloj y cronómetro, se fundamentan en dos ideas distintas
+ de medir el tiempo.
+ El reloj se construye para ser cíclico, para llevar una cuenta que se repite
+ de forma indefinida; una cuenta externa a él, independiente (en principio)
+ de él mismo.
+ Si el reloj se estropease, esa cuenta del tiempo seguiría: sería posible
+ continuarla en otro reloj.
+ El cronómetro, sin embargo, lleva una cuenta que tiene principio y fin.
+ No es cíclico.
+ Empieza en un punto y acaba en otro.
+\end_layout
+
+\begin_layout Part
+Montaje
+\end_layout
+
+\begin_layout Standard
+El montaje varía muy poco respecto del anterior.
+ Tan sólo dos modificaciones:
+\end_layout
+
+\begin_layout Enumerate
+Retirada del buzzer en el pin 1.
+\end_layout
+
+\begin_layout Enumerate
+En su lugar, conectamos el pin 1 de ARDUINO a la patilla 7 del set de 4
+ displays.
+ En dicha patilla encontramos el punto decimal, que puede situarse en cualquiera
+ de los 4 displays.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename imagenes_ilustraciones/esquema_display.png
+	lyxscale 25
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Patillaje del set de 4 displays
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Explicación del código
+\end_layout
+
+\begin_layout Standard
+NOTA: El código que se repite respecto al reloj digital no se vuelve a explicar.
+\end_layout
+
+\begin_layout Section*
+Variables
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language={C++}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int outcoma = 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// defino RESTART con el codigo ensamblador que hace un RESET
+\end_layout
+
+\begin_layout Plain Layout
+
+#define RESTART asm("jmp 0x0000");
+\end_layout
+
+\begin_layout Plain Layout
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+// entradas para modificar la hora y minuto
+\end_layout
+
+\begin_layout Plain Layout
+
+int start = 0; // 1 --> empieza , 0--> para
+\end_layout
+
+\begin_layout Plain Layout
+
+int reset = 0; // 0 --> continua, 1 --> hace un reset
+\end_layout
+
+\begin_layout Plain Layout
+
+int mode = 0; // 0 --> modo segundos + decimas  1 --> modo minutos + segundos
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// variables de entrada analogica
+\end_layout
+
+\begin_layout Plain Layout
+
+int instart = 0; 
+\end_layout
+
+\begin_layout Plain Layout
+
+int inreset = 1; 
+\end_layout
+
+\begin_layout Plain Layout
+
+int inmode = 2; 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// valores a pasar al display, y calculos
+\end_layout
+
+\begin_layout Plain Layout
+
+int h = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int m = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int hora = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int minutos = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int segundos = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int mediosegundo = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int valorcoma = 2; // display2, o sea el tercero
+\end_layout
+
+\begin_layout Plain Layout
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+//contador general de tiempo
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long tiempo1=0;
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long tiempo2=0;
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long tiempo3=0;
+\end_layout
+
+\begin_layout Plain Layout
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En primer lugar defino el pin de salida 1 como outcoma, ya que será la variable
+ que guarde la información de la coma digital.
+\end_layout
+
+\begin_layout Itemize
+Defino como RESTART a la llamada en ensamblador que reinicia el programa.
+ Es la mejor manera de hacer un RESET o puesta a cero programable.
+ Más información en la siguiente discusión de los foros de ARDUINO: 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://arduino.cc/forum/index.php?topic=50803.5;wap2"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Las variables start, reset y mode tienen las siguientes funciones:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+start: comienza el cronómetro.
+ Si se vuelve a pulsar, para (stop).
+ Al volverlo a poner en marcha se reanuda la cuenta.
+\end_layout
+
+\begin_layout Itemize
+reset: puesta a cero del cronómetro.
+\end_layout
+
+\begin_layout Itemize
+mode: son posibles 4 visualizaciones:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Segundos y décimas (mode=0).
+ Cuenta hasta 999,9 segundos.
+ Punto decimal en el tercer dígito o display número 2.
+\end_layout
+
+\begin_layout Itemize
+Segundos (mode=1): cuenta hasta 9999 segundos.
+ Punto decimal en el cuarto dígito o display número 3.
+\end_layout
+
+\begin_layout Itemize
+Minutos y segundos (mode=2): cuenta hasta 99' 59''.
+ Punto decimal en el segundo dígito o display número 1.
+\end_layout
+
+\begin_layout Itemize
+Horas y minutos (mode=3): cuenta hasta 99 horas y 59'.
+ Dos puntos centrales (muestra segundos).
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Cambio el nombre de las variables que detectan las pulsaciones de las entradas
+ analógicas: instart, inreset e inmode.
+\end_layout
+
+\begin_layout Itemize
+Variables h y m: valores respectivamente de los dos primeros dígitos del
+ display (h) , y de los otros dos (m).
+\end_layout
+
+\begin_layout Itemize
+Variables hora, minutos, segundos...: controlan los segundos-minutos-horas
+ que trasncurren.
+\end_layout
+
+\begin_layout Itemize
+Variable mediosegundo: controla el parpadeo de los puntos centrales.
+\end_layout
+
+\begin_layout Itemize
+Variable valorcoma: indica en qué display hay que activar el punto decimal.
+\end_layout
+
+\begin_layout Itemize
+Variables tiempo1, tiempo2, tiempo3: variables que llevan la cuenta del
+ tiempo.
+\end_layout
+
+\begin_layout Section*
+Rutina 
+\begin_inset Quotes eld
+\end_inset
+
+mandasenal
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language={C++}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void mandasenal(int numdisplay, int valor) {
+\end_layout
+
+\begin_layout Plain Layout
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+// **********************************
+\end_layout
+
+\begin_layout Plain Layout
+
+// b) activo un solo display cada vez
+\end_layout
+
+\begin_layout Plain Layout
+
+// **********************************
+\end_layout
+
+\begin_layout Plain Layout
+
+for (int i=0;i<=3;i++) { // recorrido de 0 hasta 3
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if (numdisplay==valorcoma) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  digitalWrite(outcoma,LOW); 
+\end_layout
+
+\begin_layout Plain Layout
+
+} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+  digitalWrite(outcoma,HIGH); 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// elige el nodo
+\end_layout
+
+\begin_layout Plain Layout
+
+if (i==numdisplay) {
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(anodo[i],HIGH); // activo por 
+\end_layout
+
+\begin_layout Plain Layout
+
+} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(anodo[i],LOW); // desactivo por 
+\end_layout
+
+\begin_layout Plain Layout
+
+} // fin del if
+\end_layout
+
+\begin_layout Plain Layout
+
+} // fin del for
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta rutina prácticamente se deja como está.
+ El único cambio radica en el 
+\series bold
+\shape italic
+if 
+\series default
+\shape default
+que detecta si el numdisplay es el mismo que valorcoma, para poder activar
+ o no el punto decimal.
+\end_layout
+
+\begin_layout Section*
+Rutina 
+\begin_inset Quotes eld
+\end_inset
+
+valordisplay
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El cambio añadido a esta rutina es simple: las variables h y m han pasado
+ a ser variables globales y no locales de la función, por lo que no se pasan
+ como parámetros a la misma.
+ El código de la rutina, sin embargo, no ha cambiado.
+\end_layout
+
+\begin_layout Section*
+Otros cambios
+\end_layout
+
+\begin_layout Itemize
+Se retira la funcion calculamuestratiempo
+\end_layout
+
+\begin_layout Itemize
+Se añade en la rutina 
+\series bold
+\shape italic
+setup
+\series default
+\shape default
+ la orden 
+\series bold
+\color magenta
+pinMode(outcoma, OUTPUT)
+\series default
+\color inherit
+;
+\end_layout
+
+\begin_layout Section*
+Rutina principal
+\end_layout
+
+\begin_layout Subsection*
+Cálculo del tiempo transcurrido
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language={C++}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+tiempo1=millis(); // milisegundostranscurridos al empezar el bucle
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if (start==1) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  tiempo3=(tiempo1-tiempo2)/100; // decimas de segundo
+\end_layout
+
+\begin_layout Plain Layout
+
+} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+  tiempo2=tiempo1-(tiempo3*100); 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+La variable tiempo1 almacena la salida de la función millis().
+ No cambia respecto al reloj digital.
+\end_layout
+
+\begin_layout Enumerate
+La variable tiempo3 almacena el tiempo en el que el botón start se activa
+ como 
+\begin_inset Quotes eld
+\end_inset
+
+1
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Esta variable es la base de tiempo para cálculos posteriores.
+\end_layout
+
+\begin_layout Enumerate
+La variable tiempo2 almacena el tiempo en el que tenemos estado de parada
+ (start -> 
+\begin_inset Quotes erd
+\end_inset
+
+0
+\begin_inset Quotes erd
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+Por lo tanto, al tener activado 
+\begin_inset Quotes eld
+\end_inset
+
+start
+\begin_inset Quotes erd
+\end_inset
+
+, se cuenta el tiempo que ha transcurrido menos el que se haya parado.
+ Si 
+\begin_inset Quotes eld
+\end_inset
+
+start
+\begin_inset Quotes erd
+\end_inset
+
+ está desactivado, ocurre lo contrario: lo que se cuenta es el tiempo de
+ parada.
+ El desborde de la variable tiempo1 (a los 50 días) nunca ocurre, ya que
+ el cronómetro, como máximo, alcanza las 99 horas y 59 minutos (algo más
+ de 4 días).
+\end_layout
+
+\begin_layout Subsection*
+Cómo se realizan cálculos con el paso del tiempo
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language={C++}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// calculo y mostrar
+\end_layout
+
+\begin_layout Plain Layout
+
+if (mode==0) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  h = tiempo3 /100; // centenas - decenas segundos
+\end_layout
+
+\begin_layout Plain Layout
+
+  m = tiempo3 % 100; // unidades y decimas de segundo
+\end_layout
+
+\begin_layout Plain Layout
+
+  valorcoma = 2; // tercer display
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (tiempo3>9999) { // caso que sobrepase la cantidad
+\end_layout
+
+\begin_layout Plain Layout
+
+     mode=2; // cambia al modo 2.
+      
+\end_layout
+
+\begin_layout Plain Layout
+
+  } 
+\end_layout
+
+\begin_layout Plain Layout
+
+} else if (mode==1) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  // segundos sin decimas
+\end_layout
+
+\begin_layout Plain Layout
+
+  segundos = tiempo3 / 10; // calculo los segundos transcurridos, sin decimas
+\end_layout
+
+\begin_layout Plain Layout
+
+  h = segundos /100 ;
+\end_layout
+
+\begin_layout Plain Layout
+
+  m = segundos % 100;
+\end_layout
+
+\begin_layout Plain Layout
+
+  valorcoma = 3; // la coma en el ultimo digito
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (segundos>9999) { // caso que sobrepase la cantidad
+\end_layout
+
+\begin_layout Plain Layout
+
+     mode=3; // cambia al modo 3.
+      
+\end_layout
+
+\begin_layout Plain Layout
+
+  } 
+\end_layout
+
+\begin_layout Plain Layout
+
+} else if (mode==2) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  // minutos - segundos
+\end_layout
+
+\begin_layout Plain Layout
+
+  segundos = tiempo3 / 10; // calculo los segundos transcurridos
+\end_layout
+
+\begin_layout Plain Layout
+
+  minutos = segundos / 60;
+\end_layout
+
+\begin_layout Plain Layout
+
+  segundos = segundos % 60;
+\end_layout
+
+\begin_layout Plain Layout
+
+  h = minutos;
+\end_layout
+
+\begin_layout Plain Layout
+
+  m = segundos;
+\end_layout
+
+\begin_layout Plain Layout
+
+  valorcoma=1; // la coma en la segunda posicion
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (segundos>5999) { // caso que sobrepase la cantidad
+\end_layout
+
+\begin_layout Plain Layout
+
+     mode=3; // cambia al modo 3.
+      
+\end_layout
+
+\begin_layout Plain Layout
+
+  } 
+\end_layout
+
+\begin_layout Plain Layout
+
+} else if (mode==3) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  // horas - minutos
+\end_layout
+
+\begin_layout Plain Layout
+
+  segundos = tiempo3 / 10; // calculo los segundos transcurridos
+\end_layout
+
+\begin_layout Plain Layout
+
+  mediosegundo = segundos % 2;
+\end_layout
+
+\begin_layout Plain Layout
+
+  minutos = segundos / 60;
+\end_layout
+
+\begin_layout Plain Layout
+
+  hora = minutos / 60 ;
+\end_layout
+
+\begin_layout Plain Layout
+
+  // hora = hora % 24 NO, no es un reloj
+\end_layout
+
+\begin_layout Plain Layout
+
+  minutos = minutos % 60;
+\end_layout
+
+\begin_layout Plain Layout
+
+  h = hora;
+\end_layout
+
+\begin_layout Plain Layout
+
+  m = minutos;
+\end_layout
+
+\begin_layout Plain Layout
+
+  digitalWrite(outmediosegundo, mediosegundo); // la coma en la segunda
+ posicion, parpadeante
+\end_layout
+
+\begin_layout Plain Layout
+
+  valorcoma = 9; // este valor no existe, y no pondr como ninguna
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (hora*3600+minutos*60>359940) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    RESTART;
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// anula el parpadeo de leds centrales en caso de mode distinto de 3
+\end_layout
+
+\begin_layout Plain Layout
+
+if (mode!=3) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  digitalWrite(outmediosegundo, HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// anula el parpadeo de leds centrales en caso de mode distinto de 3
+\end_layout
+
+\begin_layout Plain Layout
+
+if (mode!=3) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  digitalWrite(outmediosegundo, HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  valordisplay(LOW,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+  cualactivo = (cualactivo+1)*(cualactivo<3);
+\end_layout
+
+\begin_layout Plain Layout
+
+  mandasenal(cualactivo,displays[cualactivo]); 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Depende del valor que tome la variable mode:
+\end_layout
+
+\begin_layout Enumerate
+Modo décimas de segundo (mode=0): en este caso, tiempo3 ya viene dado en
+ décimas de segundo.
+ Divido entre 100 y se lo aplico a 
+\begin_inset Quotes eld
+\end_inset
+
+h
+\begin_inset Quotes erd
+\end_inset
+
+.
+ El módulo de dividir entre 100 a 
+\begin_inset Quotes eld
+\end_inset
+
+m
+\begin_inset Quotes erd
+\end_inset
+
+, y pasaré esos valores a la variable displays cuando llame a valordisplay.
+ Como en el caso del reloj, tengo que elegir cíclicamente un display a mostrar,
+ con la variable cualactivo y mostrarla con mandasenal.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+mode=0 se desborda a los 999,9 segundos (o tiempo3=9999 décimas de segundo)
+ por lo que fuerzo el cambio de modo a modo minutos - segundos.
+\end_layout
+
+\begin_layout Enumerate
+la coma de los decimales se aplica al tercer dígito con valorcoma = 2.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Modo segundos (mode=1): convierto tiempo3 en segundos y aplico lo mismo
+ que el caso anterior a la variable 
+\begin_inset Quotes eld
+\end_inset
+
+segundos
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+mode = 1 se desborda a los 9999 segundos, y fuerzo el cambio de modo a horas
+ - minutos.
+\end_layout
+
+\begin_layout Enumerate
+la coma de los decimales se aplica al cuarto dígito con valorcoma = 3.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Modo minutos - segundos (mode=2): segundos se convierten en minutos - segundos.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+h
+\begin_inset Quotes erd
+\end_inset
+
+ pasa a ser los minutos y 
+\begin_inset Quotes eld
+\end_inset
+
+m
+\begin_inset Quotes erd
+\end_inset
+
+ los segundos.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+mode = 2 se desborda a los 99' 59
+\begin_inset Quotes erd
+\end_inset
+
+ (o sea, los 5999 segundos).
+ Se fuerza el cambio a horas - minutos.
+\end_layout
+
+\begin_layout Enumerate
+La coma decimal se aplica al segundo dígito.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Modo horas - minutos (mode=3): convertimos a horas y minutos, calculamos
+ los medios segundos y activamos los leds centrales del display.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Al desbordarse (a las 99 horas y 59', los 359940
+\begin_inset Quotes erd
+\end_inset
+
+) fuerzo el reinicio.
+ Creo que es un límite más que aceptable para un cronómetro.
+ Por eso nunca desbordaré la variable tiempo1, capaz de alcanzar los 50
+ días aproximadamente.
+ 
+\end_layout
+
+\begin_layout Enumerate
+La coma decimal toma un valor imposible; así no aparece en ninguno de los
+ dígitos.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Por último, solo indicar que los leds centrales se desconectan si no estamos
+ en el último modo, el modo horas - minutos.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+NOTA
+\series default
+: es necesario investigar aún más detenidamente las rutinas que detectan
+ el desbordamiento del conteo en cada modo y el salto a otro.
+\end_layout
+
+\begin_layout Subsection*
+Activación de los botones
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language={C++}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// 1) comprueba start
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(instart)>500) { //compara
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(retrasoboton); // el retraso hace dar un pequeño salto al display.
+\end_layout
+
+\begin_layout Plain Layout
+
+// ajustar el retraso por cada boton.
+ Se ha puesto un valor de 50 pero podria tener que ser mas
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(instart)>500) {
+\end_layout
+
+\begin_layout Plain Layout
+
+   start=!start; // cambio la condicion de start
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// 2) comprueba reset
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inreset)>500) { //compara
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(retrasoboton); // el retraso hace dar un pequeño salto al display.
+\end_layout
+
+\begin_layout Plain Layout
+
+// ajustar el retraso por cada boton.
+ Se ha puesto un valor de 50 pero podria tener que ser mas
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inreset)>500) {
+\end_layout
+
+\begin_layout Plain Layout
+
+   start=0;
+\end_layout
+
+\begin_layout Plain Layout
+
+   RESTART; // hago un RESET en caliente
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// 3) comprueba modo
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inmode)>500) { //compara
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(retrasoboton); // el retraso hace dar un pequeño salto al display.
+\end_layout
+
+\begin_layout Plain Layout
+
+// ajustar el retraso por cada boton.
+ Se ha puesto un valor de 50 pero podria tener que ser mas
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inmode)>500) {
+\end_layout
+
+\begin_layout Plain Layout
+
+   mode=(mode+1)*(mode<3);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+En el primero, simplemente se complementa el valor de 
+\begin_inset Quotes eld
+\end_inset
+
+start
+\begin_inset Quotes erd
+\end_inset
+
+, pasando de 0 a 1 alternativamente.
+ Esto parará la cuenta o no.
+\end_layout
+
+\begin_layout Enumerate
+En el segundo paro la cuenta y hago un reinicio del programa, mediante la
+ llamada RESTART.
+\end_layout
+
+\begin_layout Enumerate
+Simplemente voy modificando la variable modo haciendo pasar todos los valores
+ entre 0 y 3.
+\end_layout
+
+\begin_layout Standard
+En todas las llamadas, hay un retraso y segunda lectura del botón que evita
+ lecturas espurias (ver primera parte: reloj digital) y asegura que ha sido
+ pulsado de forma correcta.
+ Esto produce un leve parpadeo del display.
+ Es quizás un efecto no deseado, pero disminuir el retraso implica que los
+ botones no tengan lecturas correctas.
+\end_layout
+
+\begin_layout Subsection*
+delay(5)
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language={C++}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+delay(5); 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sin esta sentencia final, hay efectos parásitos en la iluminación de los
+ leds de los displays y, aunque se puede ver la cuenta del tiempo, la lectura
+ del display no es cómoda.
+ No estoy muy seguro del por qué sucede.
+ Supongo que un cambio tan rápido (en el modo décimas de segundo) de los
+ ánodos implica que haya algo de tensión residual en ellos, lo suficiente
+ como para que se produzca una iluminación tenue en los segmentos de los
+ displays que deberían aparecer como apagados.
+ O bien puede haber algún efecto capacitivo asociado a los leds en el display.
+ 
+\end_layout
+
+\begin_layout Standard
+Lo cierto es que, manteniendo cada ánodo encendido al menos 5 ms, consigo
+ una iluminación correcta.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Fotografías
+\end_layout
+
+\begin_layout Standard
+El vídeo del cronómetro en funcionamiento puesdes encontralo en 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://youtu.be/Ac8foOlST3k"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename videos_fotos/01_cron_pongo_en_marcha_paro
+	lyxscale 25
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Puesta en marcha
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename videos_fotos/02_cron_reset
+	lyxscale 25
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Reset
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename videos_fotos/03_cron_modo_minutos_segundos
+	lyxscale 25
+	scale 25
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename videos_fotos/03_cron_modo_segundos
+	lyxscale 25
+	scale 25
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename videos_fotos/04_cron_modo_horas_minutos
+	lyxscale 25
+	scale 25
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Modos de funcionamiento
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Anexo I: código del programa 
+\begin_inset Quotes eld
+\end_inset
+
+cronómetro
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\normalsize\rmfamily},breaklines=true,keywordstyle={\color{blue}},language={C++}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// siete salidas digitales a cada tramo del display
+\end_layout
+
+\begin_layout Plain Layout
+
+int outa = 11;
+\end_layout
+
+\begin_layout Plain Layout
+
+int outb = 13;
+\end_layout
+
+\begin_layout Plain Layout
+
+int outc = 2;
+\end_layout
+
+\begin_layout Plain Layout
+
+int outd = 3;
+\end_layout
+
+\begin_layout Plain Layout
+
+int oute = 4;
+\end_layout
+
+\begin_layout Plain Layout
+
+int outf = 5;
+\end_layout
+
+\begin_layout Plain Layout
+
+int outg = 6;
+\end_layout
+
+\begin_layout Plain Layout
+
+int outmediosegundo = 12;
+\end_layout
+
+\begin_layout Plain Layout
+
+int outcoma = 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// defino RESTART con el codigo ensamblador que hace un RESET
+\end_layout
+
+\begin_layout Plain Layout
+
+#define RESTART asm("jmp 0x0000");
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// a los anodos de los displays.
+ Actuan por logica inversa
+\end_layout
+
+\begin_layout Plain Layout
+
+int anodo[4]={7,8,9,10};
+\end_layout
+
+\begin_layout Plain Layout
+
+// entradas para modificar la hora y minuto
+\end_layout
+
+\begin_layout Plain Layout
+
+int start = 0; // 1 --> empieza , 0--> para
+\end_layout
+
+\begin_layout Plain Layout
+
+int reset = 0; // 0 --> continua, 1 --> hace un reset
+\end_layout
+
+\begin_layout Plain Layout
+
+int mode = 0; // 0 --> modo segundos + decimas  1 --> modo minutos + segundos
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// variables de entrada analogica
+\end_layout
+
+\begin_layout Plain Layout
+
+int instart = 0; 
+\end_layout
+
+\begin_layout Plain Layout
+
+int inreset = 1; 
+\end_layout
+
+\begin_layout Plain Layout
+
+int inmode = 2; 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// valores a pasar al display, y calculos
+\end_layout
+
+\begin_layout Plain Layout
+
+int h = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int m = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int hora = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int minutos = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int segundos = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int mediosegundo = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int valorcoma = 2; // display2
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// variables de los displays
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long displays[4]; // variable para cada display
+\end_layout
+
+\begin_layout Plain Layout
+
+int cualactivo = 0 ; //variable para guardar cual se activa
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//contador general de tiempo
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long tiempo1=0;
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long tiempo2=0;
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long tiempo3=0;
+\end_layout
+
+\begin_layout Plain Layout
+
+int retrasoboton = 100; //retraso del botn al pulsar
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// contador de proposito general
+\end_layout
+
+\begin_layout Plain Layout
+
+int i=0;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ====================== */
+\end_layout
+
+\begin_layout Plain Layout
+
+/* Funciones y subrutinas */
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ====================== */
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// *************************************************
+\end_layout
+
+\begin_layout Plain Layout
+
+// Funcion que pone un valor en un display a la vez
+\end_layout
+
+\begin_layout Plain Layout
+
+// *************************************************
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void mandasenal(int numdisplay, int valor) {
+\end_layout
+
+\begin_layout Plain Layout
+
+// ********************************************
+\end_layout
+
+\begin_layout Plain Layout
+
+// a) activa cada tramo del display segun valor
+\end_layout
+
+\begin_layout Plain Layout
+
+// ********************************************
+\end_layout
+
+\begin_layout Plain Layout
+
+  // recibe el numero de display y el valor que tiene que entregar
+\end_layout
+
+\begin_layout Plain Layout
+
+switch (valor) {
+\end_layout
+
+\begin_layout Plain Layout
+
+case 0:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 1:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 2:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 3:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 4:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 5:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 6:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 7:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 8:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 9:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+case 10:
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outa,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outb,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outc,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outd,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(oute,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outf,HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(outg,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+break;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+// **********************************
+\end_layout
+
+\begin_layout Plain Layout
+
+// b) activo un solo display cada vez
+\end_layout
+
+\begin_layout Plain Layout
+
+// **********************************
+\end_layout
+
+\begin_layout Plain Layout
+
+for (int i=0;i<=3;i++) { // recorrido de 0 hasta 3
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if (numdisplay==valorcoma) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  digitalWrite(outcoma,LOW); 
+\end_layout
+
+\begin_layout Plain Layout
+
+} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+  digitalWrite(outcoma,HIGH); 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// elige el nodo
+\end_layout
+
+\begin_layout Plain Layout
+
+if (i==numdisplay) {
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(anodo[i],HIGH); // activo por 
+\end_layout
+
+\begin_layout Plain Layout
+
+} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+digitalWrite(anodo[i],LOW); // desactivo por 
+\end_layout
+
+\begin_layout Plain Layout
+
+} // fin del if
+\end_layout
+
+\begin_layout Plain Layout
+
+} // fin del for
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// **********************************
+\end_layout
+
+\begin_layout Plain Layout
+
+// displays
+\end_layout
+
+\begin_layout Plain Layout
+
+// **********************************
+\end_layout
+
+\begin_layout Plain Layout
+
+void valordisplay(int rayah, int rayam) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (rayah==LOW) {
+\end_layout
+
+\begin_layout Plain Layout
+
+   displays[0]= h/10;
+\end_layout
+
+\begin_layout Plain Layout
+
+   displays[1]= h % 10; // resto de la division entre 10
+\end_layout
+
+\begin_layout Plain Layout
+
+  } else {
+\end_layout
+
+\begin_layout Plain Layout
+
+   displays[0]= 10;
+\end_layout
+
+\begin_layout Plain Layout
+
+   displays[1]= 10; // guion
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (rayam==LOW) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+   displays[2]= m / 10;
+\end_layout
+
+\begin_layout Plain Layout
+
+   displays[3]= m % 10; // resto de la division entre 10
+\end_layout
+
+\begin_layout Plain Layout
+
+  } else {
+\end_layout
+
+\begin_layout Plain Layout
+
+    displays[2]= 10;
+\end_layout
+
+\begin_layout Plain Layout
+
+    displays[3]= 10; // guion
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ===================================== */
+\end_layout
+
+\begin_layout Plain Layout
+
+/* Bucles principales del programa: setup */
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ====================================== */
+\end_layout
+
+\begin_layout Plain Layout
+
+void setup () { // inicializo
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(outa, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(outb, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(outc, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(outd, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(oute, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(outf, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(outg, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(outcoma, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(outmediosegundo, OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(anodo[0], OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(anodo[1], OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(anodo[2], OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+pinMode(anodo[3], OUTPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+// Serial.begin(115200);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ====================================== */
+\end_layout
+
+\begin_layout Plain Layout
+
+/* Bucles principales del programa: loop  */
+\end_layout
+
+\begin_layout Plain Layout
+
+/* ====================================== */
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void loop () { // bucle
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+tiempo1=millis(); // milisegundostranscurridos al empezar el bucle
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if (start==1) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  tiempo3=(tiempo1-tiempo2)/100; // decimas de segundo
+\end_layout
+
+\begin_layout Plain Layout
+
+} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+  tiempo2=tiempo1-(tiempo3*100); 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// calculo y mostrar
+\end_layout
+
+\begin_layout Plain Layout
+
+if (mode==0) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  h = tiempo3 /100; // centenas - decenas segundos
+\end_layout
+
+\begin_layout Plain Layout
+
+  m = tiempo3 % 100; // unidades y decimas de segundo
+\end_layout
+
+\begin_layout Plain Layout
+
+  valorcoma = 2; // tercer display
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (tiempo3>9999) { // caso que sobrepase la cantidad
+\end_layout
+
+\begin_layout Plain Layout
+
+     mode=2; // cambia al modo 2.
+      
+\end_layout
+
+\begin_layout Plain Layout
+
+  } 
+\end_layout
+
+\begin_layout Plain Layout
+
+} else if (mode==1) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  // segundos sin decimas
+\end_layout
+
+\begin_layout Plain Layout
+
+  segundos = tiempo3 / 10; // calculo los segundos transcurridos, sin decimas
+\end_layout
+
+\begin_layout Plain Layout
+
+  h = segundos /100 ;
+\end_layout
+
+\begin_layout Plain Layout
+
+  m = segundos % 100;
+\end_layout
+
+\begin_layout Plain Layout
+
+  valorcoma = 3; // la coma en el ultimo digito
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (segundos>9999) { // caso que sobrepase la cantidad
+\end_layout
+
+\begin_layout Plain Layout
+
+     mode=3; // cambia al modo 3.
+      
+\end_layout
+
+\begin_layout Plain Layout
+
+  } 
+\end_layout
+
+\begin_layout Plain Layout
+
+} else if (mode==2) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  // minutos - segundos
+\end_layout
+
+\begin_layout Plain Layout
+
+  segundos = tiempo3 / 10; // calculo los segundos transcurridos
+\end_layout
+
+\begin_layout Plain Layout
+
+  minutos = segundos / 60;
+\end_layout
+
+\begin_layout Plain Layout
+
+  segundos = segundos % 60;
+\end_layout
+
+\begin_layout Plain Layout
+
+  h = minutos;
+\end_layout
+
+\begin_layout Plain Layout
+
+  m = segundos;
+\end_layout
+
+\begin_layout Plain Layout
+
+  valorcoma=1; // la coma en la segunda posicion
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (segundos>5999) { // caso que sobrepase la cantidad
+\end_layout
+
+\begin_layout Plain Layout
+
+     mode=3; // cambia al modo 3.
+      
+\end_layout
+
+\begin_layout Plain Layout
+
+  } 
+\end_layout
+
+\begin_layout Plain Layout
+
+} else if (mode==3) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  // horas - minutos
+\end_layout
+
+\begin_layout Plain Layout
+
+  segundos = tiempo3 / 10; // calculo los segundos transcurridos
+\end_layout
+
+\begin_layout Plain Layout
+
+  mediosegundo = segundos % 2;
+\end_layout
+
+\begin_layout Plain Layout
+
+  minutos = segundos / 60;
+\end_layout
+
+\begin_layout Plain Layout
+
+  hora = minutos / 60 ;
+\end_layout
+
+\begin_layout Plain Layout
+
+  // hora = hora % 24 NO, no es un reloj
+\end_layout
+
+\begin_layout Plain Layout
+
+  minutos = minutos % 60;
+\end_layout
+
+\begin_layout Plain Layout
+
+  h = hora;
+\end_layout
+
+\begin_layout Plain Layout
+
+  m = minutos;
+\end_layout
+
+\begin_layout Plain Layout
+
+  digitalWrite(outmediosegundo, mediosegundo); // la coma en la segunda
+ posicion, parpadeante
+\end_layout
+
+\begin_layout Plain Layout
+
+  valorcoma = 9; // este valor no existe, y no pondr como ninguna
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (hora*3600+minutos*60>359940) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    RESTART;
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// anula el parpadeo de leds centrales en caso de mode distinto de 3
+\end_layout
+
+\begin_layout Plain Layout
+
+if (mode!=3) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  digitalWrite(outmediosegundo, HIGH);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  valordisplay(LOW,LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+  cualactivo = (cualactivo+1)*(cualactivo<3);
+\end_layout
+
+\begin_layout Plain Layout
+
+  mandasenal(cualactivo,displays[cualactivo]); 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// 1) comprueba start
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(instart)>500) { //compara
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(retrasoboton); // el retraso hace dar un pequeño salto al display.
+\end_layout
+
+\begin_layout Plain Layout
+
+// ajustar el retraso por cada boton.
+ Se ha puesto un valor de 50 pero podria tener que ser mas
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(instart)>500) {
+\end_layout
+
+\begin_layout Plain Layout
+
+   start=!start; // cambio la condicion de start
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// 2) comprueba reset
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inreset)>500) { //compara
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(retrasoboton); // el retraso hace dar un pequeño salto al display.
+\end_layout
+
+\begin_layout Plain Layout
+
+// ajustar el retraso por cada boton.
+ Se ha puesto un valor de 50 pero podria tener que ser mas
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inreset)>500) {
+\end_layout
+
+\begin_layout Plain Layout
+
+   start=0;
+\end_layout
+
+\begin_layout Plain Layout
+
+   RESTART; // hago un RESET en caliente
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// 3) comprueba modo
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inmode)>500) { //compara
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(retrasoboton); // el retraso hace dar un pequeño salto al display.
+\end_layout
+
+\begin_layout Plain Layout
+
+// ajustar el retraso por cada boton.
+ Se ha puesto un valor de 50 pero podria tener que ser mas
+\end_layout
+
+\begin_layout Plain Layout
+
+if (analogRead(inmode)>500) {
+\end_layout
+
+\begin_layout Plain Layout
+
+   mode=(mode+1)*(mode<3);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+delay(5); 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+// Fin del programa
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

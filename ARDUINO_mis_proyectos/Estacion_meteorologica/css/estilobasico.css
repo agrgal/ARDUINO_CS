@@ -1,0 +1,377 @@
+/* -------------------------------------------------------- */
+/* http://www.maxdesign.com.au/articles/process/            */
+/* -------------------------------------------------------- */
+
+@charset "ISO-8859-15";
+/* -------- Código --------- */
+
+@font-face {
+    font-family: 'Great Vibes'; /*a name to be used later*/
+    src: url('../imagenes/GreatVibes-Regular.otf'); /*URL to font*/
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family:"Comic Sans MS", cursive, sans-serif !important;
+	font-size: 1.3em;
+	text-align: center;
+	color: #333;
+	background-color: #E7AB76;
+}
+
+a:link { color: #B52C07; }
+a:visited { color: #b93411; }
+a:focus { color: #000; }
+a:hover { color: #7d8206; }
+a:active { color: #453323; }
+h1, h2, h3, h4, h5, h6 { margin: 0 0 .5em; }
+
+/* h1
+{
+	color: 	#2E2218;
+	font: 140% "Comic Sans MS", cursive, sans-serif;
+} */
+
+h1 { 
+color: 	#2E2218;
+font-family: "Great Vibes", cursive; 
+font-size: 3em; 
+line-height: 160px; 
+font-weight: normal;
+margin-bottom: 0px;
+margin-top: 40px;
+text-align: center;
+text-shadow: 0 1px 1px #fff;
+}
+
+h2
+{
+	color: #453323;
+	font: 125% "Comic Sans MS", cursive, sans-serif;
+}
+
+h2 a { text-decoration: none; }
+
+h3
+{
+	color: #5C442F;
+	font: 110% "Comic Sans MS", cursive, sans-serif;
+}
+
+h4,h5,h6
+{
+	color: #5C442F;
+	font: 100% "Comic Sans MS", cursive, sans-serif;
+}
+
+/* ------------------------------
+container styles
+------------------------------ */
+
+#container
+{
+	margin: 0.8em auto;
+	width: 95%;
+	background: #E7D4C3;	
+	border: 1px solid #676767;
+}
+
+/* ------------------------------
+contents styles
+------------------------------ */
+
+#contents
+{
+	margin: 0px auto;	
+	width: 80%;
+	border: 0px solid #676767;
+	overflow: hidden;
+	/* background: blue; */
+	position: relative;
+}
+
+#contents p { line-height: 165%; }
+
+/* Navegación */
+
+#navcontainer {
+   border: 0px solid red;
+   overflow: hidden;
+   width: 100%;
+   height: 40px;
+   padding: 0px;
+   margin: 0px auto;
+}
+
+#navcontainer ul
+{
+padding-left: 0;
+margin-left: 0;
+margin: 0;
+background-color: #036;
+color: White;
+float: left;
+width: 100%;
+font-family: arial, helvetica, sans-serif;
+}
+
+#navcontainer ul li { display: inline; }
+
+#navcontainer ul li a
+{
+padding: 0.2em 1em;
+background-color: #036;
+color: White;
+text-decoration: none;
+float: left;
+border-right: 1px solid #fff;
+}
+
+#navcontainer ul li a:hover
+{
+background-color: #369;
+color: #fff;
+}
+/* ------------------------------
+header styles
+------------------------------ */
+
+#header
+{
+	height: 50px;
+	width: 100%;
+	position: relative;
+	/* background: url(../imagenes/iesseritium.png) no-repeat 0 0; */
+	padding-top:1%;
+	padding-bottom: 2%;
+	border-bottom: 1px solid black;
+}
+
+#header h1
+{
+	position: absolute;
+	left: 1em;
+}
+
+#logo
+{
+	float: right;
+	position: relative;
+	text-align: center;
+	margin-top: -12px;
+	/* background: red; */
+}
+
+#iesseritium
+{
+	float: left;
+	position: relative;
+	text-align: center;
+	margin-top: -20px;
+	margin-left: 30px;
+	/* background: red; */
+}
+
+#calendario 
+{
+   float:left;
+   position: relative;
+   text-align: justify;
+   margin-left: 10em;
+}
+
+
+/* ------------------------------
+footer styles
+------------------------------ */
+
+#footer
+{
+	clear: both;
+	overflow: hidden;
+	color: #272900;
+	text-align: center;
+	font-size: 0.6em;
+	background: #B9AA9C;
+	margin: 0px auto;
+	padding: 4px 2px;
+}
+
+
+#footer_img
+{
+    float:right;
+    position: relative;
+    margin: 0.5em 1em 0.5em 5em;
+    /* background: yellow; */
+}
+#footer_text
+{
+    float:left;
+    position: relative;
+    text-align: left;
+    margin: 0.5em 30em 0.5em 5em;
+    /* background: yellow; */
+}
+
+/* ------------------------------
+divs
+------------------------------ */
+
+#conexion, #grabacion, #desde, #hasta {
+	float: left;
+	text-align: justify;
+	width: 49%;
+	margin: 1px;
+	padding: 4px;
+	border: 0px solid black; 
+	overflow: hidden;
+}
+
+#divempezar, #divcheckboxes, #datos {
+	float: left;
+	width: 100%;
+	border: 0px solid black; 
+	margin: 10px 0px;
+	overflow: hidden;
+}
+
+#desde, #hasta {
+text-align: center;
+}
+
+#iconos {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	border: 0px solid red;
+	width: auto;
+	overflow: hidden;
+	
+}
+
+
+/* ===== */
+/* Tabla */
+/* ===== */
+tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:1.2em;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:1.2em;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-cmqq{font-weight:bold;font-size:1.2em;font-family:"Comic Sans MS", cursive, sans-serif !important;;background-color:#fffe65;text-align:center;vertical-align:top}
+.tg .tg-elaw{font-weight:bold;font-size:1.2em;font-family:"Comic Sans MS", cursive, sans-serif !important;;background-color:#ffcb2f;vertical-align:top}
+.tg .tg-j0ip{font-weight:bold;font-size:1.2em;font-family:"Comic Sans MS", cursive, sans-serif !important;;background-color:#ffcb2f}
+
+
+/* ====== */
+/* INPUTs */
+/* ====== */
+
+
+
+input, label
+{
+    font-family:"Comic Sans MS", cursive, sans-serif !important;
+    font-size: 1.2em;
+    color: black;
+
+}
+label {
+    display:block;
+    margin-bottom: 20px;
+    margin-top: 2opx;
+}
+label > span{
+    /* display: inline-block; */
+    /* float: left; */
+    width: 300px;
+}
+
+input
+{
+    background: transparent;
+    border: none;
+    border-bottom: 3px dashed #83A4C5;
+    width: auto;
+    outline: none;
+    padding-left: 0.5em;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: left;
+    font-style: italic;
+}
+
+
+input[type=text]:focus
+{
+    border-bottom: 3px dashed red;
+}
+
+/* ===== */
+/* Boton */
+/* ===== */
+.btn {
+  background: #fffe65;
+  background-image: -webkit-linear-gradient(top, #fffe65, #ffcb2f);
+  background-image: -moz-linear-gradient(top, #fffe65, #ffcb2f);
+  background-image: -ms-linear-gradient(top, #fffe65, #ffcb2f);
+  background-image: -o-linear-gradient(top, #fffe65, #ffcb2f);
+  background-image: linear-gradient(to bottom, #fffe65, #ffcb2f);
+  -webkit-border-radius: 17;
+  -moz-border-radius: 17;
+  border-radius: 17px;
+  -webkit-box-shadow: 5px 5px 3px #fffe65;
+  -moz-box-shadow: 5px 5px 3px #fffe65;
+  box-shadow: 5px 5px 3px #fffe65;
+  font-family:"Comic Sans MS", cursive, sans-serif !important;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #3d3c16;
+  padding: 10px 20px 10px 20px;
+  border: solid #9c7d21 3px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #ffcb2f;
+  background-image: -webkit-linear-gradient(top, #ffcb2f, #fffe65);
+  background-image: -moz-linear-gradient(top, #ffcb2f, #fffe65);
+  background-image: -ms-linear-gradient(top, #ffcb2f, #fffe65);
+  background-image: -o-linear-gradient(top, #ffcb2f, #fffe65);
+  background-image: linear-gradient(to bottom, #ffcb2f, #fffe65);
+  text-decoration: none;
+}
+
+/* ====================== */
+
+input[type=checkbox].css-checkbox {
+	position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:33px;
+	height:28px; 
+	display:inline-block;
+	line-height:28px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:28px;
+	vertical-align:middle;
+	cursor:pointer;
+
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	background-position: 0 -28px;
+}
+label.css-label {
+background-image:url(../imagenes/csscheckbox_d3637c26b7bff4db3158e6ce16569a9e.png); 
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+			

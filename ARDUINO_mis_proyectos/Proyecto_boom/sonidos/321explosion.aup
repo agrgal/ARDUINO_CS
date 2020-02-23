@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="321explosion_data" version="1.3.0" audacityversion="2.1.2" sel0="3.9108666628" sel1="3.9108666628" vpos="0" h="0.0000000000" zoom="197.6543990493" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags/>
+	<wavetrack name="BOOM LOS ROCIEROS 3 [360p]" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="-0.84997732">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="373944">
+				<waveblock start="0">
+					<simpleblockfile filename="e0003fda.au" len="186972" min="-0.423408" max="0.371727" rms="0.054416"/>
+				</waveblock>
+				<waveblock start="186972">
+					<simpleblockfile filename="e0003d1b.au" len="186972" min="-0.416579" max="0.403976" rms="0.095706"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="7.62947846">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="25882">
+				<waveblock start="0">
+					<simpleblockfile filename="e00036a4.au" len="25882" min="-0.353678" max="0.206075" rms="0.021971"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="BOOM LOS ROCIEROS 3 [360p]" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="-0.84997732">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="373944">
+				<waveblock start="0">
+					<simpleblockfile filename="e0003040.au" len="186972" min="-0.407649" max="0.375183" rms="0.054457"/>
+				</waveblock>
+				<waveblock start="186972">
+					<simpleblockfile filename="e0003783.au" len="186972" min="-0.415721" max="0.398633" rms="0.094302"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="7.62947846">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="25882">
+				<waveblock start="0">
+					<simpleblockfile filename="e0003356.au" len="25882" min="-0.183068" max="0.289462" rms="0.021228"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
