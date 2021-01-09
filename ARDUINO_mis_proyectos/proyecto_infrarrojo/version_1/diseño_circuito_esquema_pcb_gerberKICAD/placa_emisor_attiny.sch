@@ -1,0 +1,228 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATtiny:ATtiny85V-10SU U1
+U 1 1 5FEA0327
+P 4500 3200
+F 0 "U1" H 3970 3246 50  0000 R CNN
+F 1 "ATtiny85V-10SU" H 3970 3155 50  0000 R CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket_LongPads" H 4500 3200 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 4500 3200 50  0001 C CNN
+	1    4500 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 2600 4500 2300
+$Comp
+L Device:R R1
+U 1 1 5FEA21F5
+P 5900 2300
+F 0 "R1" V 5693 2300 50  0000 C CNN
+F 1 "10K" V 5784 2300 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5830 2300 50  0001 C CNN
+F 3 "~" H 5900 2300 50  0001 C CNN
+	1    5900 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5FEA2489
+P 6400 3100
+F 0 "R2" V 6193 3100 50  0000 C CNN
+F 1 "220Ohm" V 6284 3100 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6330 3100 50  0001 C CNN
+F 3 "~" H 6400 3100 50  0001 C CNN
+	1    6400 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5FEA2A00
+P 5250 2300
+F 0 "SW1" H 5250 2585 50  0000 C CNN
+F 1 "SW_Push" H 5250 2494 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H13mm" H 5250 2500 50  0001 C CNN
+F 3 "~" H 5250 2500 50  0001 C CNN
+	1    5250 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 5FEA4EB7
+P 6250 3400
+F 0 "J1" H 6330 3442 50  0000 L CNN
+F 1 "KY005" H 6330 3351 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 6250 3400 50  0001 C CNN
+F 3 "~" H 6250 3400 50  0001 C CNN
+	1    6250 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5FEA59AB
+P 5800 3100
+F 0 "D1" H 5793 2845 50  0000 C CNN
+F 1 "LED" H 5793 2936 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 5800 3100 50  0001 C CNN
+F 3 "~" H 5800 3100 50  0001 C CNN
+	1    5800 3100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5050 2300 4500 2300
+Connection ~ 4500 2300
+Wire Wire Line
+	5450 2300 5550 2300
+Wire Wire Line
+	5100 2900 5550 2900
+Wire Wire Line
+	5550 2900 5550 2300
+Connection ~ 5550 2300
+Wire Wire Line
+	5550 2300 5750 2300
+Wire Wire Line
+	5100 3300 6050 3300
+Wire Wire Line
+	6050 3500 5950 3500
+Wire Wire Line
+	5950 3500 5950 3800
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5FEB3833
+P 7300 2500
+F 0 "BT1" H 7418 2596 50  0000 L CNN
+F 1 "Battery_Cell" H 7418 2505 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_106_1x20mm" V 7300 2560 50  0001 C CNN
+F 3 "~" V 7300 2560 50  0001 C CNN
+	1    7300 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 3100 5100 3100
+Wire Wire Line
+	6250 3100 5950 3100
+Text Label 6000 3300 0    50   ~ 0
+S
+NoConn ~ 5100 3000
+NoConn ~ 5100 3200
+NoConn ~ 5100 3400
+Wire Wire Line
+	6550 2300 6050 2300
+Wire Wire Line
+	4500 1900 4500 2300
+Wire Wire Line
+	7300 1800 7300 2000
+$Comp
+L power:+5V #PWR0101
+U 1 1 5FED6225
+P 7300 1800
+F 0 "#PWR0101" H 7300 1650 50  0001 C CNN
+F 1 "+5V" H 7315 1973 50  0000 C CNN
+F 2 "" H 7300 1800 50  0001 C CNN
+F 3 "" H 7300 1800 50  0001 C CNN
+	1    7300 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5FED695A
+P 7300 2900
+F 0 "#PWR0102" H 7300 2650 50  0001 C CNN
+F 1 "GND" H 7305 2727 50  0000 C CNN
+F 2 "" H 7300 2900 50  0001 C CNN
+F 3 "" H 7300 2900 50  0001 C CNN
+	1    7300 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 2900 7300 2800
+Wire Wire Line
+	7150 2100 7300 2100
+Connection ~ 7300 2100
+Wire Wire Line
+	7300 2100 7300 2300
+Wire Wire Line
+	7150 2700 7300 2700
+Connection ~ 7300 2700
+Wire Wire Line
+	7300 2700 7300 2600
+Text GLabel 4300 1900 0    50   Input ~ 0
+VCC
+Text GLabel 6450 2500 0    50   Input ~ 0
+GND
+Text GLabel 5700 3800 0    50   Input ~ 0
+GND
+Text GLabel 5650 3400 0    50   Input ~ 0
+VCC
+Text GLabel 4400 3950 0    50   Input ~ 0
+GND
+Wire Wire Line
+	4400 3950 4500 3950
+Wire Wire Line
+	4500 3950 4500 3800
+Wire Wire Line
+	4500 1900 4300 1900
+Wire Wire Line
+	6550 2500 6450 2500
+Wire Wire Line
+	6550 2300 6550 2500
+Wire Wire Line
+	5650 3400 6050 3400
+Wire Wire Line
+	5950 3800 5700 3800
+Text GLabel 6900 3100 2    50   Input ~ 0
+GND
+Wire Wire Line
+	6550 3100 6900 3100
+Text GLabel 7150 2700 0    50   Input ~ 0
+GND
+Text GLabel 7150 2100 0    50   Input ~ 0
+VCC
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5FEE132B
+P 7550 1950
+F 0 "#FLG0101" H 7550 2025 50  0001 C CNN
+F 1 "PWR_FLAG" H 7550 2123 50  0000 C CNN
+F 2 "" H 7550 1950 50  0001 C CNN
+F 3 "~" H 7550 1950 50  0001 C CNN
+	1    7550 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5FEE1C97
+P 7525 2800
+F 0 "#FLG0102" H 7525 2875 50  0001 C CNN
+F 1 "PWR_FLAG" H 7525 2973 50  0000 C CNN
+F 2 "" H 7525 2800 50  0001 C CNN
+F 3 "~" H 7525 2800 50  0001 C CNN
+	1    7525 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 1950 7550 2000
+Wire Wire Line
+	7550 2000 7300 2000
+Connection ~ 7300 2000
+Wire Wire Line
+	7300 2000 7300 2100
+Wire Wire Line
+	7525 2800 7300 2800
+Connection ~ 7300 2800
+Wire Wire Line
+	7300 2800 7300 2700
+$EndSCHEMATC
