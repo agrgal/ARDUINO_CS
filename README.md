@@ -44,7 +44,7 @@ Trato aspectos como implementar una alimentación con baterías recargables, gra
 
 ### NodeMCU
 
-Copia de seguridad de los artículos publicados en mi [blog](https://agrportfolioeducativo.blogspot.com/)
+Copia de seguridad de los artículos publicados en mi [blog](https://agrportfolioeducativo.blogspot.com/). En él trato temas como Firebase y el protocolo ESPNOW. También está descrito un proyecto inacabado, botón del pánico, manejo de una CNC y grabado de pcbs, algo de diseño con FREECAD,dibujo en pantallas OLED 128x64.
 
 1.Índice de entradas con mis estudios sobre el NodeMCU: [enlace](https://agrportfolioeducativo.blogspot.com/2019/07/indice-de-nodemcu.html)
 
