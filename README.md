@@ -42,6 +42,16 @@ Trato aspectos como implementar una alimentación con baterías recargables, gra
 
 2. [Presentaciones del curso en PDF](https://github.com/agrgal/ARDUINO_CS/tree/master/Curso_Arduino_Savater_Febrero_2020_PDFs)
 
+### NodeMCU
+
+Copia de seguridad de los artículos publicados en mi [blog](https://agrportfolioeducativo.blogspot.com/)
+
+1.Índice de entradas con mis estudios sobre el NodeMCU: [enlace](https://agrportfolioeducativo.blogspot.com/2019/07/indice-de-nodemcu.html)
+
+2.Índice de entradas botón del pánico: [enlace](https://agrportfolioeducativo.blogspot.com/2019/12/listado-de-entradas-boton-del-panico.html)
+
+Es preferible consultar el blog antes de descargar los documentos PDF. En la carpeta de sketches pueden encontrarse la mayoría de los programas usados con el NODEMCU correspondiente a las diferentes entradas.
+
 ### Robótica
 
 Algunos apuntes de robótica con PrintBOT [Robótica](https://github.com/agrgal/ARDUINO_CS/tree/master/ROBOTICA)
