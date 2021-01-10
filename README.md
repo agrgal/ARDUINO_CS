@@ -16,7 +16,7 @@ Encontrarás aquí una serie de proyectos de Arduino. Son mis trabajos a lo larg
 
 5. [Luces para una escalera](https://github.com/agrgal/ARDUINO_CS/tree/master/ARDUINO_mis_proyectos/Luz%20de%20escalera)
 
-6. Último añadido. [Proyecto de mando infrarrojo para proyectores](https://github.com/agrgal/ARDUINO_CS/tree/master/ARDUINO_mis_proyectos/proyecto_infrarrojo) relacionado con [Mano proyector](https://github.com/agrgal/ARDUINO_CS/tree/master/ARDUINO_mis_proyectos/MANDO%20Proyector)
+6. Último añadido. [Proyecto de mando infrarrojo para proyectores](https://github.com/agrgal/ARDUINO_CS/tree/master/ARDUINO_mis_proyectos/proyecto_infrarrojo) relacionado con [Mando proyector](https://github.com/agrgal/ARDUINO_CS/tree/master/ARDUINO_mis_proyectos/MANDO%20Proyector)
 
 7. [Proyecto Boom](https://github.com/agrgal/ARDUINO_CS/tree/master/ARDUINO_mis_proyectos/Proyecto_boom). Juego presentado en la feria de la Ciencia de Jerez emulando el juego de televisión en el que hay que eliminar respuestas incorrectas a una pregunta. Quizás uno de los proyectos de los que me siento más satisfecho, tanto del trabajo del alumnado como del mío. [Instrucciones ](https://github.com/agrgal/ARDUINO_CS/blob/master/ARDUINO_mis_proyectos/Proyecto_boom/Proyecto%20Boom.pptx)
 
