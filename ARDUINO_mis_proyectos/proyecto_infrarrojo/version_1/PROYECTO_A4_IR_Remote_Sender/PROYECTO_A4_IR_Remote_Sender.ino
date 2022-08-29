@@ -14,7 +14,7 @@ int estado=0;
 int estadoAnterior=0;
 long tiempo2 =0;
 long tiempo=0;
-uint32_t numEnviado=0xC40BF; // C40BF
+uint32_t numEnviado=0xC4B7; // 0x61A828D7 --> mando proyector
 
 void setup()
 {
@@ -33,7 +33,7 @@ if (estado==1 && estadoAnterior==0) { //flanco de subida
   parpadeo();
 }
 estadoAnterior=estado;
-digitalWrite(LED,((tiempo/10000)%8==0));
+digitalWrite(LED,((tiempo/100000)%64==0));
 }
 
 // Función parpadeo
