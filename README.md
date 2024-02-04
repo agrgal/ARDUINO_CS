@@ -42,7 +42,7 @@ Trato aspectos como implementar una alimentación con baterías recargables, gra
 
 2. [Presentaciones del curso en PDF](https://github.com/agrgal/ARDUINO_CS/tree/master/Curso_Arduino_Savater_Febrero_2020_PDFs)
 
-### NodeMCU
+### NodeMCU (ESP8266_ESP32_Proyectos)
 
 Copia de seguridad de los artículos publicados en mi [blog](https://agrportfolioeducativo.blogspot.com/). En él trato temas como Firebase y el protocolo ESPNOW. También está descrito un proyecto inacabado, botón del pánico, manejo de una CNC y grabado de pcbs, algo de diseño con FREECAD,dibujo en pantallas OLED 128x64.
 
@@ -51,6 +51,8 @@ Copia de seguridad de los artículos publicados en mi [blog](https://agrportfoli
 2.Índice de entradas botón del pánico: [enlace](https://agrportfolioeducativo.blogspot.com/2019/12/listado-de-entradas-boton-del-panico.html)
 
 Es preferible consultar el blog antes de descargar los documentos PDF. En la carpeta de sketches pueden encontrarse la mayoría de los programas usados con el NODEMCU correspondiente a las diferentes entradas.
+
+3.Proyecto IoT. Luces de lectura definitivo. También en el sitio [Luces de Lectura](https://github.com/agrgal/LucesLectura)
 
 ### Robótica
 
