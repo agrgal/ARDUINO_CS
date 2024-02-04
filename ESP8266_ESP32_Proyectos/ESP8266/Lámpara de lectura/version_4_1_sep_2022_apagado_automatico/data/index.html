@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- 
+  Por Aurelio Gallardo, 27-08-2022
+  Basado en el tutorial https://randomnerdtutorials.com/esp8266-web-server-spiffs-nodemcu/ 
+  y en el tutorial: https://randomnerdtutorials.com/esp32-esp8266-input-data-html-form/  
+-->
+<html>
+<head>
+  <title>Luces de lectura</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Luces de lectura</h1><h4>usando Servidor WEB ESP8266 </h4>
+  <a href="/refrescar" id="refrescar" hidden><button  class="button">Refrescar</button></a>
+	<h4>Lámpara %CUALES%</h4>	  
+	<p>
+	<a href="/cual"><button class="button">%CUALES%</button></a>
+	<button class="button button3">%FACTOR%</button>
+	</p>
+	<form action="/get" id="miSliderUNO" name="miFormulario" >
+	  <p><input type="range" min="0" max="10" value="%NIVEL%" class="slider"
+				name="miSlider1" id="miSlider1" onchange="variarValor()"></p>
+				<!-- al recargar asíncronamente la página se le pasa el parámetro disabled o ninguno
+				según sea el modo de conexión -->
+	  <p>Nivel de luz [0 apagado - 10]: <strong>%NIVEL%</strong></p>	
+	  <p>Encendido desde hace %TENC%</p> 
+	</form>	
+	<p>==================</p>
+	<p>
+	<a href="/apagar"><button class="button button2">Apagar</br>las dos</button></a>
+	<a href="/encender"><button class="button button2">Encender</br>las dos</button></a>
+	<a href="/media"><button class="button button2">Media luz</br>las dos</button></a>		
+	</p>
+	<p>
+	<a href="/intercambiar"><button class="button button2">Intercambiar</br>luces</button></a>
+	<a href="/disminuir"><button class="button button3">Disminuir</br>luces</button></a>
+	<a href="/aumentar"><button class="button button3">Aumentar</br>luces</button></a>
+	</p>
+	<p>
+	<a href="/t2"><button class="button">Apagar en 2min</button></a>
+	<a href="/t20"><button class="button">Apagar en 20min</button></a>	
+	</p>
+    <p>%TAPAGADO%</p> 
+	
+</body>
+</html>
+
+<!-- SCRIPTS -->
+<script>
+// Esta función actúa al variar el slider 
+function variarValor() {
+	document.miFormulario.submit();
+} // fin de la función 
+
+// Esta función intercambia entre lámpara derecha e izquierda
+setInterval(function () {
+	document.getElementById("refrescar").click();
+	}, 3000); // funciona perfectamente. 
+	// Permite el refresco de datos (nivel de luz) en modo manual. 
+</script>
+

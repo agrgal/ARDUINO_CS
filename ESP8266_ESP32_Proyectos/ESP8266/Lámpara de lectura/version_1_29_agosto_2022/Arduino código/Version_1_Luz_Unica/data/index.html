@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- 
+  Por Aurelio Gallardo, 27-08-2022
+  Basado en el tutorial https://randomnerdtutorials.com/esp8266-web-server-spiffs-nodemcu/ 
+  y en el tutorial: https://randomnerdtutorials.com/esp32-esp8266-input-data-html-form/  
+-->
+<html>
+<head>
+  <title>Luces de lectura</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Luces de lectura usando Servidor WEB ESP8266 </h1>
+  <a href="/refrescar" id="refrescar" hidden><button  class="button">Refrescar</button></a>
+  <h4>Lámpara derecha. Modo %MODO% activado.</h4>
+	<p>
+	<a href="/man1"><button id="manual1" class="button">MANUAL</button></a>
+	<a href="/online1"><button id="online1" class="button button2">ONLINE</button></a>
+	</p>
+	<form action="/get" id="miSliderUNO" name="miFormulario" >
+	  <p><input type="range" min="0" max="10" value="%NIVEL%" class="slider"
+				name="miSlider1" id="miSlider1" onchange="variarValor()" %ACTUAR%></p>
+				<!-- al recargar asíncronamente la página se le pasa el parámetro disabled o ninguno
+				según sea el modo de conexión -->
+	  <p>Nivel de luz [0 apagado - 10]: <strong>%NIVEL%</strong></p>	  
+	</form>	
+	<hr width="50%">
+	
+</body>
+</html>
+
+<!-- SCRIPTS -->
+<script>
+// Esta función actúa al variar el slider 
+function variarValor() {
+	document.miFormulario.submit();
+} // fin de la función 
+
+setInterval(function () {
+	document.getElementById("refrescar").click();
+	}, 3000); // funciona perfectamente. 
+	// Permite el refresco de datos (nivel de luz) en modo manual. 
+</script>
+

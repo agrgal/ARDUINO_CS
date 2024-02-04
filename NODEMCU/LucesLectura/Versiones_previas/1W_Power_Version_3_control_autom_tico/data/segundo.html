@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- 
+  Por Aurelio Gallardo, 27-08-2022
+  Basado en el tutorial https://randomnerdtutorials.com/esp8266-web-server-spiffs-nodemcu/  
+-->
+<html>
+<head>
+  <title>Luces de lectura</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta charset="UTF-8">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Luces de lectura</h1>
+  <h4>Servidor WEB ESP8266</h4>
+	<form action="/get" id="miSliderUNO" name="miFormulario" >
+	  <p><input id="mibotonUno" name="miboton1" class="button" type="button" value="Modo ONLINE" onclick="cambiar()"></p>
+	  <p><input type="range" min="0" max="10" value="%NIVEL%" class="slider"
+				name="miSlider1" id="miSlider1" onchange="variarValor()"></p>
+	  <p>Nivel de luz, lámpara 1: <strong>%NIVEL%</strong></p>
+	  <!-- <input type="submit" value="Submit"> -->
+	</form>	
+</body>
+</html>
+
+<!-- SCRIPTS -->
+<script>
+// Esta función actúa sobre los elementos del DOM, cambiando sus características	
+function cambiar() {
+
+  // alert(document.getElementById("mibotonUno").value);
+  var valorBoton = document.getElementById("mibotonUno").value;
+  
+  if (valorBoton=="Modo ONLINE") {	
+	
+	document.getElementById("miSlider1").value = 0;	  		
+	document.getElementById("mibotonUno").value = "Modo Manual";
+	document.getElementById("mibotonUno").classList.add('button2');
+	document.getElementById("miSlider1").disabled = true;
+	
+  } else if (valorBoton=="Modo Manual") { 	  
+	
+	document.getElementById("miSlider1").disabled = false;	
+	document.getElementById("mibotonUno").value= "Modo ONLINE";
+	document.getElementById("mibotonUno").classList.remove('button2');
+	
+  } 
+  
+
+  
+} // fin de la función 
+</script>
+
+<script>
+// Esta función actúa al variar el slider 
+function variarValor() {
+	document.miFormulario.submit();
+} // fin de la función 
+</script>
+
